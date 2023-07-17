@@ -1,0 +1,100 @@
+#onBoardFooter{
+    background-color: #FFFFFF;
+    box-shadow      : 0px -1px 12px 1px rgba(36, 50, 66, 0.08);
+    padding         : 16px;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    height          : 76px;
+    position        : fixed;
+    bottom          : 0px;
+    left            : 0px;
+    z-index         : 1000;
+    width           : 30vw;
+}
+
+.cardForm{
+    max-width       : 460px;
+    width           : calc(100% - 16px);
+    padding         : 32px;
+    display         : flex;
+    box-shadow      : rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    flex-direction  : column;
+    box-sizing      : border-box;
+    border-radius   : 8px;
+    justify-content : center;
+    background-color: #fff;
+    z-index         : 100;
+    gap             : 32px;
+}
+
+.LoginCardLayout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #E3E6F3;
+    position: relative;
+}
+.login-gradient{
+    position: absolute;
+    object-fit: contain;
+    // height: 100%;
+    // width: 30%;
+    bottom: 0;
+    left: 0;
+    // background-color: red;
+}
+
+.old-walletly{
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 16px;
+gap: 8px;
+height: 52px;
+border: 1px solid #D6DAE9;
+border-radius: 6px;
+text-decoration: none !important;
+transition: all 0.2s ease;
+}
+
+.old-walletly:hover{
+    background-color: color(neutral0);
+}
+
+.auth-form{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 16px;
+width: 100%;
+
+    /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+}
+
+
+.top-header-auth{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  padding: 16px 24px;
+  align-items: center;
+}

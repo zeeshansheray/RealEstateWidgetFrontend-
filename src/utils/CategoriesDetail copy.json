@@ -1,0 +1,5255 @@
+[
+    {
+      "category": "Accessories",
+      "subcategories": [
+        {
+          "name": "Scarves",
+          "sizes": [
+            "S",
+            "M",
+            "L"
+          ]
+        },
+        {
+          "name": "Hats",
+          "sizes": [
+            "S",
+            "M",
+            "L"
+          ]
+        },
+        {
+          "name": "Belts",
+          "sizes": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40",
+            "42",
+            "44"
+          ]
+        },
+        {
+          "name": "Rings",
+          "sizes": [
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22"
+          ]
+        },
+        {
+          "name": "Sunglasses",
+          "sizes": [
+            "S",
+            "M",
+            "L"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Accessories",
+      "subcategories": [
+        {
+          "name": "Monitor Arm",
+          "features": [
+            "Adjustable",
+            "Rotatable",
+            "VESA compatible"
+          ]
+        },
+        {
+          "name": "Speakers",
+          "features": [
+            "Bluetooth",
+            "Wired",
+            "Portable"
+          ]
+        },
+        {
+          "name": "Docking Stations",
+          "features": [
+            "USB-C",
+            "HDMI",
+            "Ethernet",
+            "Thunderbolt"
+          ]
+        },
+        {
+          "name": "Power Supply",
+          "features": [
+            "Universal",
+            "AC/DC",
+            "USB-A",
+            "USB-C"
+          ]
+        },
+        {
+          "name": "Protective Cases",
+          "features": [
+            "Waterproof",
+            "Shockproof",
+            "Scratch-resistant",
+            "Drop-proof"
+          ]
+        },
+        {
+          "name": "Computer Stickers",
+          "features": [
+            "Funny",
+            "Cool",
+            "Geeky",
+            "Cute"
+          ]
+        },
+        {
+          "name": "Mouse",
+          "features": [
+            "Wired",
+            "Wireless",
+            "Ergonomic",
+            "Gaming"
+          ]
+        },
+        {
+          "name": "Headphones",
+          "features": [
+            "Noise-cancelling",
+            "Wireless",
+            "Over-ear",
+            "In-ear"
+          ]
+        },
+        {
+          "name": "Headphone Stand",
+          "features": [
+            "Wooden",
+            "Metallic",
+            "Rotatable",
+            "Space-saving"
+          ]
+        },
+        {
+          "name": "Rests",
+          "features": [
+            "Wrist rest",
+            "Keyboard rest",
+            "Gel-filled",
+            "Ergonomic"
+          ]
+        },
+        {
+          "name": "Keyboard Extensions",
+          "features": [
+            "Numeric keypad",
+            "Trackpad",
+            "Touchpad",
+            "USB hub"
+          ]
+        },
+        {
+          "name": "Desk Pads",
+          "features": [
+            "Waterproof",
+            "Leather",
+            "Large",
+            "Anti-slip"
+          ]
+        },
+        {
+          "name": "Recorders",
+          "features": [
+            "Audio",
+            "Video",
+            "Screen recording",
+            "Portable"
+          ]
+        },
+        {
+          "name": "Microphones",
+          "features": [
+            "USB",
+            "Condenser",
+            "Shotgun",
+            "Lavalier"
+          ]
+        },
+        {
+          "name": "Camera",
+          "features": [
+            "Webcam",
+            "HD",
+            "Auto-focus",
+            "Portable"
+          ]
+        },
+        {
+          "name": "Webcams",
+          "features": [
+            "HD",
+            "Auto-focus",
+            "Privacy cover",
+            "Microphone"
+          ]
+        },
+        {
+          "name": "Lighting",
+          "features": [
+            "Ring light",
+            "LED strip",
+            "Portable",
+            "Dimmable"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Activewear",
+      "subcategories": [
+        {
+          "name": "Sports Bras",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        },
+        {
+          "name": "Leggings",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        },
+        {
+          "name": "Yoga Pants",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        },
+        {
+          "name": "Tank Tops",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        },
+        {
+          "name": "Athletic Shorts",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        },
+        {
+          "name": "Sports Hoodies",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Bathroom",
+      "subcategories": [
+        {
+          "name": "Sink",
+          "models": [
+            "undermount",
+            "topmount",
+            "vessel"
+          ],
+          "colors": [
+            "white",
+            "black",
+            "silver"
+          ],
+          "quantity": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "Toilet",
+          "models": [
+            "one-piece",
+            "two-piece"
+          ],
+          "colors": [
+            "white",
+            "black"
+          ],
+          "quantity": [
+            1
+          ]
+        },
+        {
+          "name": "Brushes",
+          "types": [
+            "toilet",
+            "scrub"
+          ],
+          "colors": [
+            "white",
+            "blue",
+            "green"
+          ],
+          "quantity": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "Bathtub",
+          "types": [
+            "freestanding",
+            "alcove"
+          ],
+          "colors": [
+            "white",
+            "black"
+          ],
+          "quantity": [
+            1
+          ]
+        },
+        {
+          "name": "Rugs",
+          "sizes": [
+            "small",
+            "medium",
+            "large"
+          ],
+          "colors": [
+            "white",
+            "blue",
+            "pink"
+          ],
+          "quantity": [
+            1,
+            2
+          ]
+        },
+        {
+          "name": "Bin",
+          "types": [
+            "step-on",
+            "swing-top"
+          ],
+          "colors": [
+            "white",
+            "black",
+            "silver"
+          ],
+          "quantity": [
+            1
+          ]
+        },
+        {
+          "name": "Laundry Basket",
+          "types": [
+            "wicker",
+            "plastic",
+            "mesh"
+          ],
+          "colors": [
+            "white",
+            "gray",
+            "brown"
+          ],
+          "quantity": [
+            1
+          ]
+        },
+        {
+          "name": "Towel Rails",
+          "types": [
+            "wall-mounted",
+            "freestanding"
+          ],
+          "colors": [
+            "white",
+            "chrome",
+            "black"
+          ],
+          "quantity": [
+            1,
+            2
+          ]
+        },
+        {
+          "name": "Toothbrush Holders",
+          "types": [
+            "wall-mounted",
+            "countertop"
+          ],
+          "colors": [
+            "white",
+            "black",
+            "blue"
+          ],
+          "quantity": [
+            1,
+            2
+          ]
+        },
+        {
+          "name": "Bathroom Shelves",
+          "types": [
+            "wall-mounted",
+            "corner"
+          ],
+          "colors": [
+            "white",
+            "black",
+            "chrome"
+          ],
+          "quantity": [
+            1,
+            2
+          ]
+        },
+        {
+          "name": "Mops",
+          "types": [
+            "spin",
+            "sponge"
+          ],
+          "colors": [
+            "white",
+            "blue",
+            "green"
+          ],
+          "quantity": [
+            1
+          ]
+        },
+        {
+          "name": "Clippers",
+          "types": [
+            "nail",
+            "hair"
+          ],
+          "colors": [
+            "white",
+            "black",
+            "silver"
+          ],
+          "quantity": [
+            1
+          ]
+        },
+        {
+          "name": "Ironing Boards",
+          "types": [
+            "wall-mounted",
+            "freestanding"
+          ],
+          "colors": [
+            "white",
+            "gray"
+          ],
+          "quantity": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Bedroom",
+      "subcategories": [
+        {
+          "name": "Hangers",
+          "colors": [
+            "Black",
+            "White",
+            "Wood"
+          ],
+          "types": "Clothes",
+          "sizes": "Standard"
+        },
+        {
+          "name": "Bed Frames",
+          "models": "Platform",
+          "sizes": [
+            "Twin",
+            "Full",
+            "Queen",
+            "King"
+          ],
+          "colors": [
+            "Black",
+            "White",
+            "Brown"
+          ]
+        },
+        {
+          "name": "Mattresses",
+          "models": "Memory Foam",
+          "sizes": [
+            "Twin",
+            "Full",
+            "Queen",
+            "King"
+          ],
+          "colors": [
+            "White"
+          ],
+          "types": "Soft"
+        },
+        {
+          "name": "Blankets",
+          "sizes": [
+            "Twin",
+            "Full",
+            "Queen",
+            "King"
+          ],
+          "colors": [
+            "Black",
+            "White",
+            "Gray",
+            "Beige"
+          ]
+        },
+        {
+          "name": "Pillows",
+          "sizes": [
+            "Standard",
+            "Queen",
+            "King"
+          ],
+          "colors": [
+            "White"
+          ]
+        },
+        {
+          "name": "Covers",
+          "sizes": [
+            "Twin",
+            "Full",
+            "Queen",
+            "King"
+          ],
+          "colors": [
+            "Black",
+            "White",
+            "Gray",
+            "Beige"
+          ]
+        },
+        {
+          "name": "Cover Sets",
+          "sizes": [
+            "Twin",
+            "Full",
+            "Queen",
+            "King"
+          ],
+          "colors": [
+            "Black",
+            "White",
+            "Gray",
+            "Beige"
+          ]
+        },
+        {
+          "name": "Lamps",
+          "models": "Desk",
+          "colors": [
+            "Black",
+            "White",
+            "Gold"
+          ]
+        },
+        {
+          "name": "Drawers",
+          "models": "Chest",
+          "sizes": [
+            "Small",
+            "Medium",
+            "Large"
+          ],
+          "colors": [
+            "Black",
+            "White",
+            "Brown"
+          ]
+        },
+        {
+          "name": "Cabinets",
+          "models": "Storage",
+          "sizes": [
+            "Small",
+            "Medium",
+            "Large"
+          ],
+          "colors": [
+            "Black",
+            "White",
+            "Brown"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Biking, Hiking, and Running",
+      "subcategories": [
+        {
+          "name": "Bikes",
+          "colors": [
+            "Red",
+            "Blue",
+            "Green",
+            "Black",
+            "White"
+          ],
+          "models": [
+            "Mountain Bike",
+            "Road Bike",
+            "Hybrid Bike"
+          ],
+          "capacity": [
+            "Single Rider",
+            "Tandem"
+          ]
+        },
+        {
+          "name": "Tires",
+          "colors": [
+            "Black",
+            "Red",
+            "Blue",
+            "Yellow"
+          ],
+          "quantity": [
+            "1",
+            "2",
+            "4"
+          ],
+          "types": [
+            "Mountain Bike",
+            "Road Bike",
+            "Hybrid Bike"
+          ]
+        },
+        {
+          "name": "Helmet",
+          "colors": [
+            "Black",
+            "Red",
+            "Blue",
+            "Yellow",
+            "White"
+          ],
+          "models": [
+            "Mountain Bike",
+            "Road Bike",
+            "Hybrid Bike"
+          ],
+          "types": [
+            "Full-Face",
+            "Half-Face",
+            "Road",
+            "MTB",
+            "Urban"
+          ],
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ]
+        },
+        {
+          "name": "Hydration Bottles",
+          "colors": [
+            "Red",
+            "Blue",
+            "Green",
+            "Black",
+            "White"
+          ],
+          "quantity": [
+            "1",
+            "2",
+            "4",
+            "6"
+          ],
+          "capacity": [
+            "500 ml",
+            "750 ml",
+            "1 liter"
+          ]
+        },
+        {
+          "name": "Phone Straps",
+          "colors": [
+            "Black",
+            "Red",
+            "Blue",
+            "Yellow",
+            "White"
+          ],
+          "types": [
+            "Universal",
+            "Waterproof"
+          ],
+          "sizes": [
+            "Small",
+            "Medium",
+            "Large"
+          ]
+        },
+        {
+          "name": "Levers",
+          "colors": [
+            "Black",
+            "Red",
+            "Blue",
+            "Yellow"
+          ],
+          "quantity": [
+            "2",
+            "4"
+          ],
+          "types": [
+            "Mountain Bike",
+            "Road Bike",
+            "Hybrid Bike"
+          ]
+        },
+        {
+          "name": "Spare Tube",
+          "types": [
+            "Mountain Bike",
+            "Road Bike",
+            "Hybrid Bike"
+          ],
+          "sizes": [
+            "26 inches",
+            "27.5 inches",
+            "29 inches"
+          ]
+        },
+        {
+          "name": "Pump",
+          "types": [
+            "Floor Pump",
+            "Hand Pump"
+          ],
+          "colors": [
+            "Black",
+            "Red",
+            "Blue",
+            "Yellow"
+          ],
+          "sizes": [
+            "Small",
+            "Medium",
+            "Large"
+          ]
+        },
+        {
+          "name": "Multi Tool",
+          "colors": [
+            "Black",
+            "Red",
+            "Blue",
+            "Yellow"
+          ],
+          "types": [
+            "MTB",
+            "Road Bike",
+            "Hybrid Bike"
+          ],
+          "sizes": [
+            "Small",
+            "Medium",
+            "Large"
+          ]
+        },
+        {
+          "name": "Lights",
+          "types": "Front and Rear Lights"
+        },
+        {
+          "name": "Bike Locks"
+        },
+        {
+          "name": "Sunglasses",
+          "types": "Polarized Sunglasses"
+        },
+        {
+          "name": "Vests",
+          "types": "Reflective Vest"
+        },
+        {
+          "name": "Attire",
+          "types": "Moisture-Wicking T-Shirt"
+        },
+        {
+          "name": "Trekking Poles",
+          "types": "Collapsible Trekking Poles"
+        },
+        {
+          "name": "Bandana"
+        },
+        {
+          "name": "First Aid Kit",
+          "types": "Compact First Aid Kit"
+        }
+      ]
+    },
+    {
+      "category": "Board and Card Games",
+      "subcategories": [
+        {
+          "name": "Roll and Move Games",
+          "ageRange": "5+",
+          "quantity": "2-4 players"
+        },
+        {
+          "name": "Deck Building Games",
+          "ageRange": "10+",
+          "quantity": "2-4 players"
+        },
+        {
+          "name": "Tag Team Games",
+          "ageRange": "8+",
+          "quantity": "2-6 players"
+        },
+        {
+          "name": "Strategy Games",
+          "ageRange": "12+",
+          "quantity": "2-5 players"
+        },
+        {
+          "name": "Social Games",
+          "ageRange": "14+",
+          "quantity": "3-8 players"
+        },
+        {
+          "name": "RPG Games",
+          "ageRange": "16+",
+          "quantity": "2-6 players"
+        }
+      ]
+    },
+    {
+      "category": "Body Care Equipment",
+      "subcategories": [
+        {
+          "name": "Handbags",
+          "types": [
+            "Tote Bag",
+            "Clutch Bag",
+            "Shoulder Bag",
+            "Crossbody Bag"
+          ]
+        },
+        {
+          "name": "Lint Rollers",
+          "models": [
+            "Reusable",
+            "Disposable"
+          ]
+        },
+        {
+          "name": "Massager",
+          "target area": [
+            "Back",
+            "Neck",
+            "Shoulders",
+            "Feet"
+          ]
+        },
+        {
+          "name": "Razors",
+          "types": [
+            "Disposable",
+            "Cartridge",
+            "Electric"
+          ]
+        },
+        {
+          "name": "Toning Device",
+          "target area": [
+            "Face",
+            "Neck",
+            "Body"
+          ]
+        },
+        {
+          "name": "Face Masks",
+          "types": [
+            "Sheet Mask",
+            "Clay Mask",
+            "Gel Mask"
+          ]
+        },
+        {
+          "name": "Rollers",
+          "types": [
+            "Jade Roller",
+            "Rose Quartz Roller",
+            "Ice Roller"
+          ]
+        },
+        {
+          "name": "Light Therapy",
+          "target area": [
+            "Face",
+            "Acne",
+            "Hair Growth"
+          ]
+        },
+        {
+          "name": "Steamer",
+          "target area": [
+            "Face",
+            "Clothes"
+          ]
+        },
+        {
+          "name": "Cleansing Brush",
+          "target area": [
+            "Face",
+            "Body"
+          ]
+        },
+        {
+          "name": "Clippers",
+          "target area": [
+            "Hair",
+            "Nails"
+          ]
+        },
+        {
+          "name": "Tooth Brushes",
+          "types": [
+            "Manual",
+            "Electric"
+          ]
+        },
+        {
+          "name": "Shower Caps",
+          "models": [
+            "Disposable",
+            "Reusable"
+          ]
+        },
+        {
+          "name": "Face Towels",
+          "types": [
+            "Microfiber",
+            "Cotton"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Bottoms",
+      "subcategories": [
+        {
+          "name": "Jeans",
+          "sizes": [
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40",
+            "42",
+            "44",
+            "46"
+          ]
+        },
+        {
+          "name": "Pants",
+          "sizes": [
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40",
+            "42",
+            "44",
+            "46"
+          ]
+        },
+        {
+          "name": "Shorts",
+          "sizes": [
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40",
+            "42",
+            "44",
+            "46"
+          ]
+        },
+        {
+          "name": "Skirts",
+          "sizes": [
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40",
+            "42",
+            "44",
+            "46"
+          ]
+        },
+        {
+          "name": "Leggings",
+          "sizes": [
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40",
+            "42",
+            "44",
+            "46"
+          ]
+        },
+        {
+          "name": "Joggers",
+          "sizes": [
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40",
+            "42",
+            "44",
+            "46"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Camera Equipment",
+      "subcategories": [
+        {
+          "name": "Camera",
+          "models": [
+            "Canon EOS R5",
+            "Sony A7R IV",
+            "Nikon Z7 II",
+            "Panasonic Lumix GH5",
+            "Fujifilm X-T4"
+          ]
+        },
+        {
+          "name": "Stand",
+          "features": [
+            "Adjustable height",
+            "360-degree rotation",
+            "Foldable",
+            "Rubber feet",
+            "Carrying bag"
+          ]
+        },
+        {
+          "name": "Drones",
+          "models": [
+            "DJI Mavic 2 Pro",
+            "DJI Phantom 4 Pro",
+            "Autel Robotics EVO II",
+            "Parrot Anafi USA",
+            "Skydio 2"
+          ]
+        },
+        {
+          "name": "Lenses",
+          "models": [
+            "Canon EF 70-200mm f/2.8L IS III USM",
+            "Sony FE 70-200mm f/2.8 GM OSS",
+            "Nikon AF-S NIKKOR 70-200mm f/2.8E FL ED VR",
+            "Sigma 70-200mm f/2.8 DG OS HSM Sports",
+            "Tamron SP 70-200mm f/2.8 Di VC USD G2"
+          ]
+        },
+        {
+          "name": "Camera Straps",
+          "features": [
+            "Adjustable length",
+            "Padded",
+            "Quick release",
+            "Anti-slip",
+            "Breathable"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Car Accessories",
+      "subcategories": [
+        {
+          "name": "Seat Covers",
+          "target_area": "car seats",
+          "models": "universal",
+          "types": "cover"
+        },
+        {
+          "name": "Keys",
+          "target_area": "car doors",
+          "models": "various",
+          "types": "key"
+        },
+        {
+          "name": "Floor Mats",
+          "target_area": "car floors",
+          "models": "universal",
+          "types": "mat"
+        },
+        {
+          "name": "Air Refreshers",
+          "target_area": "car interior",
+          "models": "various",
+          "types": "refresher"
+        },
+        {
+          "name": "Car Cover",
+          "target_area": "car body",
+          "models": "universal",
+          "types": "cover"
+        },
+        {
+          "name": "Cleaning Cloth and Gels",
+          "target_area": "car interior and exterior",
+          "models": "various",
+          "types": "cleaner"
+        },
+        {
+          "name": "GPS Navigator",
+          "target_area": "car dashboard",
+          "models": "various",
+          "types": "navigator"
+        },
+        {
+          "name": "Puncture Repair Kits",
+          "target_area": "car tires",
+          "models": "universal",
+          "types": "repair kit"
+        },
+        {
+          "name": "Tire Inflation kits",
+          "target_area": "car tires",
+          "models": "universal",
+          "types": "inflation kit"
+        },
+        {
+          "name": "Jumper Cables",
+          "target_area": "car battery",
+          "models": "universal",
+          "types": "cable"
+        },
+        {
+          "name": "Parking Sensors",
+          "target_area": "car bumpers",
+          "models": "various",
+          "types": "sensor"
+        },
+        {
+          "name": "Car Paint Equipment",
+          "target_area": "car body",
+          "models": "various",
+          "types": "paint equipment"
+        }
+      ]
+    },
+    {
+      "category": "Car Parts",
+      "subcategories": [
+        {
+          "name": "Wheels",
+          "models": "Universal",
+          "types": "Alloy",
+          "target area": "Vehicle exterior"
+        },
+        {
+          "name": "Car Mirrors",
+          "models": "Universal",
+          "types": "Side view",
+          "target area": "Vehicle exterior"
+        },
+        {
+          "name": "Car Lights",
+          "models": "Universal",
+          "types": "Headlights",
+          "target area": "Vehicle exterior"
+        },
+        {
+          "name": "AC Compressor",
+          "models": "Universal",
+          "types": "AC component",
+          "target area": "Vehicle interior"
+        },
+        {
+          "name": "Spindle Knuckle",
+          "models": "Universal",
+          "types": "Steering component",
+          "target area": "Vehicle exterior"
+        },
+        {
+          "name": "Chasis Control Module",
+          "models": "Universal",
+          "types": "Electronic component",
+          "target area": "Vehicle interior"
+        },
+        {
+          "name": "Engine Parts",
+          "models": "Universal",
+          "types": "Engine component",
+          "target area": "Vehicle interior"
+        },
+        {
+          "name": "Alternator",
+          "models": "Universal",
+          "types": "Electric component",
+          "target area": "Vehicle interior"
+        },
+        {
+          "name": "Speedometer",
+          "models": "Universal",
+          "types": "Gauge",
+          "target area": "Vehicle interior"
+        },
+        {
+          "name": "Bumpers",
+          "models": "Universal",
+          "types": "Front and rear",
+          "target area": "Vehicle exterior"
+        },
+        {
+          "name": "Grills",
+          "models": "Universal",
+          "types": "Front",
+          "target area": "Vehicle exterior"
+        },
+        {
+          "name": "Leveling Kits",
+          "models": "Universal",
+          "types": "Suspension component",
+          "target area": "Vehicle exterior"
+        },
+        {
+          "name": "Shocks",
+          "models": "Universal",
+          "types": "Suspension component",
+          "target area": "Vehicle exterior"
+        },
+        {
+          "name": "Exhausts",
+          "models": "Universal",
+          "types": "Exhaust component",
+          "target area": "Vehicle exterior"
+        },
+        {
+          "name": "Spoilers",
+          "models": "Universal",
+          "types": "Aerodynamic component",
+          "target area": "Vehicle exterior"
+        }
+      ]
+    },
+    {
+      "category": "Combat Sports",
+      "subcategories": [
+        {
+          "name": "Gloves",
+          "types": [
+            "Boxing Gloves",
+            "MMA Gloves",
+            "Kickboxing Gloves"
+          ]
+        },
+        {
+          "name": "Wraps",
+          "types": [
+            "Hand Wraps",
+            "Wrist Wraps"
+          ]
+        },
+        {
+          "name": "Combat Sport Attire",
+          "types": [
+            "MMA Shorts",
+            "Rash Guards",
+            "Fight Shorts"
+          ]
+        },
+        {
+          "name": "Punching Bags",
+          "types": [
+            "Heavy Bags",
+            "Speed Bags",
+            "Double-End Bags"
+          ]
+        },
+        {
+          "name": "Guards",
+          "types": [
+            "Mouth Guards",
+            "Groin Protectors",
+            "Shin Guards"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Desk Items",
+      "subcategories": [
+        {
+          "name": "Staplers",
+          "types": [
+            "Full-Strip",
+            "Half-Strip",
+            "Mini",
+            "Electric"
+          ],
+          "colors": [
+            "Black",
+            "Silver",
+            "Red",
+            "Blue"
+          ],
+          "quantity": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            10
+          ]
+        },
+        {
+          "name": "Stick Notes",
+          "types": [
+            "Standard",
+            "Accordion",
+            "Cube"
+          ],
+          "colors": [
+            "Yellow",
+            "Pink",
+            "Green",
+            "Blue",
+            "Orange"
+          ],
+          "quantity": [
+            50,
+            100,
+            200,
+            300
+          ]
+        },
+        {
+          "name": "Glue",
+          "types": [
+            "Liquid",
+            "Gel",
+            "Stick"
+          ],
+          "colors": [
+            "Clear",
+            "White"
+          ],
+          "quantity": [
+            4,
+            8,
+            16,
+            32
+          ]
+        },
+        {
+          "name": "Calculator",
+          "types": [
+            "Basic",
+            "Scientific",
+            "Graphing"
+          ],
+          "colors": [
+            "Black",
+            "Silver",
+            "Blue",
+            "Pink"
+          ],
+          "quantity": [
+            1,
+            2,
+            5,
+            10
+          ]
+        },
+        {
+          "name": "Tape",
+          "types": [
+            "Transparent",
+            "Opaque",
+            "Double-Sided"
+          ],
+          "colors": [
+            "Clear",
+            "White"
+          ],
+          "sizes": [
+            "1/2 inch",
+            "3/4 inch",
+            "1 inch"
+          ],
+          "quantity": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "name": "Clips",
+          "types": [
+            "Binder Clips",
+            "Paper Clips",
+            "Bulldog Clips"
+          ],
+          "colors": [
+            "Black",
+            "Silver",
+            "Colorful"
+          ],
+          "sizes": [
+            "Small",
+            "Medium",
+            "Large"
+          ],
+          "quantity": [
+            25,
+            50,
+            100,
+            200
+          ]
+        },
+        {
+          "name": "Folders",
+          "types": [
+            "File Folders",
+            "Pocket Folders",
+            "Classification Folders"
+          ],
+          "colors": [
+            "Manila",
+            "Assorted Colors"
+          ],
+          "sizes": [
+            "Letter",
+            "Legal"
+          ],
+          "quantity": [
+            10,
+            25,
+            50
+          ]
+        },
+        {
+          "name": "Scissors",
+          "types": [
+            "Straight",
+            "Curved",
+            "Blunt-Tip",
+            "Pointed-Tip"
+          ],
+          "colors": [
+            "Black",
+            "Silver",
+            "Colorful"
+          ],
+          "sizes": [
+            "5 inch",
+            "7 inch",
+            "8 inch"
+          ],
+          "quantity": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Dresses",
+      "subcategories": [
+        {
+          "name": "Cocktail Dresses",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        },
+        {
+          "name": "Maxi Dresses",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        },
+        {
+          "name": "Summer Dresses",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Electronic Watches",
+      "subcategories": [
+        {
+          "name": "Fitbit",
+          "models": [
+            "Fitbit Charge 5",
+            "Fitbit Versa 3",
+            "Fitbit Inspire 2"
+          ]
+        },
+        {
+          "name": "Apple Watch",
+          "models": [
+            "Apple Watch Series 7",
+            "Apple Watch SE",
+            "Apple Watch Series 6",
+            "Apple Watch Series 5"
+          ]
+        },
+        {
+          "name": "Garmin",
+          "models": [
+            "Garmin Fenix 6 Pro",
+            "Garmin Vivoactive 4",
+            "Garmin Venu 2"
+          ]
+        },
+        {
+          "name": "Xiomi Mi",
+          "models": [
+            "Xiaomi Mi Watch"
+          ]
+        },
+        {
+          "name": "Coros Pace",
+          "models": [
+            "Coros Pace 2"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Essentials",
+      "subcategories": [
+        {
+          "name": "Pencils",
+          "types": [
+            "HB",
+            "2B",
+            "4B",
+            "6B"
+          ],
+          "colors": [
+            "black",
+            "blue"
+          ],
+          "quantity": [
+            12,
+            24,
+            36
+          ]
+        },
+        {
+          "name": "Erasers",
+          "types": [
+            "vinyl",
+            "kneaded"
+          ],
+          "colors": [
+            "white",
+            "gray"
+          ],
+          "quantity": [
+            2,
+            4,
+            6
+          ]
+        },
+        {
+          "name": "Highlighters",
+          "types": [
+            "chisel tip",
+            "pen tip"
+          ],
+          "colors": [
+            "yellow",
+            "green",
+            "pink"
+          ],
+          "quantity": [
+            3,
+            6,
+            12
+          ]
+        },
+        {
+          "name": "Ballpoint",
+          "types": [
+            "gel ink",
+            "oil-based ink"
+          ],
+          "colors": [
+            "black",
+            "blue",
+            "red"
+          ],
+          "quantity": [
+            10,
+            20,
+            30
+          ]
+        },
+        {
+          "name": "Fountain Pen",
+          "types": [
+            "fine nib",
+            "medium nib",
+            "broad nib"
+          ],
+          "colors": [
+            "black",
+            "blue"
+          ],
+          "quantity": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "Pencil Cases",
+          "types": [
+            "zipper",
+            "roll-up"
+          ],
+          "colors": [
+            "black",
+            "gray",
+            "pink"
+          ],
+          "sizes": [
+            "small",
+            "medium",
+            "large"
+          ]
+        },
+        {
+          "name": "School Bags",
+          "types": [
+            "backpack",
+            "shoulder bag"
+          ],
+          "colors": [
+            "black",
+            "blue",
+            "gray"
+          ],
+          "sizes": [
+            "small",
+            "medium",
+            "large"
+          ]
+        },
+        {
+          "name": "Sharpeners",
+          "types": [
+            "manual",
+            "electric"
+          ],
+          "colors": [
+            "white",
+            "gray",
+            "red"
+          ],
+          "sizes": [
+            "small",
+            "medium",
+            "large"
+          ]
+        },
+        {
+          "name": "Stamps",
+          "types": [
+            "self-inking",
+            "wooden"
+          ],
+          "colors": [
+            "black",
+            "red",
+            "blue"
+          ],
+          "sizes": [
+            "small",
+            "medium",
+            "large"
+          ]
+        },
+        {
+          "name": "Markers",
+          "types": [
+            "permanent",
+            "washable"
+          ],
+          "colors": [
+            "black",
+            "blue",
+            "red",
+            "green"
+          ],
+          "quantity": [
+            4,
+            8,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Fishing",
+      "subcategories": [
+        {
+          "name": "Sinker",
+          "types": "Weight"
+        },
+        {
+          "name": "Fishnet",
+          "types": "Mesh"
+        },
+        {
+          "name": "Rod",
+          "types": "Length"
+        },
+        {
+          "name": "Reel",
+          "types": "Gear Ratio"
+        },
+        {
+          "name": "Hook",
+          "types": "sizes"
+        },
+        {
+          "name": "Bait",
+          "types": "types"
+        },
+        {
+          "name": "Knot",
+          "types": "types"
+        },
+        {
+          "name": "Line",
+          "types": "Weight"
+        }
+      ]
+    },
+    {
+      "category": "Fitness Equipment",
+      "subcategories": [
+        {
+          "name": "Machines",
+          "types": [
+            "Cardio",
+            "Strength"
+          ]
+        },
+        {
+          "name": "Free Weights",
+          "types": [
+            "Dumbbells",
+            "Barbells",
+            "Kettlebells"
+          ]
+        },
+        {
+          "name": "Racks",
+          "types": [
+            "Barbell",
+            "Dumbbell"
+          ]
+        },
+        {
+          "name": "Benches",
+          "types": [
+            "Flat",
+            "Incline",
+            "Decline"
+          ]
+        },
+        {
+          "name": "Clips",
+          "types": [
+            "Spring",
+            "Collars"
+          ]
+        },
+        {
+          "name": "Treadmills",
+          "types": [
+            "Folding",
+            "Non-Folding"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Gaming Accessories",
+      "subcategories": [
+        {
+          "name": "Controllers",
+          "colors": [
+            "Black",
+            "White",
+            "Red",
+            "Blue"
+          ],
+          "types": [
+            "Gamepad",
+            "Joystick"
+          ],
+          "consoles": [
+            "PlayStation",
+            "Xbox",
+            "Nintendo"
+          ]
+        },
+        {
+          "name": "CD Games",
+          "genre": [
+            "Action",
+            "RPG",
+            "Sports",
+            "Adventure"
+          ],
+          "consoles": [
+            "PlayStation",
+            "Xbox"
+          ]
+        },
+        {
+          "name": "Headsets",
+          "colors": [
+            "Black",
+            "White",
+            "Red",
+            "Blue"
+          ],
+          "types": [
+            "Wired",
+            "Wireless"
+          ],
+          "consoles": [
+            "PlayStation",
+            "Xbox",
+            "PC"
+          ]
+        },
+        {
+          "name": "Controller Stands",
+          "colors": [
+            "Black",
+            "White",
+            "Red",
+            "Blue"
+          ],
+          "consoles": [
+            "PlayStation",
+            "Xbox",
+            "Nintendo"
+          ]
+        },
+        {
+          "name": "Microphone",
+          "colors": [
+            "Black",
+            "White"
+          ],
+          "types": [
+            "Wired",
+            "Wireless"
+          ],
+          "consoles": [
+            "PlayStation",
+            "Xbox"
+          ]
+        },
+        {
+          "name": "Camera",
+          "colors": [
+            "Black",
+            "White"
+          ],
+          "types": [
+            "Wired",
+            "Wireless"
+          ],
+          "consoles": [
+            "PlayStation",
+            "Xbox",
+            "PC"
+          ]
+        },
+        {
+          "name": "Controller Cover",
+          "colors": [
+            "Black",
+            "White",
+            "Red",
+            "Blue"
+          ],
+          "consoles": [
+            "PlayStation",
+            "Xbox",
+            "Nintendo"
+          ]
+        },
+        {
+          "name": "Console Cover",
+          "colors": [
+            "Black",
+            "White",
+            "Red",
+            "Blue"
+          ],
+          "consoles": [
+            "PlayStation",
+            "Xbox",
+            "Nintendo"
+          ]
+        },
+        {
+          "name": "VR Headset",
+          "colors": [
+            "Black",
+            "White"
+          ],
+          "consoles": [
+            "PlayStation",
+            "PC"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Gaming Consoles",
+      "subcategories": [
+        {
+          "name": "PlayStation 5",
+          "models": [
+            "Standard Edition",
+            "Digital Edition"
+          ],
+          "colors": [
+            "White",
+            "Black",
+            "Red",
+            "Blue"
+          ],
+          "storage": [
+            "825GB SSD",
+            "Digital Edition Only"
+          ]
+        },
+        {
+          "name": "Xbox Series X/S",
+          "models": [
+            "Series X",
+            "Series S"
+          ],
+          "colors": [
+            "Black",
+            "White"
+          ],
+          "storage": [
+            "1TB SSD",
+            "512GB SSD"
+          ]
+        },
+        {
+          "name": "Nintendo Switch",
+          "models": [
+            "Standard",
+            "Lite"
+          ],
+          "colors": [
+            "Neon Red/Blue",
+            "Gray",
+            "Coral",
+            "Yellow",
+            "Turquoise"
+          ],
+          "storage": [
+            "32GB Internal Storage",
+            "Expandable with microSDHC or microSDXC cards"
+          ]
+        },
+        {
+          "name": "PlayStation 4",
+          "models": [
+            "Pro",
+            "Slim"
+          ],
+          "colors": [
+            "Jet Black",
+            "Glacier White"
+          ],
+          "storage": [
+            "1TB HDD",
+            "500GB HDD"
+          ]
+        },
+        {
+          "name": "Xbox One",
+          "models": [
+            "X",
+            "S"
+          ],
+          "colors": [
+            "Black",
+            "White"
+          ],
+          "storage": [
+            "1TB HDD",
+            "500GB HDD"
+          ]
+        },
+        {
+          "name": "Nintendo Wii U",
+          "models": [
+            "Deluxe",
+            "Basic"
+          ],
+          "colors": [
+            "Black",
+            "White"
+          ],
+          "storage": [
+            "32GB Internal Storage"
+          ]
+        },
+        {
+          "name": "PlayStation 3",
+          "models": [
+            "Super Slim"
+          ],
+          "colors": [
+            "Charcoal Black",
+            "Classic White"
+          ],
+          "storage": [
+            "250GB HDD",
+            "500GB HDD"
+          ]
+        },
+        {
+          "name": "Xbox 360",
+          "models": [
+            "S",
+            "E"
+          ],
+          "colors": [
+            "Black",
+            "White"
+          ],
+          "storage": [
+            "4GB or 250GB HDD",
+            "320GB HDD"
+          ]
+        },
+        {
+          "name": "Nintendo Wii",
+          "models": [
+            "Standard"
+          ],
+          "colors": [
+            "White",
+            "Black"
+          ],
+          "storage": [
+            "512MB Internal Flash Memory",
+            "Expandable with SD memory cards"
+          ]
+        },
+        {
+          "name": "Nintendo GameCube",
+          "models": [
+            "Standard"
+          ],
+          "colors": [
+            "Indigo",
+            "Jet Black",
+            "Platinum"
+          ],
+          "storage": [
+            "1.5GB Mini DVD Discs"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Garden and Backyard",
+      "subcategories": [
+        {
+          "name": "Garden Hose",
+          "types": "Expandable Hose"
+        },
+        {
+          "name": "Fertilizer",
+          "types": [
+            "Liquid Fertilizer",
+            "Solid Fertilizer"
+          ]
+        },
+        {
+          "name": "Seeds",
+          "types": [
+            "Vegetable Seeds",
+            "Fruit Seeds"
+          ]
+        },
+        {
+          "name": "Wheelbarrow",
+          "types": "Single Wheel"
+        },
+        {
+          "name": "Gardening Tools",
+          "types": "Garden Tool Set",
+          "quantity": "5 pieces"
+        },
+        {
+          "name": "Fences",
+          "types": "Garden Fence"
+        },
+        {
+          "name": "Pots",
+          "types": "Terracotta Pot"
+        }
+      ]
+    },
+    {
+      "category": "Gym Accessories",
+      "subcategories": [
+        {
+          "name": "Gym Bags",
+          "types": [
+            "Duffle Bag",
+            "Backpack",
+            "Tote Bag"
+          ],
+          "target_areas": [
+            "Upper Body",
+            "Lower Body",
+            "Full Body"
+          ],
+          "models": [
+            "Basic",
+            "Water-Resistant",
+            "Multi-Compartment"
+          ]
+        },
+        {
+          "name": "Lifting Belts",
+          "types": [
+            "Powerlifting Belt",
+            "Olympic Weightlifting Belt"
+          ],
+          "target_areas": [
+            "Core"
+          ],
+          "models": [
+            "Leather",
+            "Nylon"
+          ]
+        },
+        {
+          "name": "Lifting Gloves",
+          "types": [
+            "Full Finger",
+            "Half Finger"
+          ],
+          "target_areas": [
+            "Hands"
+          ],
+          "models": [
+            "Leather",
+            "Neoprene"
+          ]
+        },
+        {
+          "name": "Yoga Mats",
+          "types": [
+            "Regular",
+            "Extra Thick",
+            "Travel"
+          ],
+          "target_areas": [
+            "Full Body"
+          ],
+          "models": [
+            "Eco-Friendly",
+            "Non-Slip"
+          ]
+        },
+        {
+          "name": "Shaker Cups",
+          "types": [
+            "Regular",
+            "Blender Bottle"
+          ],
+          "target_areas": [
+            "Full Body"
+          ],
+          "models": [
+            "Plastic",
+            "Stainless Steel"
+          ]
+        },
+        {
+          "name": "Towels",
+          "types": [
+            "Gym Towel",
+            "Sweat Towel"
+          ],
+          "target_areas": [
+            "Full Body"
+          ],
+          "models": [
+            "Microfiber",
+            "Cotton"
+          ]
+        },
+        {
+          "name": "Foam Rollers",
+          "types": [
+            "Regular",
+            "Textured"
+          ],
+          "target_areas": [
+            "Full Body"
+          ],
+          "models": [
+            "High Density",
+            "Medium Density"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Hair Care",
+      "subcategories": [
+        {
+          "name": "Shampoo and Conditioners",
+          "target_area": [
+            "Hair"
+          ],
+          "types": [
+            "Normal",
+            "Dry",
+            "Oily",
+            "Color-Treated"
+          ],
+          "models": [
+            "Volume-Boosting",
+            "Anti-Dandruff",
+            "Repairing"
+          ]
+        },
+        {
+          "name": "Hair Brushes",
+          "types": [
+            "Paddle Brush",
+            "Round Brush",
+            "Vent Brush",
+            "Teasing Brush"
+          ],
+          "models": [
+            "Boar Bristle",
+            "Synthetic Bristle",
+            "Ceramic"
+          ]
+        },
+        {
+          "name": "Hair Oils",
+          "target_area": [
+            "Scalp",
+            "Hair"
+          ],
+          "types": [
+            "Coconut Oil",
+            "Argan Oil",
+            "Castor Oil",
+            "Jojoba Oil",
+            "Almond Oil"
+          ]
+        },
+        {
+          "name": "Leave On Products",
+          "target_area": [
+            "Hair"
+          ],
+          "types": [
+            "Serum",
+            "Hair Cream",
+            "Hair Gel"
+          ]
+        },
+        {
+          "name": "Hair Dryer",
+          "models": [
+            "Ionic",
+            "Ceramic",
+            "Tourmaline"
+          ],
+          "capacity": [
+            "1200W",
+            "1500W",
+            "2000W"
+          ]
+        },
+        {
+          "name": "Hair Spray",
+          "types": [
+            "Flexible Hold",
+            "Strong Hold",
+            "Extra Strong Hold"
+          ],
+          "target_area": [
+            "Hair"
+          ]
+        },
+        {
+          "name": "Wigs",
+          "target_area": [
+            "Head"
+          ],
+          "types": [
+            "Lace Front",
+            "Full Lace",
+            "Synthetic",
+            "Human Hair"
+          ]
+        },
+        {
+          "name": "Extensions",
+          "target_area": [
+            "Hair"
+          ],
+          "types": [
+            "Clip-In",
+            "Tape-In",
+            "Sew-In"
+          ],
+          "colors": [
+            "Blonde",
+            "Brunette",
+            "Black",
+            "Red"
+          ]
+        },
+        {
+          "name": "Hair Ties",
+          "types": [
+            "Elastic",
+            "Scrunchie"
+          ],
+          "colors": [
+            "Black",
+            "Brown",
+            "Blonde",
+            "Red"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Inflatables",
+      "subcategories": [
+        {
+          "name": "Inflatable Houses",
+          "age_range": "3+",
+          "capacity": "6 kids"
+        },
+        {
+          "name": "Inflatable Chairs"
+        },
+        {
+          "name": "Inflatable Figures",
+          "types": "Giraffe"
+        },
+        {
+          "name": "Inflatable Swimming Pools",
+          "capacity": "120 gallons",
+          "age_range": "6+"
+        },
+        {
+          "name": "Inflatable Swimming Accessories",
+          "types": "Arm Floaties",
+          "age_range": "3-6"
+        }
+      ]
+    },
+    {
+      "category": "Intimates",
+      "subcategories": [
+        {
+          "name": "Bras",
+          "sizes": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40",
+            "42",
+            "44"
+          ]
+        },
+        {
+          "name": "Panties",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        },
+        {
+          "name": "Lingerie Sets",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        },
+        {
+          "name": "Shapewear",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        },
+        {
+          "name": "Sleepwear",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Kids Magazines",
+      "subcategories": [
+        {
+          "name": "Comic Books",
+          "age_range": "7+"
+        },
+        {
+          "name": "Coloring Books",
+          "age_range": "4+"
+        },
+        {
+          "name": "3D Books",
+          "age_range": "5+"
+        },
+        {
+          "name": "Educational Books",
+          "age_range": "8+",
+          "types": "Science"
+        },
+        {
+          "name": "Puzzles",
+          "age_range": "6+"
+        }
+      ]
+    },
+    {
+      "category": "Kitchen",
+      "subcategories": [
+        {
+          "name": "Eating Utensils",
+          "types": [
+            "Forks",
+            "Spoons",
+            "Knives"
+          ],
+          "quantity": [
+            4,
+            6,
+            8,
+            12
+          ]
+        },
+        {
+          "name": "Cooking Utensils",
+          "types": [
+            "Spatulas",
+            "Spoons",
+            "Whisks"
+          ],
+          "colors": [
+            "Silver",
+            "Black",
+            "Red"
+          ]
+        },
+        {
+          "name": "Plates",
+          "sizes": [
+            "Small",
+            "Medium",
+            "Large"
+          ],
+          "colors": [
+            "White",
+            "Black",
+            "Blue"
+          ]
+        },
+        {
+          "name": "Pans",
+          "types": [
+            "Frying Pans",
+            "Sauté Pans",
+            "Grill Pans"
+          ],
+          "sizes": [
+            "Small",
+            "Medium",
+            "Large"
+          ]
+        },
+        {
+          "name": "Bowls",
+          "sizes": [
+            "Small",
+            "Medium",
+            "Large"
+          ],
+          "colors": [
+            "White",
+            "Blue",
+            "Green"
+          ]
+        },
+        {
+          "name": "Cooking Knives",
+          "types": [
+            "Chef's Knife",
+            "Paring Knife",
+            "Serrated Knife"
+          ],
+          "colors": [
+            "Silver",
+            "Black",
+            "Red"
+          ]
+        },
+        {
+          "name": "Trays",
+          "sizes": [
+            "Small",
+            "Medium",
+            "Large"
+          ],
+          "colors": [
+            "White",
+            "Black",
+            "Wooden"
+          ]
+        },
+        {
+          "name": "Pan Holder",
+          "sizes": [
+            "Small",
+            "Medium",
+            "Large"
+          ],
+          "colors": [
+            "Silver",
+            "Black",
+            "Red"
+          ]
+        },
+        {
+          "name": "Liquid Containers",
+          "sizes": [
+            "Small",
+            "Medium",
+            "Large"
+          ],
+          "colors": [
+            "Clear",
+            "Blue",
+            "Green"
+          ]
+        },
+        {
+          "name": "Cutting Boards",
+          "sizes": [
+            "Small",
+            "Medium",
+            "Large"
+          ],
+          "colors": [
+            "Wooden",
+            "Plastic"
+          ]
+        },
+        {
+          "name": "Food Scale",
+          "capacity": [
+            "1kg",
+            "3kg",
+            "5kg"
+          ],
+          "colors": [
+            "White",
+            "Black",
+            "Red"
+          ]
+        },
+        {
+          "name": "Measuring Utensils",
+          "types": [
+            "Cups",
+            "Spoons"
+          ],
+          "quantity": [
+            4,
+            6,
+            8,
+            12
+          ]
+        },
+        {
+          "name": "Cups",
+          "sizes": [
+            "Small",
+            "Medium",
+            "Large"
+          ],
+          "colors": [
+            "White",
+            "Black",
+            "Blue"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Kitchen Appliances",
+      "subcategories": [
+        {
+          "name": "Kettles",
+          "colors": [
+            "Black",
+            "White",
+            "Silver",
+            "Red"
+          ],
+          "models": [
+            "Electric",
+            "Stovetop"
+          ],
+          "capacity": [
+            "1L",
+            "1.5L",
+            "2L",
+            "2.5L",
+            "3L",
+            "3.5L"
+          ]
+        },
+        {
+          "name": "Coffee Makers",
+          "colors": [
+            "Black",
+            "White",
+            "Silver",
+            "Red"
+          ],
+          "models": [
+            "Drip",
+            "French Press",
+            "Espresso",
+            "Single Serve"
+          ],
+          "capacity": [
+            "4 cups",
+            "6 cups",
+            "8 cups",
+            "10 cups",
+            "12 cups"
+          ]
+        },
+        {
+          "name": "Blenders",
+          "colors": [
+            "Black",
+            "White",
+            "Silver",
+            "Red"
+          ],
+          "models": [
+            "Countertop",
+            "Personal"
+          ],
+          "capacity": [
+            "20 oz",
+            "32 oz",
+            "48 oz",
+            "64 oz"
+          ]
+        },
+        {
+          "name": "Mixers",
+          "colors": [
+            "Black",
+            "White",
+            "Silver",
+            "Red"
+          ],
+          "models": [
+            "Stand",
+            "Handheld"
+          ],
+          "power": [
+            "250W",
+            "350W",
+            "500W",
+            "750W"
+          ]
+        },
+        {
+          "name": "Stoves",
+          "colors": [
+            "Black",
+            "White",
+            "Silver"
+          ],
+          "models": [
+            "Gas",
+            "Electric",
+            "Induction"
+          ],
+          "burners": [
+            "2-burner",
+            "4-burner",
+            "6-burner"
+          ]
+        },
+        {
+          "name": "Ovens",
+          "colors": [
+            "Black",
+            "White",
+            "Silver"
+          ],
+          "models": [
+            "Gas",
+            "Electric",
+            "Double"
+          ],
+          "capacity": [
+            "30L",
+            "40L",
+            "50L",
+            "60L"
+          ]
+        },
+        {
+          "name": "Microwaves",
+          "colors": [
+            "Black",
+            "White",
+            "Silver"
+          ],
+          "models": [
+            "Countertop",
+            "Over-the-range"
+          ],
+          "capacity": [
+            "0.7 cu ft",
+            "1.1 cu ft",
+            "1.4 cu ft",
+            "1.6 cu ft"
+          ]
+        },
+        {
+          "name": "Fans",
+          "colors": [
+            "Black",
+            "White",
+            "Silver"
+          ],
+          "models": [
+            "Tower",
+            "Pedestal",
+            "Table"
+          ],
+          "height": [
+            "24\"",
+            "36\"",
+            "48\""
+          ]
+        },
+        {
+          "name": "Air Fryers",
+          "colors": [
+            "Black",
+            "White",
+            "Silver"
+          ],
+          "models": [
+            "Digital",
+            "Analog"
+          ],
+          "capacity": [
+            "2.5L",
+            "3.5L",
+            "5.5L"
+          ]
+        },
+        {
+          "name": "Steamers",
+          "colors": [
+            "Black",
+            "White",
+            "Silver"
+          ],
+          "models": [
+            "Electric",
+            "Stovetop"
+          ],
+          "capacity": [
+            "1 tier",
+            "2 tier",
+            "3 tier"
+          ]
+        },
+        {
+          "name": "Washing Machines",
+          "colors": [
+            "Black",
+            "White",
+            "Silver"
+          ],
+          "models": [
+            "Front-load",
+            "Top-load"
+          ],
+          "capacity": [
+            "5kg",
+            "7kg",
+            "9kg",
+            "11kg"
+          ]
+        },
+        {
+          "name": "Toasters",
+          "sizes": [
+            "2-Slice",
+            "4-Slice"
+          ],
+          "colors": [
+            "Black",
+            "Silver",
+            "White"
+          ],
+          "models": [
+            "Digital",
+            "Manual"
+          ]
+        },
+        {
+          "name": "Grills",
+          "sizes": [
+            "Small",
+            "Medium",
+            "Large"
+          ],
+          "colors": [
+            "Black",
+            "Silver",
+            "Red"
+          ],
+          "models": [
+            "Indoor",
+            "Outdoor"
+          ]
+        },
+        {
+          "name": "Dishwashers",
+          "sizes": [
+            "Small",
+            "Medium",
+            "Large"
+          ],
+          "colors": [
+            "Black",
+            "White",
+            "Stainless Steel"
+          ],
+          "models": [
+            "Portable",
+            "Built-in"
+          ]
+        },
+        {
+          "name": "Stoves",
+          "sizes": [
+            "Small",
+            "Medium",
+            "Large"
+          ],
+          "colors": [
+            "Black",
+            "Stainless Steel",
+            "White"
+          ],
+          "models": [
+            "Gas",
+            "Electric"
+          ]
+        },
+        {
+          "name": "Juicers",
+          "sizes": [
+            "Small",
+            "Medium",
+            "Large"
+          ],
+          "colors": [
+            "Black",
+            "Silver",
+            "White"
+          ],
+          "models": [
+            "Centrifugal",
+            "Masticating"
+          ]
+        },
+        {
+          "name": "Hoovers",
+          "sizes": [
+            "Small",
+            "Medium",
+            "Large"
+          ],
+          "colors": [
+            "Black",
+            "Silver",
+            "Red"
+          ],
+          "models": [
+            "Upright",
+            "Canister"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Laptop and Tablet Parts",
+      "subcategories": [
+        {
+          "name": "Screens",
+          "sizes": [
+            "11.6 inch",
+            "13.3 inch",
+            "15.6 inch",
+            "17.3 inch",
+            "14 inch",
+            "12.9 inch"
+          ]
+        },
+        {
+          "name": "Frames",
+          "features": [
+            "Metal",
+            "Plastic",
+            "Carbon Fiber"
+          ]
+        },
+        {
+          "name": "Motherboards",
+          "models": [
+            "Lenovo",
+            "HP",
+            "Dell",
+            "Apple",
+            "Acer",
+            "Asus",
+            "Toshiba",
+            "IBM",
+            "Samsung"
+          ]
+        },
+        {
+          "name": "Batteries",
+          "models": [
+            "HP",
+            "Dell",
+            "Apple",
+            "Acer",
+            "Asus",
+            "Toshiba",
+            "Lenovo"
+          ]
+        },
+        {
+          "name": "Keyboard",
+          "features": [
+            "Backlit",
+            "Non-backlit",
+            "Wireless"
+          ]
+        },
+        {
+          "name": "Hinges",
+          "features": [
+            "Left",
+            "Right",
+            "Center"
+          ]
+        },
+        {
+          "name": "Chargers",
+          "models": [
+            "Lenovo",
+            "HP",
+            "Dell",
+            "Apple",
+            "Acer",
+            "Asus",
+            "Toshiba",
+            "Microsoft"
+          ]
+        },
+        {
+          "name": "Wires",
+          "features": [
+            "USB Type-C",
+            "Lightning",
+            "Micro USB",
+            "Thunderbolt"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Laptops and Tablets",
+      "subcategories": [
+        {
+          "name": "Lenovo",
+          "models": [
+            "ThinkPad X1 Carbon",
+            "IdeaPad 5",
+            "Yoga C940",
+            "ThinkBook 13s",
+            "ThinkPad T14s",
+            "Legion 5"
+          ]
+        },
+        {
+          "name": "HP",
+          "models": [
+            "Spectre x360",
+            "Envy x360",
+            "EliteBook x360",
+            "Pavilion x360",
+            "Omen",
+            "ProBook 445 G8"
+          ]
+        },
+        {
+          "name": "Dell",
+          "models": [
+            "XPS 13",
+            "Latitude 7420",
+            "Inspiron 14 5000",
+            "G5 15",
+            "Precision 5750",
+            "Alienware m15 R5"
+          ]
+        },
+        {
+          "name": "Apple",
+          "models": [
+            "MacBook Air",
+            "MacBook Pro",
+            "iPad Pro",
+            "iPad Air",
+            "iPad mini"
+          ]
+        },
+        {
+          "name": "Acer",
+          "models": [
+            "Swift 5",
+            "Aspire 5",
+            "Spin 5",
+            "Chromebook Spin 713",
+            "Predator Triton 500"
+          ]
+        },
+        {
+          "name": "Asus",
+          "models": [
+            "ZenBook 13",
+            "VivoBook S14",
+            "ROG Zephyrus G14",
+            "TUF Dash F15",
+            "Chromebook Flip C434"
+          ]
+        },
+        {
+          "name": "Toshiba",
+          "models": [
+            "Dynabook Portege X30W-J",
+            "Dynabook Tecra A50-J",
+            "Dynabook Satellite Pro L50-G"
+          ]
+        },
+        {
+          "name": "IBM",
+          "models": [
+            "ThinkPad X1 Carbon",
+            "ThinkPad X13",
+            "ThinkPad T14s",
+            "ThinkPad L14",
+            "ThinkPad P14s"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Living Room",
+      "subcategories": [
+        {
+          "name": "Sofa",
+          "colors": [
+            "Black",
+            "Grey",
+            "White",
+            "Blue"
+          ],
+          "quantity": [
+            "1-seater",
+            "2-seater",
+            "3-seater"
+          ],
+          "types": [
+            "Sectional",
+            "Recliner",
+            "Sleeper"
+          ]
+        },
+        {
+          "name": "Side Chairs",
+          "colors": [
+            "Black",
+            "Grey",
+            "White",
+            "Blue"
+          ],
+          "quantity": [
+            "Single",
+            "Set of 2",
+            "Set of 4"
+          ],
+          "types": [
+            "Armchair",
+            "Accent Chair",
+            "Swivel Chair"
+          ]
+        },
+        {
+          "name": "Tables",
+          "colors": [
+            "Black",
+            "Brown",
+            "White",
+            "Grey"
+          ],
+          "quantity": [
+            "Single",
+            "Set of 2",
+            "Set of 3"
+          ],
+          "types": [
+            "Coffee Table",
+            "End Table",
+            "Console Table"
+          ]
+        },
+        {
+          "name": "Clocks",
+          "colors": [
+            "Black",
+            "Silver",
+            "Gold",
+            "Rose Gold"
+          ],
+          "types": [
+            "Analog",
+            "Digital",
+            "Wall Clock"
+          ]
+        },
+        {
+          "name": "Mirrors",
+          "colors": [
+            "Black",
+            "Silver",
+            "Gold",
+            "Rose Gold"
+          ],
+          "types": [
+            "Floor Mirror",
+            "Wall Mirror",
+            "Vanity Mirror"
+          ]
+        },
+        {
+          "name": "Carpets",
+          "colors": [
+            "Black",
+            "Grey",
+            "White",
+            "Blue"
+          ],
+          "types": [
+            "Area Rug",
+            "Runner",
+            "Outdoor Rug"
+          ]
+        },
+        {
+          "name": "Plants",
+          "types": [
+            "Artificial",
+            "Real"
+          ],
+          "genre": [
+            "Flowers",
+            "Trees",
+            "Cacti"
+          ]
+        },
+        {
+          "name": "Tea Set",
+          "colors": [
+            "Black",
+            "White",
+            "Blue",
+            "Red"
+          ],
+          "quantity": [
+            "Single",
+            "Set of 2",
+            "Set of 4"
+          ],
+          "types": [
+            "Teapot",
+            "Teacups",
+            "Saucers"
+          ]
+        },
+        {
+          "name": "Paintings",
+          "colors": [
+            "Multi-color"
+          ],
+          "genre": [
+            "Landscape",
+            "Abstract",
+            "Portrait"
+          ]
+        },
+        {
+          "name": "Vases",
+          "colors": [
+            "Black",
+            "White",
+            "Blue",
+            "Green"
+          ],
+          "types": [
+            "Ceramic",
+            "Glass",
+            "Metal"
+          ]
+        },
+        {
+          "name": "Cushioning",
+          "colors": [
+            "Black",
+            "Grey",
+            "White",
+            "Blue"
+          ],
+          "types": [
+            "Throw Pillow",
+            "Floor Cushion",
+            "Pillow Cover"
+          ]
+        },
+        {
+          "name": "Fireplace",
+          "types": [
+            "Electric",
+            "Gas",
+            "Wood-burning"
+          ]
+        },
+        {
+          "name": "Curtains",
+          "colors": [
+            "Black",
+            "Grey",
+            "White",
+            "Blue"
+          ],
+          "quantity": [
+            "Single",
+            "Set of 2",
+            "Set of 4"
+          ],
+          "types": [
+            "Sheer",
+            "Blackout",
+            "Thermal"
+          ]
+        },
+        {
+          "name": "Bookshelf",
+          "models": [
+            "Traditional",
+            "Modern",
+            "Industrial"
+          ],
+          "capacity": [
+            "Small",
+            "Medium",
+            "Large"
+          ]
+        },
+        {
+          "name": "Home Fragrances",
+          "types": [
+            "Candles",
+            "Diffusers",
+            "Sprays"
+          ],
+          "fragrance": [
+            "Floral",
+            "Citrus",
+            "Woody"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Makeup",
+      "subcategories": [
+        {
+          "name": "Lip Cosmetics",
+          "target area": "Lips",
+          "types": [
+            "Lipstick",
+            "Lip Gloss",
+            "Lip Liner"
+          ]
+        },
+        {
+          "name": "Conselear",
+          "target area": "Face",
+          "types": [
+            "Liquid",
+            "Cream",
+            "Powder"
+          ]
+        },
+        {
+          "name": "Foundation",
+          "target area": "Face",
+          "types": [
+            "Liquid",
+            "Cream",
+            "Powder"
+          ]
+        },
+        {
+          "name": "Eye Cosmetics",
+          "target area": "Eyes",
+          "types": [
+            "Mascara",
+            "Eyeliner",
+            "Eyeshadow"
+          ]
+        },
+        {
+          "name": "Nail Polish",
+          "target area": "Nails",
+          "types": [
+            "Gel",
+            "Regular"
+          ]
+        },
+        {
+          "name": "Makeup Brushes",
+          "target area": "Face",
+          "types": [
+            "Blush/Contour",
+            "Foundation",
+            "Concealer Brush"
+          ]
+        },
+        {
+          "name": "Blenders",
+          "types": [
+            "Sponge",
+            "Brush"
+          ]
+        },
+        {
+          "name": "Palets",
+          "target area": "Face/Eyes",
+          "types": [
+            "Eyeshadow",
+            "Blush",
+            "Highlighter Palet"
+          ]
+        },
+        {
+          "name": "Face Powder",
+          "target area": "Face",
+          "types": [
+            "Pressed",
+            "Loose"
+          ]
+        },
+        {
+          "name": "Cleanser",
+          "target area": "Face",
+          "types": [
+            "Facial Cleanser",
+            "Makeup Remover"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Mobile Accessories",
+      "subcategories": [
+        {
+          "name": "Battery Charging Cases",
+          "features": [
+            "Wireless Charging",
+            "Slim Design",
+            "LED Indicator"
+          ]
+        },
+        {
+          "name": "Mobile Keyboards",
+          "features": [
+            "Bluetooth Connectivity",
+            "Backlit Keys",
+            "Ultra-thin Design"
+          ]
+        },
+        {
+          "name": "Mobile Covers",
+          "features": [
+            "Shockproof",
+            "Anti-scratch",
+            "Transparent"
+          ]
+        },
+        {
+          "name": "Power Banks",
+          "features": [
+            "Fast Charging",
+            "High Capacity",
+            "Slim Design"
+          ]
+        },
+        {
+          "name": "Screen Protectors",
+          "features": [
+            "Anti-Glare",
+            "Tempered Glass",
+            "Easy Installation"
+          ]
+        },
+        {
+          "name": "Selfie Lights and Sticks",
+          "features": [
+            "Adjustable Brightness",
+            "Compact Design",
+            "Bluetooth Remote"
+          ]
+        },
+        {
+          "name": "Cable Organizer",
+          "features": [
+            "Reusable",
+            "Flexible",
+            "Easy to Install"
+          ]
+        },
+        {
+          "name": "Adapters, Holders and Stands",
+          "features": [
+            "360° Rotation",
+            "Universal Compatibility",
+            "Compact Design"
+          ]
+        },
+        {
+          "name": "Phone Bands",
+          "features": [
+            "Adjustable Size",
+            "Secure Grip",
+            "Sweatproof"
+          ]
+        },
+        {
+          "name": "Chargers",
+          "features": [
+            "Fast Charging",
+            "Multiple Ports",
+            "Compact Design"
+          ]
+        },
+        {
+          "name": "Cables",
+          "features": [
+            "Fast Charging",
+            "Durable",
+            "Tangle-free"
+          ]
+        },
+        {
+          "name": "Plugs",
+          "features": [
+            "Universal Compatibility",
+            "Compact Design",
+            "Easy to Use"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Mobile Parts",
+      "subcategories": [
+        {
+          "name": "Mobile Screen",
+          "features": [
+            "Touchscreen",
+            "High-Resolution",
+            "OLED Display"
+          ]
+        },
+        {
+          "name": "Phone Battery",
+          "features": [
+            "High Capacity",
+            "Long-Lasting",
+            "Fast Charging"
+          ]
+        },
+        {
+          "name": "Mobile Frames",
+          "features": [
+            "Durable",
+            "Lightweight",
+            "Easy to Install"
+          ]
+        },
+        {
+          "name": "SIM Card Tools",
+          "features": [
+            "Eject Pin",
+            "SIM Card Cutter",
+            "SIM Card Adapter"
+          ]
+        },
+        {
+          "name": "Mobile Circuits",
+          "features": [
+            "Logic Board",
+            "Audio IC",
+            "Power IC"
+          ]
+        },
+        {
+          "name": "Repair Kits",
+          "features": [
+            "Complete Set",
+            "Easy to Use",
+            "High Quality"
+          ]
+        },
+        {
+          "name": "Mobile Camera",
+          "features": [
+            "High-Resolution",
+            "Wide Angle",
+            "Auto-Focus"
+          ]
+        },
+        {
+          "name": "Mobile Motherboard",
+          "features": [
+            "Mainboard",
+            "CPU",
+            "GPU"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Mobile Phones",
+      "subcategories": [
+        {
+          "name": "Apple",
+          "models": [
+            "iPhone 13",
+            "iPhone 13 Pro",
+            "iPhone 13 Pro Max",
+            "iPhone 13 Mini"
+          ]
+        },
+        {
+          "name": "Samsung",
+          "models": [
+            "Galaxy S21",
+            "Galaxy S21+",
+            "Galaxy S21 Ultra",
+            "Galaxy Note20"
+          ]
+        },
+        {
+          "name": "LG",
+          "models": [
+            "LG V70",
+            "LG G9",
+            "LG Q31",
+            "LG Stylo 7"
+          ]
+        },
+        {
+          "name": "Sony",
+          "models": [
+            "Xperia 1 III",
+            "Xperia 5 III",
+            "Xperia 10 III",
+            "Xperia L5"
+          ]
+        },
+        {
+          "name": "Huawei",
+          "models": [
+            "Mate 40 Pro",
+            "P40 Pro",
+            "Nova 8 Pro",
+            "Y9a"
+          ]
+        },
+        {
+          "name": "Motorola",
+          "models": [
+            "Moto G Power (2022)",
+            "Moto G Play (2022)",
+            "Moto G Stylus (2022)",
+            "Moto One 5G Ace"
+          ]
+        },
+        {
+          "name": "Nokia",
+          "models": [
+            "Nokia G20",
+            "Nokia X20",
+            "Nokia 5.4",
+            "Nokia 3.4"
+          ]
+        },
+        {
+          "name": "Oppo",
+          "models": [
+            "Oppo Reno6 5G",
+            "Oppo A94 5G",
+            "Oppo A15s",
+            "Oppo A53"
+          ]
+        },
+        {
+          "name": "Lenovo",
+          "models": [
+            "Lenovo Legion Phone Duel 2",
+            "Lenovo K13 Note",
+            "Lenovo K12 Pro",
+            "Lenovo K12"
+          ]
+        },
+        {
+          "name": "Blackview",
+          "models": [
+            "Blackview BV9900 Pro",
+            "Blackview BV9100",
+            "Blackview BV9900E",
+            "Blackview BV5900"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Networking",
+      "subcategories": [
+        {
+          "name": "Switches",
+          "models": [
+            "8-port",
+            "16-port",
+            "24-port",
+            "48-port"
+          ]
+        },
+        {
+          "name": "Hubs",
+          "models": [
+            "4-port",
+            "8-port",
+            "16-port"
+          ]
+        },
+        {
+          "name": "Gateways",
+          "features": [
+            "VPN",
+            "Firewall",
+            "Wireless"
+          ]
+        },
+        {
+          "name": "Repeaters",
+          "features": [
+            "Wireless",
+            "Ethernet"
+          ]
+        },
+        {
+          "name": "Bridges",
+          "features": [
+            "Wireless",
+            "Ethernet"
+          ]
+        },
+        {
+          "name": "Routers",
+          "features": [
+            "Wireless",
+            "VPN",
+            "Firewall"
+          ]
+        },
+        {
+          "name": "NIC Cards",
+          "models": [
+            "Gigabit",
+            "10 Gigabit",
+            "Wireless"
+          ]
+        },
+        {
+          "name": "Modems",
+          "models": [
+            "DSL",
+            "Cable",
+            "Wireless"
+          ]
+        },
+        {
+          "name": "Connection Wires",
+          "sizes": [
+            "3 ft",
+            "6 ft",
+            "10 ft",
+            "25 ft",
+            "50 ft"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Outerwear",
+      "subcategories": [
+        {
+          "name": "Jackets",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        },
+        {
+          "name": "Coats",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        },
+        {
+          "name": "Blazers",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        },
+        {
+          "name": "Sweaters",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        },
+        {
+          "name": "Cardigans",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "PC Components",
+      "subcategories": [
+        {
+          "name": "Operating System",
+          "features": [
+            "Windows",
+            "macOS",
+            "Linux",
+            "Chrome OS"
+          ]
+        },
+        {
+          "name": "Power Supply Unit",
+          "models": [
+            "ATX",
+            "SFX",
+            "TFX",
+            "FlexATX",
+            "Fanless"
+          ]
+        },
+        {
+          "name": "Motherboard",
+          "models": [
+            "ATX",
+            "MicroATX",
+            "Mini-ITX",
+            "Extended ATX",
+            "Thin Mini-ITX"
+          ]
+        },
+        {
+          "name": "CPU",
+          "models": [
+            "Intel Core i9",
+            "AMD Ryzen 9",
+            "Intel Core i7",
+            "AMD Ryzen 7",
+            "Intel Core i5",
+            "AMD Ryzen 5"
+          ]
+        },
+        {
+          "name": "RAM",
+          "models": [
+            "DDR3",
+            "DDR4",
+            "DDR5",
+            "LPDDR4",
+            "LPDDR5"
+          ]
+        },
+        {
+          "name": "Cooling Devices",
+          "features": [
+            "Air Cooling",
+            "Liquid Cooling",
+            "Passive Cooling",
+            "RGB Lighting"
+          ]
+        },
+        {
+          "name": "Monitor",
+          "sizes": [
+            "24 inch",
+            "27 inch",
+            "32 inch",
+            "34 inch",
+            "38 inch",
+            "42 inch"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Party",
+      "subcategories": [
+        {
+          "name": "Balloons",
+          "colors": [
+            "Red",
+            "Blue",
+            "Green",
+            "Yellow",
+            "Pink",
+            "Purple"
+          ],
+          "quantity": [
+            10,
+            25,
+            50,
+            100
+          ],
+          "age_range": "3+"
+        },
+        {
+          "name": "Ribbons",
+          "colors": [
+            "Red",
+            "Blue",
+            "Green",
+            "Yellow",
+            "Pink",
+            "Purple"
+          ],
+          "quantity": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "age_range": "5+"
+        },
+        {
+          "name": "Birthday Banner",
+          "colors": [
+            "Red",
+            "Blue",
+            "Green",
+            "Yellow",
+            "Pink",
+            "Purple"
+          ],
+          "models": [
+            "Happy Birthday",
+            "Celebration Time",
+            "Let's Party"
+          ],
+          "age_range": "3+"
+        },
+        {
+          "name": "Candles",
+          "colors": [
+            "Red",
+            "Blue",
+            "Green",
+            "Yellow",
+            "Pink",
+            "Purple"
+          ],
+          "quantity": [
+            10,
+            25,
+            50,
+            100
+          ],
+          "age_range": "3+"
+        },
+        {
+          "name": "Napkins",
+          "colors": [
+            "Red",
+            "Blue",
+            "Green",
+            "Yellow",
+            "Pink",
+            "Purple"
+          ],
+          "quantity": [
+            10,
+            25,
+            50,
+            100
+          ],
+          "age_range": "3+"
+        },
+        {
+          "name": "Plastic Plates and Cups",
+          "colors": [
+            "Red",
+            "Blue",
+            "Green",
+            "Yellow",
+            "Pink",
+            "Purple"
+          ],
+          "quantity": [
+            10,
+            25,
+            50,
+            100
+          ],
+          "types": [
+            "Plates",
+            "Cups"
+          ],
+          "age_range": "3+"
+        },
+        {
+          "name": "Pinata",
+          "colors": [
+            "Red",
+            "Blue",
+            "Green",
+            "Yellow",
+            "Pink",
+            "Purple"
+          ],
+          "models": [
+            "Unicorn",
+            "Dragon",
+            "Football",
+            "Butterfly"
+          ],
+          "age_range": "6+"
+        }
+      ]
+    },
+    {
+      "category": "Pets Appliances",
+      "subcategories": [
+        {
+          "name": "Harnesses",
+          "sizes": "Medium"
+        },
+        {
+          "name": "Chewing Toys",
+          "quantity": "Pack of 3"
+        },
+        {
+          "name": "Carriers",
+          "types": "Pet Carrier"
+        },
+        {
+          "name": "Pet Homes",
+          "sizes": "Large"
+        }
+      ]
+    },
+    {
+      "category": "Shoes",
+      "subcategories": [
+        {
+          "name": "Sneaker",
+          "sizes": [
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47"
+          ]
+        },
+        {
+          "name": "High Heels",
+          "sizes": [
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47"
+          ]
+        },
+        {
+          "name": "Slippers",
+          "sizes": [
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47"
+          ]
+        },
+        {
+          "name": "Sandals",
+          "sizes": [
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47"
+          ]
+        },
+        {
+          "name": "Loafers",
+          "sizes": [
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47"
+          ]
+        },
+        {
+          "name": "Boots",
+          "sizes": [
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47"
+          ]
+        },
+        {
+          "name": "Topsiders",
+          "sizes": [
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47"
+          ]
+        },
+        {
+          "name": "Running Shoes",
+          "sizes": [
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47"
+          ]
+        },
+        {
+          "name": "Uggs",
+          "sizes": [
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Skincare",
+      "subcategories": [
+        {
+          "name": "Face Cream",
+          "target_area": "Face",
+          "types": "Moisturizer"
+        },
+        {
+          "name": "Tanning Cream",
+          "target_area": "Body",
+          "types": "Self-tanner"
+        },
+        {
+          "name": "Cleansers",
+          "target_area": "Face",
+          "types": "Cleanser"
+        },
+        {
+          "name": "Massage Oils",
+          "target_area": "Body",
+          "types": "Massage oil"
+        },
+        {
+          "name": "Perfumes and Fragrances",
+          "target_area": "Body",
+          "types": "Fragrance"
+        },
+        {
+          "name": "Shower gels",
+          "target_area": "Body",
+          "types": "Body wash"
+        },
+        {
+          "name": "Scrubbing Luffa",
+          "target_area": "Body",
+          "types": "Exfoliator"
+        }
+      ]
+    },
+    {
+      "category": "Smart Home Devices",
+      "subcategories": [
+        {
+          "name": "Door Locks",
+          "models": [
+            "Smart Lock 2.0",
+            "August Wi-Fi Smart Lock",
+            "Schlage Encode"
+          ],
+          "colors": [
+            "Black",
+            "Silver"
+          ],
+          "types": [
+            "Deadbolt",
+            "Keypad",
+            "Bluetooth"
+          ],
+          "quantity": [
+            "1 pack",
+            "2 pack",
+            "3 pack"
+          ]
+        },
+        {
+          "name": "Thermostats",
+          "models": [
+            "Nest Learning Thermostat",
+            "Ecobee SmartThermostat",
+            "Honeywell Home T9"
+          ],
+          "colors": [
+            "White",
+            "Black",
+            "Stainless Steel"
+          ],
+          "types": [
+            "Programmable",
+            "Smart",
+            "Wi-Fi"
+          ],
+          "quantity": [
+            "1 pack"
+          ]
+        },
+        {
+          "name": "Lights",
+          "models": [
+            "Philips Hue",
+            "LIFX",
+            "Sengled Smart LED"
+          ],
+          "colors": [
+            "White",
+            "Multicolor"
+          ],
+          "types": [
+            "Smart Bulb",
+            "Smart Light Strip",
+            "Smart Lamp"
+          ],
+          "quantity": [
+            "1 pack",
+            "2 pack",
+            "4 pack"
+          ]
+        },
+        {
+          "name": "Home Monitors",
+          "models": [
+            "Arlo Pro 3",
+            "Ring Spotlight Cam",
+            "Nest Cam IQ"
+          ],
+          "colors": [
+            "White",
+            "Black"
+          ],
+          "types": [
+            "Indoor",
+            "Outdoor",
+            "Wi-Fi"
+          ],
+          "quantity": [
+            "1 pack",
+            "2 pack"
+          ]
+        },
+        {
+          "name": "Refrigerators",
+          "models": [
+            "Samsung French Door",
+            "LG Side-by-Side",
+            "Whirlpool Bottom Freezer"
+          ],
+          "colors": [
+            "Stainless Steel",
+            "Black Stainless Steel",
+            "White"
+          ],
+          "types": [
+            "Smart",
+            "Counter Depth",
+            "Top Freezer"
+          ],
+          "quantity": [
+            "1 pack"
+          ]
+        },
+        {
+          "name": "Air Conditioner",
+          "models": [
+            "LG Window AC",
+            "Frigidaire Portable AC",
+            "Honeywell Smart AC"
+          ],
+          "colors": [
+            "White"
+          ],
+          "types": [
+            "Window",
+            "Portable",
+            "Smart"
+          ],
+          "quantity": [
+            "1 pack"
+          ]
+        },
+        {
+          "name": "Printers",
+          "models": [
+            "HP Envy",
+            "Canon PIXMA",
+            "Epson WorkForce"
+          ],
+          "colors": [
+            "Black",
+            "White"
+          ],
+          "types": [
+            "Inkjet",
+            "Laser",
+            "All-in-One"
+          ],
+          "quantity": [
+            "1 pack"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Sports",
+      "subcategories": [
+        {
+          "name": "Sports Balls"
+        },
+        {
+          "name": "Rackets"
+        },
+        {
+          "name": "Nets"
+        }
+      ]
+    },
+    {
+      "category": "Storage",
+      "subcategories": [
+        {
+          "name": "USB Flash Drives",
+          "capacities": [
+            "16GB",
+            "32GB",
+            "64GB",
+            "128GB",
+            "256GB",
+            "512GB",
+            "1TB"
+          ]
+        },
+        {
+          "name": "Memory Cards",
+          "capacities": [
+            "4GB",
+            "8GB",
+            "16GB",
+            "32GB",
+            "64GB",
+            "128GB",
+            "256GB"
+          ]
+        },
+        {
+          "name": "Micro SD Cards",
+          "capacities": [
+            "4GB",
+            "8GB",
+            "16GB",
+            "32GB",
+            "64GB",
+            "128GB",
+            "256GB"
+          ]
+        },
+        {
+          "name": "HD Drives",
+          "capacities": [
+            "500GB",
+            "1TB",
+            "2TB",
+            "3TB",
+            "4TB",
+            "6TB",
+            "8TB"
+          ]
+        },
+        {
+          "name": "SSD Adapters",
+          "features": [
+            "NVMe",
+            "SATA",
+            "M.2"
+          ]
+        },
+        {
+          "name": "Solid State Drive",
+          "capacities": [
+            "120GB",
+            "240GB",
+            "500GB",
+            "1TB",
+            "2TB"
+          ]
+        },
+        {
+          "name": "Disks",
+          "capacities": [
+            "500GB",
+            "1TB",
+            "2TB",
+            "3TB",
+            "4TB",
+            "6TB",
+            "8TB"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Supplements",
+      "subcategories": [
+        {
+          "name": "Protein Powder",
+          "types": [
+            "Whey Protein",
+            "Casein Protein",
+            "Soy Protein",
+            "Pea Protein"
+          ]
+        },
+        {
+          "name": "Health Bars",
+          "types": [
+            "Energy Bars",
+            "Protein Bars",
+            "Meal Replacement Bars"
+          ]
+        },
+        {
+          "name": "Vitamins",
+          "types": [
+            "Multivitamins",
+            "Vitamin C",
+            "Vitamin D",
+            "B Vitamins",
+            "Fish Oil"
+          ]
+        },
+        {
+          "name": "BCAA's",
+          "types": [
+            "Powder",
+            "Capsules",
+            "Drink Mixes"
+          ]
+        },
+        {
+          "name": "Electrolytes",
+          "types": [
+            "Powder",
+            "Tablets",
+            "Drink Mixes"
+          ]
+        },
+        {
+          "name": "Pre-Workout",
+          "types": [
+            "Powder",
+            "Drink Mixes",
+            "Capsules"
+          ]
+        },
+        {
+          "name": "Post-Workout",
+          "types": [
+            "Powder",
+            "Drink Mixes",
+            "Capsules"
+          ]
+        },
+        {
+          "name": "Creatine",
+          "types": [
+            "Powder",
+            "Capsules",
+            "Drink Mixes"
+          ]
+        },
+        {
+          "name": "Beta-Alanine",
+          "types": [
+            "Powder",
+            "Capsules",
+            "Drink Mixes"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Swimwear",
+      "subcategories": [
+        {
+          "name": "Bikinis",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        },
+        {
+          "name": "One-Piece Swimsuits",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        },
+        {
+          "name": "Board Shorts",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Televisions",
+      "subcategories": [
+        {
+          "name": "LG",
+          "sizes": [
+            32,
+            43,
+            55,
+            65,
+            75
+          ],
+          "colors": [
+            "Black",
+            "Silver"
+          ],
+          "models": [
+            "OLED",
+            "NanoCell",
+            "UHD 4K",
+            "HD"
+          ]
+        },
+        {
+          "name": "Samsung",
+          "sizes": [
+            32,
+            43,
+            55,
+            65,
+            75
+          ],
+          "colors": [
+            "Black",
+            "Silver"
+          ],
+          "models": [
+            "QLED",
+            "Crystal UHD",
+            "UHD 4K",
+            "HD"
+          ]
+        },
+        {
+          "name": "Sharp",
+          "sizes": [
+            32,
+            43,
+            55,
+            65,
+            75
+          ],
+          "colors": [
+            "Black"
+          ],
+          "models": [
+            "Aquos",
+            "4K Ultra HD",
+            "HD"
+          ]
+        },
+        {
+          "name": "Hitachi",
+          "sizes": [
+            32,
+            43,
+            55,
+            65,
+            75
+          ],
+          "colors": [
+            "Black"
+          ],
+          "models": [
+            "Smart",
+            "4K Ultra HD",
+            "HD"
+          ]
+        },
+        {
+          "name": "Sony",
+          "sizes": [
+            32,
+            43,
+            55,
+            65,
+            75
+          ],
+          "colors": [
+            "Black",
+            "Silver"
+          ],
+          "models": [
+            "Bravia",
+            "4K HDR",
+            "HD"
+          ]
+        },
+        {
+          "name": "Philips",
+          "sizes": [
+            32,
+            43,
+            55,
+            65,
+            75
+          ],
+          "colors": [
+            "Black",
+            "Silver"
+          ],
+          "models": [
+            "Ambilight",
+            "4K UHD",
+            "HD"
+          ]
+        },
+        {
+          "name": "Panasonic",
+          "sizes": [
+            32,
+            43,
+            55,
+            65,
+            75
+          ],
+          "colors": [
+            "Black",
+            "Silver"
+          ],
+          "models": [
+            "Smart Viera",
+            "4K Ultra HD",
+            "HD"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Tents and Dunes",
+      "subcategories": [
+        {
+          "name": "Tents",
+          "colors": [
+            "Red",
+            "Blue",
+            "Green"
+          ],
+          "capacity": [
+            "2-person",
+            "4-person",
+            "6-person"
+          ]
+        },
+        {
+          "name": "Chairs",
+          "colors": [
+            "Red",
+            "Blue",
+            "Green"
+          ],
+          "quantity": [
+            "1",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "name": "Tables",
+          "colors": [
+            "Red",
+            "Blue",
+            "Green"
+          ],
+          "models": [
+            "Folding",
+            "Portable"
+          ]
+        },
+        {
+          "name": "Water Tanks",
+          "capacity": [
+            "5-gallon",
+            "10-gallon",
+            "20-gallon"
+          ]
+        },
+        {
+          "name": "Ropes",
+          "quantity": [
+            "25ft",
+            "50ft",
+            "100ft"
+          ]
+        },
+        {
+          "name": "Tent Assembly Kit",
+          "models": [
+            "Basic",
+            "Advanced"
+          ]
+        },
+        {
+          "name": "Coolers",
+          "sizes": [
+            "Small",
+            "Medium",
+            "Large"
+          ]
+        },
+        {
+          "name": "Picnic Set",
+          "colors": [
+            "Red",
+            "Green",
+            "Blue"
+          ],
+          "types": "Portable",
+          "capacity": "4 persons"
+        },
+        {
+          "name": "Lights",
+          "colors": [
+            "White",
+            "Yellow"
+          ],
+          "types": "LED"
+        },
+        {
+          "name": "Caravan",
+          "types": "Trailer"
+        }
+      ]
+    },
+    {
+      "category": "Tops",
+      "subcategories": [
+        {
+          "name": "T-Shirts",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        },
+        {
+          "name": "Polo Shirts",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        },
+        {
+          "name": "Button-Down Shirts",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        },
+        {
+          "name": "Sweatshirts",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        },
+        {
+          "name": "Sleeveless Shirts",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        },
+        {
+          "name": "Blouses",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Toys",
+      "subcategories": [
+        {
+          "name": "Action Figures",
+          "ageRange": "4-10 years",
+          "quantity": "Pack of 4"
+        },
+        {
+          "name": "Animals",
+          "ageRange": "2-5 years",
+          "types": "Stuffed Animals",
+          "colors": "Assorted"
+        },
+        {
+          "name": "Dolls",
+          "ageRange": "3-8 years",
+          "types": "Fashion Dolls",
+          "models": "Barbie"
+        },
+        {
+          "name": "Edible Toys",
+          "ageRange": "3-6 years",
+          "types": "Candy Making Kit",
+          "quantity": "Kit for 10"
+        },
+        {
+          "name": "Construction Toys",
+          "ageRange": "5-12 years",
+          "types": "Building Blocks",
+          "quantity": "100 pieces"
+        },
+        {
+          "name": "Educational Toys",
+          "ageRange": "6-10 years",
+          "types": "Science Kit",
+          "models": "Chemistry Set"
+        },
+        {
+          "name": "Electronic Toys",
+          "ageRange": "8-12 years",
+          "types": "Remote Control Car",
+          "models": "Ferrari"
+        },
+        {
+          "name": "Playground",
+          "ageRange": "4-10 years",
+          "types": "Swing Set",
+          "capacity": "4 children"
+        },
+        {
+          "name": "Science",
+          "ageRange": "7-12 years",
+          "types": "Microscope",
+          "models": "Beginner's Set"
+        },
+        {
+          "name": "Sound toys",
+          "ageRange": "2-5 years",
+          "types": "Musical Instruments",
+          "quantity": "Set of 3"
+        },
+        {
+          "name": "Spinning Toys",
+          "ageRange": "3-6 years",
+          "types": "Fidget Spinners",
+          "colors": "Assorted",
+          "quantity": "Pack of 6"
+        }
+      ]
+    },
+    {
+      "category": "Water Sports",
+      "subcategories": [
+        {
+          "name": "Swimming Cap",
+          "sizes": [
+            "Small",
+            "Medium",
+            "Large"
+          ]
+        },
+        {
+          "name": "Swimming Goggles",
+          "sizes": [
+            "Small",
+            "Medium",
+            "Large"
+          ]
+        },
+        {
+          "name": "Waterboard"
+        },
+        {
+          "name": "Canoe",
+          "capacity": "1-3 Persons"
+        },
+        {
+          "name": "Kayak",
+          "capacity": "1-2 Persons"
+        },
+        {
+          "name": "Paddles"
+        },
+        {
+          "name": "SwimFins",
+          "sizes": [
+            "Small",
+            "Medium",
+            "Large"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Writing Material",
+      "subcategories": [
+        {
+          "name": "Paper",
+          "types": [
+            "Printer Paper",
+            "Copy Paper",
+            "Lined Paper",
+            "Graph Paper"
+          ],
+          "colors": [
+            "White",
+            "Ivory"
+          ],
+          "sizes": [
+            "Letter",
+            "Legal",
+            "A4",
+            "A5"
+          ],
+          "quantity": [
+            100,
+            250,
+            500,
+            1000
+          ]
+        },
+        {
+          "name": "Notebooks",
+          "types": [
+            "Spiral-Bound",
+            "Composition",
+            "Hardcover",
+            "Softcover"
+          ],
+          "colors": [
+            "Black",
+            "Red",
+            "Blue",
+            "Green"
+          ],
+          "sizes": [
+            "Letter",
+            "Legal",
+            "A4",
+            "A5"
+          ],
+          "quantity": [
+            1,
+            2,
+            3,
+            5
+          ]
+        },
+        {
+          "name": "Clipboards",
+          "types": [
+            "Hardboard",
+            "Plastic",
+            "Aluminum"
+          ],
+          "sizes": [
+            "A4",
+            "Letter",
+            "Legal"
+          ],
+          "colors": [
+            "Black",
+            "Brown",
+            "Blue",
+            "Green",
+            "Yellow",
+            "Red"
+          ],
+          "quantity": [
+            "Single",
+            "Pack of 5",
+            "Pack of 10"
+          ]
+        },
+        {
+          "name": "Cardboard Projects",
+          "types": [
+            "Cardboard Sheets",
+            "Cardboard Rolls",
+            "Cardboard Boxes"
+          ],
+          "sizes": [
+            "A4",
+            "Letter",
+            "Legal",
+            "Custom"
+          ],
+          "colors": [
+            "Brown",
+            "White"
+          ],
+          "quantity": [
+            "Single",
+            "Pack of 5",
+            "Pack of 10"
+          ]
+        }
+      ]
+    }
+  ]

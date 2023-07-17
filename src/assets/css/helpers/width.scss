@@ -1,0 +1,33 @@
+/* ---------------------------------------------------
+    VARIABLES
+----------------------------------------------------- */
+$otherSize:(
+fit-content,
+max-content,
+min-content,
+inherit,
+auto,
+);
+/* ---------------------------------------------------
+    WIDTH CLASS LOOP
+----------------------------------------------------- */
+@each $name in $otherSize {
+    .w-#{$name} {
+        width : #{$name} !important;
+    }
+}
+
+@for $i from 0 through 500 {
+   .w-#{$i} {
+    width: #{$i}#{"%"} !important;
+  }
+
+
+  .wpx-#{$i} {
+    width: #{$i}px !important;
+  }
+
+  .vw-#{$i} {
+    width: #{$i}vw !important;
+  }
+}

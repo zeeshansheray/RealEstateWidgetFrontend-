@@ -1,0 +1,98 @@
+
+#Orders{
+    overflow-y: scroll;
+    width: 100%;
+    height: calc(100vh);
+
+    thead tr{
+        background: #F9F9F9;
+        border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+
+    }
+
+    tbody{
+        background: #FFFFFF;
+
+    }
+
+    .table-responsive {
+        border-radius: 6px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
+    }
+
+    tbody tr:hover{
+        background-color: #f7f7f7;
+        cursor: pointer;
+    }
+
+    .outerCircle{
+        border : 2px solid #E9ECEF;
+        border-radius: 50%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+
+    .MuiCircularProgress-circle {
+        stroke-linecap: round;
+    }
+
+    .table{
+        .headings{
+            background: #F9F9F9;
+            border: 1px solid #EAECF0;
+            border-radius: 8px 8px 0px 0px;
+            padding: 16px 25px;
+        }
+
+        .body{
+            background: #FFFFFF;
+            border: 1px solid #EAECF0;
+            padding: 20px 25px;
+            min-height: 80px;
+        }
+
+        .border-radius-bottom{
+            border-radius: 0px 0px 8px 8px;
+        }
+
+        .rotateDown{
+            transform: rotate(139deg);
+            margin-top: 8px;
+            margin-left: 8px;
+        }
+        
+
+    }
+
+    .progressBarSection{
+        height: 80%;
+
+    }
+
+    .indicator{
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+    }
+
+    .singleCard:last-child{
+        margin-right: 0px;
+    }
+
+    .bar{
+        top      : 60%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        left     : 100px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        .singleCard{
+            max-width : 200px !important; 
+        }
+    }
+}

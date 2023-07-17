@@ -1,0 +1,33 @@
+/* ---------------------------------------------------
+    VARIABLES
+----------------------------------------------------- */
+$otherSize:(
+fit-content,
+max-content,
+min-content,
+inherit,
+auto,
+);
+/* ---------------------------------------------------
+    HEIGHT CLASS LOOP
+----------------------------------------------------- */
+@each $name in $otherSize {
+    .h-#{$name} {
+        height : #{$name} !important;
+    }
+}
+
+@for $i from 0 through 1000 {
+   .h-#{$i} {
+    height: #{$i}#{"%"} !important;
+  }
+
+
+  .hpx-#{$i} {
+    height: #{$i}px !important;
+  }
+  
+  .vh-#{$i} {
+    height: #{$i}vh !important;
+  }
+}

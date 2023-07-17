@@ -1,0 +1,48 @@
+/* ---------------------------------------------------
+    VARIABLES
+----------------------------------------------------- */
+
+$borderDirection:(
+"-top",
+"-bottom",
+"-right",
+"-left",
+" ",
+);
+
+/* ---------------------------------------------------
+    BORDER MIXIN CLASS
+    @inlcude in any class to use border.
+    (direction,width,style,color,radius)
+----------------------------------------------------- */  
+
+@mixin border($direction,$width:0.5px,$style:solid,$color:color(neutral20),$radius:0px){
+    border#{$direction}  : $width $style $color !important;
+    border-radius: $radius ;
+  }
+
+@mixin card-style{
+  @include border(" ",$radius:4px);
+  box-shadow: $shadow-card;
+  background: color(white);
+  padding   : 20px;
+}
+
+/* ---------------------------------------------------
+    Border Class Loop
+----------------------------------------------------- */
+
+@for $i from 0 through 100 {
+   .borderRadius-#{$i} {
+    border-radius: #{$i}px !important;
+  }
+  .border-#{$i} {
+    border: #{$i}px !important;
+  }
+  }
+
+  @each $name in $borderDirection {
+    .border#{$name} {
+        @include border($name);
+    }
+    }

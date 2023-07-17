@@ -1,0 +1,17 @@
+@for $i from 0 through 100 {
+  .p_#{$i} {
+    padding: #{$i}px !important;
+  }
+  .pt_#{$i} {
+    padding-top: #{$i}px !important;
+  }
+  .pb_#{$i} {
+    padding-bottom: #{$i}px !important;
+  }
+  .pr_#{$i} {
+    padding-right: #{$i}px !important;
+  }
+  .pl_#{$i} {
+    padding-left: #{$i}px !important;
+  }
+}

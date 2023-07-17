@@ -1,0 +1,1806 @@
+[
+    {
+      "category": "Accessories",
+      "subcategory": "Scarves"
+    },
+    {
+      "category": "Accessories",
+      "subcategory": "Hats"
+    },
+    {
+      "category": "Accessories",
+      "subcategory": "Belts"
+    },
+    {
+      "category": "Accessories",
+      "subcategory": "Rings"
+    },
+    {
+      "category": "Accessories",
+      "subcategory": "Sunglasses"
+    },
+    {
+      "category": "Accessories",
+      "subcategory": "Monitor Arm"
+    },
+    {
+      "category": "Accessories",
+      "subcategory": "Speakers"
+    },
+    {
+      "category": "Accessories",
+      "subcategory": "Docking Stations"
+    },
+    {
+      "category": "Accessories",
+      "subcategory": "Power Supply"
+    },
+    {
+      "category": "Accessories",
+      "subcategory": "Protective Cases"
+    },
+    {
+      "category": "Accessories",
+      "subcategory": "Computer Stickers"
+    },
+    {
+      "category": "Accessories",
+      "subcategory": "Mouse"
+    },
+    {
+      "category": "Accessories",
+      "subcategory": "Headphones"
+    },
+    {
+      "category": "Accessories",
+      "subcategory": "Headphone Stand"
+    },
+    {
+      "category": "Accessories",
+      "subcategory": "Rests"
+    },
+    {
+      "category": "Accessories",
+      "subcategory": "Keyboard Extensions"
+    },
+    {
+      "category": "Accessories",
+      "subcategory": "Desk Pads"
+    },
+    {
+      "category": "Accessories",
+      "subcategory": "Recorders"
+    },
+    {
+      "category": "Accessories",
+      "subcategory": "Microphones"
+    },
+    {
+      "category": "Accessories",
+      "subcategory": "Camera"
+    },
+    {
+      "category": "Accessories",
+      "subcategory": "Webcams"
+    },
+    {
+      "category": "Accessories",
+      "subcategory": "Lighting"
+    },
+    {
+      "category": "Activewear",
+      "subcategory": "Sports Bras"
+    },
+    {
+      "category": "Activewear",
+      "subcategory": "Leggings"
+    },
+    {
+      "category": "Activewear",
+      "subcategory": "Yoga Pants"
+    },
+    {
+      "category": "Activewear",
+      "subcategory": "Tank Tops"
+    },
+    {
+      "category": "Activewear",
+      "subcategory": "Athletic Shorts"
+    },
+    {
+      "category": "Activewear",
+      "subcategory": "Sports Hoodies"
+    },
+    {
+      "category": "Bathroom",
+      "subcategory": "Sink"
+    },
+    {
+      "category": "Bathroom",
+      "subcategory": "Toilet"
+    },
+    {
+      "category": "Bathroom",
+      "subcategory": "Brushes"
+    },
+    {
+      "category": "Bathroom",
+      "subcategory": "Bathtub"
+    },
+    {
+      "category": "Bathroom",
+      "subcategory": "Rugs"
+    },
+    {
+      "category": "Bathroom",
+      "subcategory": "Bin"
+    },
+    {
+      "category": "Bathroom",
+      "subcategory": "Laundry Basket"
+    },
+    {
+      "category": "Bathroom",
+      "subcategory": "Towel Rails"
+    },
+    {
+      "category": "Bathroom",
+      "subcategory": "Toothbrush Holders"
+    },
+    {
+      "category": "Bathroom",
+      "subcategory": "Bathroom Shelves"
+    },
+    {
+      "category": "Bathroom",
+      "subcategory": "Mops"
+    },
+    {
+      "category": "Bathroom",
+      "subcategory": "Clippers"
+    },
+    {
+      "category": "Bathroom",
+      "subcategory": "Ironing Boards"
+    },
+    {
+      "category": "Bedroom",
+      "subcategory": "Hangers"
+    },
+    {
+      "category": "Bedroom",
+      "subcategory": "Bed Frames"
+    },
+    {
+      "category": "Bedroom",
+      "subcategory": "Mattresses"
+    },
+    {
+      "category": "Bedroom",
+      "subcategory": "Blankets"
+    },
+    {
+      "category": "Bedroom",
+      "subcategory": "Pillows"
+    },
+    {
+      "category": "Bedroom",
+      "subcategory": "Covers"
+    },
+    {
+      "category": "Bedroom",
+      "subcategory": "Cover Sets"
+    },
+    {
+      "category": "Bedroom",
+      "subcategory": "Lamps"
+    },
+    {
+      "category": "Bedroom",
+      "subcategory": "Drawers"
+    },
+    {
+      "category": "Bedroom",
+      "subcategory": "Cabinets"
+    },
+    {
+      "category": "Biking, Hiking, and Running",
+      "subcategory": "Bikes"
+    },
+    {
+      "category": "Biking, Hiking, and Running",
+      "subcategory": "Tires"
+    },
+    {
+      "category": "Biking, Hiking, and Running",
+      "subcategory": "Helmet"
+    },
+    {
+      "category": "Biking, Hiking, and Running",
+      "subcategory": "Hydration Bottles"
+    },
+    {
+      "category": "Biking, Hiking, and Running",
+      "subcategory": "Phone Straps"
+    },
+    {
+      "category": "Biking, Hiking, and Running",
+      "subcategory": "Levers"
+    },
+    {
+      "category": "Biking, Hiking, and Running",
+      "subcategory": "Spare Tube"
+    },
+    {
+      "category": "Biking, Hiking, and Running",
+      "subcategory": "Pump"
+    },
+    {
+      "category": "Biking, Hiking, and Running",
+      "subcategory": "Multi Tool"
+    },
+    {
+      "category": "Biking, Hiking, and Running",
+      "subcategory": "Lights"
+    },
+    {
+      "category": "Biking, Hiking, and Running",
+      "subcategory": "Bike Locks"
+    },
+    {
+      "category": "Biking, Hiking, and Running",
+      "subcategory": "Sunglasses"
+    },
+    {
+      "category": "Biking, Hiking, and Running",
+      "subcategory": "Vests"
+    },
+    {
+      "category": "Biking, Hiking, and Running",
+      "subcategory": "Attire"
+    },
+    {
+      "category": "Biking, Hiking, and Running",
+      "subcategory": "Trekking Poles"
+    },
+    {
+      "category": "Biking, Hiking, and Running",
+      "subcategory": "Bandana"
+    },
+    {
+      "category": "Biking, Hiking, and Running",
+      "subcategory": "First Aid Kit"
+    },
+    {
+      "category": "Board and Card Games",
+      "subcategory": "Roll and Move Games"
+    },
+    {
+      "category": "Board and Card Games",
+      "subcategory": "Deck Building Games"
+    },
+    {
+      "category": "Board and Card Games",
+      "subcategory": "Tag Team Games"
+    },
+    {
+      "category": "Board and Card Games",
+      "subcategory": "Strategy Games"
+    },
+    {
+      "category": "Board and Card Games",
+      "subcategory": "Social Games"
+    },
+    {
+      "category": "Board and Card Games",
+      "subcategory": "RPG Games"
+    },
+    {
+      "category": "Body Care Equipment",
+      "subcategory": "Handbags"
+    },
+    {
+      "category": "Body Care Equipment",
+      "subcategory": "Lint Rollers"
+    },
+    {
+      "category": "Body Care Equipment",
+      "subcategory": "Massager"
+    },
+    {
+      "category": "Body Care Equipment",
+      "subcategory": "Razors"
+    },
+    {
+      "category": "Body Care Equipment",
+      "subcategory": "Toning Device"
+    },
+    {
+      "category": "Body Care Equipment",
+      "subcategory": "Face Masks"
+    },
+    {
+      "category": "Body Care Equipment",
+      "subcategory": "Rollers"
+    },
+    {
+      "category": "Body Care Equipment",
+      "subcategory": "Light Therapy"
+    },
+    {
+      "category": "Body Care Equipment",
+      "subcategory": "Steamer"
+    },
+    {
+      "category": "Body Care Equipment",
+      "subcategory": "Cleansing Brush"
+    },
+    {
+      "category": "Body Care Equipment",
+      "subcategory": "Clippers"
+    },
+    {
+      "category": "Body Care Equipment",
+      "subcategory": "Tooth Brushes"
+    },
+    {
+      "category": "Body Care Equipment",
+      "subcategory": "Shower Caps"
+    },
+    {
+      "category": "Body Care Equipment",
+      "subcategory": "Face Towels"
+    },
+    {
+      "category": "Bottoms",
+      "subcategory": "Jeans"
+    },
+    {
+      "category": "Bottoms",
+      "subcategory": "Pants"
+    },
+    {
+      "category": "Bottoms",
+      "subcategory": "Shorts"
+    },
+    {
+      "category": "Bottoms",
+      "subcategory": "Skirts"
+    },
+    {
+      "category": "Bottoms",
+      "subcategory": "Leggings"
+    },
+    {
+      "category": "Bottoms",
+      "subcategory": "Joggers"
+    },
+    {
+      "category": "Camera Equipment",
+      "subcategory": "Camera"
+    },
+    {
+      "category": "Camera Equipment",
+      "subcategory": "Stand"
+    },
+    {
+      "category": "Camera Equipment",
+      "subcategory": "Drones"
+    },
+    {
+      "category": "Camera Equipment",
+      "subcategory": "Lenses"
+    },
+    {
+      "category": "Camera Equipment",
+      "subcategory": "Camera Straps"
+    },
+    {
+      "category": "Car Accessories",
+      "subcategory": "Seat Covers"
+    },
+    {
+      "category": "Car Accessories",
+      "subcategory": "Keys"
+    },
+    {
+      "category": "Car Accessories",
+      "subcategory": "Floor Mats"
+    },
+    {
+      "category": "Car Accessories",
+      "subcategory": "Air Refreshers"
+    },
+    {
+      "category": "Car Accessories",
+      "subcategory": "Car Cover"
+    },
+    {
+      "category": "Car Accessories",
+      "subcategory": "Cleaning Cloth and Gels"
+    },
+    {
+      "category": "Car Accessories",
+      "subcategory": "GPS Navigator"
+    },
+    {
+      "category": "Car Accessories",
+      "subcategory": "Puncture Repair Kits"
+    },
+    {
+      "category": "Car Accessories",
+      "subcategory": "Tire Inflation kits"
+    },
+    {
+      "category": "Car Accessories",
+      "subcategory": "Jumper Cables"
+    },
+    {
+      "category": "Car Accessories",
+      "subcategory": "Parking Sensors"
+    },
+    {
+      "category": "Car Accessories",
+      "subcategory": "Car Paint Equipment"
+    },
+    {
+      "category": "Car Parts",
+      "subcategory": "Wheels"
+    },
+    {
+      "category": "Car Parts",
+      "subcategory": "Car Mirrors"
+    },
+    {
+      "category": "Car Parts",
+      "subcategory": "Car Lights"
+    },
+    {
+      "category": "Car Parts",
+      "subcategory": "AC Compressor"
+    },
+    {
+      "category": "Car Parts",
+      "subcategory": "Spindle Knuckle"
+    },
+    {
+      "category": "Car Parts",
+      "subcategory": "Chasis Control Module"
+    },
+    {
+      "category": "Car Parts",
+      "subcategory": "Engine Parts"
+    },
+    {
+      "category": "Car Parts",
+      "subcategory": "Alternator"
+    },
+    {
+      "category": "Car Parts",
+      "subcategory": "Speedometer"
+    },
+    {
+      "category": "Car Parts",
+      "subcategory": "Bumpers"
+    },
+    {
+      "category": "Car Parts",
+      "subcategory": "Grills"
+    },
+    {
+      "category": "Car Parts",
+      "subcategory": "Leveling Kits"
+    },
+    {
+      "category": "Car Parts",
+      "subcategory": "Shocks"
+    },
+    {
+      "category": "Car Parts",
+      "subcategory": "Exhausts"
+    },
+    {
+      "category": "Car Parts",
+      "subcategory": "Spoilers"
+    },
+    {
+      "category": "Combat Sports",
+      "subcategory": "Gloves"
+    },
+    {
+      "category": "Combat Sports",
+      "subcategory": "Wraps"
+    },
+    {
+      "category": "Combat Sports",
+      "subcategory": "Combat Sport Attire"
+    },
+    {
+      "category": "Combat Sports",
+      "subcategory": "Punching Bags"
+    },
+    {
+      "category": "Combat Sports",
+      "subcategory": "Guards"
+    },
+    {
+      "category": "Desk Items",
+      "subcategory": "Staplers"
+    },
+    {
+      "category": "Desk Items",
+      "subcategory": "Stick Notes"
+    },
+    {
+      "category": "Desk Items",
+      "subcategory": "Glue"
+    },
+    {
+      "category": "Desk Items",
+      "subcategory": "Calculator"
+    },
+    {
+      "category": "Desk Items",
+      "subcategory": "Tape"
+    },
+    {
+      "category": "Desk Items",
+      "subcategory": "Clips"
+    },
+    {
+      "category": "Desk Items",
+      "subcategory": "Folders"
+    },
+    {
+      "category": "Desk Items",
+      "subcategory": "Scissors"
+    },
+    {
+      "category": "Dresses",
+      "subcategory": "Cocktail Dresses"
+    },
+    {
+      "category": "Dresses",
+      "subcategory": "Maxi Dresses"
+    },
+    {
+      "category": "Dresses",
+      "subcategory": "Summer Dresses"
+    },
+    {
+      "category": "Electronic Watches",
+      "subcategory": "Fitbit"
+    },
+    {
+      "category": "Electronic Watches",
+      "subcategory": "Apple Watch"
+    },
+    {
+      "category": "Electronic Watches",
+      "subcategory": "Garmin"
+    },
+    {
+      "category": "Electronic Watches",
+      "subcategory": "Xiomi Mi"
+    },
+    {
+      "category": "Electronic Watches",
+      "subcategory": "Coros Pace"
+    },
+    {
+      "category": "Essentials",
+      "subcategory": "Pencils"
+    },
+    {
+      "category": "Essentials",
+      "subcategory": "Erasers"
+    },
+    {
+      "category": "Essentials",
+      "subcategory": "Highlighters"
+    },
+    {
+      "category": "Essentials",
+      "subcategory": "Ballpoint"
+    },
+    {
+      "category": "Essentials",
+      "subcategory": "Fountain Pen"
+    },
+    {
+      "category": "Essentials",
+      "subcategory": "Pencil Cases"
+    },
+    {
+      "category": "Essentials",
+      "subcategory": "School Bags"
+    },
+    {
+      "category": "Essentials",
+      "subcategory": "Sharpeners"
+    },
+    {
+      "category": "Essentials",
+      "subcategory": "Stamps"
+    },
+    {
+      "category": "Essentials",
+      "subcategory": "Markers"
+    },
+    {
+      "category": "Fishing",
+      "subcategory": "Sinker"
+    },
+    {
+      "category": "Fishing",
+      "subcategory": "Fishnet"
+    },
+    {
+      "category": "Fishing",
+      "subcategory": "Rod"
+    },
+    {
+      "category": "Fishing",
+      "subcategory": "Reel"
+    },
+    {
+      "category": "Fishing",
+      "subcategory": "Hook"
+    },
+    {
+      "category": "Fishing",
+      "subcategory": "Bait"
+    },
+    {
+      "category": "Fishing",
+      "subcategory": "Knot"
+    },
+    {
+      "category": "Fishing",
+      "subcategory": "Line"
+    },
+    {
+      "category": "Fitness Equipment",
+      "subcategory": "Machines"
+    },
+    {
+      "category": "Fitness Equipment",
+      "subcategory": "Free Weights"
+    },
+    {
+      "category": "Fitness Equipment",
+      "subcategory": "Racks"
+    },
+    {
+      "category": "Fitness Equipment",
+      "subcategory": "Benches"
+    },
+    {
+      "category": "Fitness Equipment",
+      "subcategory": "Clips"
+    },
+    {
+      "category": "Fitness Equipment",
+      "subcategory": "Treadmills"
+    },
+    {
+      "category": "Gaming Accessories",
+      "subcategory": "Controllers"
+    },
+    {
+      "category": "Gaming Accessories",
+      "subcategory": "CD Games"
+    },
+    {
+      "category": "Gaming Accessories",
+      "subcategory": "Headsets"
+    },
+    {
+      "category": "Gaming Accessories",
+      "subcategory": "Controller Stands"
+    },
+    {
+      "category": "Gaming Accessories",
+      "subcategory": "Microphone"
+    },
+    {
+      "category": "Gaming Accessories",
+      "subcategory": "Camera"
+    },
+    {
+      "category": "Gaming Accessories",
+      "subcategory": "Controller Cover"
+    },
+    {
+      "category": "Gaming Accessories",
+      "subcategory": "Console Cover"
+    },
+    {
+      "category": "Gaming Accessories",
+      "subcategory": "VR Headset"
+    },
+    {
+      "category": "Gaming Consoles",
+      "subcategory": "PlayStation 5"
+    },
+    {
+      "category": "Gaming Consoles",
+      "subcategory": "Xbox Series X/S"
+    },
+    {
+      "category": "Gaming Consoles",
+      "subcategory": "Nintendo Switch"
+    },
+    {
+      "category": "Gaming Consoles",
+      "subcategory": "PlayStation 4"
+    },
+    {
+      "category": "Gaming Consoles",
+      "subcategory": "Xbox One"
+    },
+    {
+      "category": "Gaming Consoles",
+      "subcategory": "Nintendo Wii U"
+    },
+    {
+      "category": "Gaming Consoles",
+      "subcategory": "PlayStation 3"
+    },
+    {
+      "category": "Gaming Consoles",
+      "subcategory": "Xbox 360"
+    },
+    {
+      "category": "Gaming Consoles",
+      "subcategory": "Nintendo Wii"
+    },
+    {
+      "category": "Gaming Consoles",
+      "subcategory": "Nintendo GameCube"
+    },
+    {
+      "category": "Garden and Backyard",
+      "subcategory": "Garden Hose"
+    },
+    {
+      "category": "Garden and Backyard",
+      "subcategory": "Fertilizer"
+    },
+    {
+      "category": "Garden and Backyard",
+      "subcategory": "Seeds"
+    },
+    {
+      "category": "Garden and Backyard",
+      "subcategory": "Wheelbarrow"
+    },
+    {
+      "category": "Garden and Backyard",
+      "subcategory": "Gardening Tools"
+    },
+    {
+      "category": "Garden and Backyard",
+      "subcategory": "Fences"
+    },
+    {
+      "category": "Garden and Backyard",
+      "subcategory": "Pots"
+    },
+    {
+      "category": "Gym Accessories",
+      "subcategory": "Gym Bags"
+    },
+    {
+      "category": "Gym Accessories",
+      "subcategory": "Lifting Belts"
+    },
+    {
+      "category": "Gym Accessories",
+      "subcategory": "Lifting Gloves"
+    },
+    {
+      "category": "Gym Accessories",
+      "subcategory": "Yoga Mats"
+    },
+    {
+      "category": "Gym Accessories",
+      "subcategory": "Shaker Cups"
+    },
+    {
+      "category": "Gym Accessories",
+      "subcategory": "Towels"
+    },
+    {
+      "category": "Gym Accessories",
+      "subcategory": "Foam Rollers"
+    },
+    {
+      "category": "Hair Care",
+      "subcategory": "Shampoo and Conditioners"
+    },
+    {
+      "category": "Hair Care",
+      "subcategory": "Hair Brushes"
+    },
+    {
+      "category": "Hair Care",
+      "subcategory": "Hair Oils"
+    },
+    {
+      "category": "Hair Care",
+      "subcategory": "Leave On Products"
+    },
+    {
+      "category": "Hair Care",
+      "subcategory": "Hair Dryer"
+    },
+    {
+      "category": "Hair Care",
+      "subcategory": "Hair Spray"
+    },
+    {
+      "category": "Hair Care",
+      "subcategory": "Wigs"
+    },
+    {
+      "category": "Hair Care",
+      "subcategory": "Extensions"
+    },
+    {
+      "category": "Hair Care",
+      "subcategory": "Hair Ties"
+    },
+    {
+      "category": "Inflatables",
+      "subcategory": "Inflatable Houses"
+    },
+    {
+      "category": "Inflatables",
+      "subcategory": "Inflatable Chairs"
+    },
+    {
+      "category": "Inflatables",
+      "subcategory": "Inflatable Figures"
+    },
+    {
+      "category": "Inflatables",
+      "subcategory": "Inflatable Swimming Pools"
+    },
+    {
+      "category": "Inflatables",
+      "subcategory": "Inflatable Swimming Accessories"
+    },
+    {
+      "category": "Intimates",
+      "subcategory": "Bras"
+    },
+    {
+      "category": "Intimates",
+      "subcategory": "Panties"
+    },
+    {
+      "category": "Intimates",
+      "subcategory": "Lingerie Sets"
+    },
+    {
+      "category": "Intimates",
+      "subcategory": "Shapewear"
+    },
+    {
+      "category": "Intimates",
+      "subcategory": "Sleepwear"
+    },
+    {
+      "category": "Kids Magazines",
+      "subcategory": "Comic Books"
+    },
+    {
+      "category": "Kids Magazines",
+      "subcategory": "Coloring Books"
+    },
+    {
+      "category": "Kids Magazines",
+      "subcategory": "3D Books"
+    },
+    {
+      "category": "Kids Magazines",
+      "subcategory": "Educational Books"
+    },
+    {
+      "category": "Kids Magazines",
+      "subcategory": "Puzzles"
+    },
+    {
+      "category": "Kitchen",
+      "subcategory": "Eating Utensils"
+    },
+    {
+      "category": "Kitchen",
+      "subcategory": "Cooking Utensils"
+    },
+    {
+      "category": "Kitchen",
+      "subcategory": "Plates"
+    },
+    {
+      "category": "Kitchen",
+      "subcategory": "Pans"
+    },
+    {
+      "category": "Kitchen",
+      "subcategory": "Bowls"
+    },
+    {
+      "category": "Kitchen",
+      "subcategory": "Cooking Knives"
+    },
+    {
+      "category": "Kitchen",
+      "subcategory": "Trays"
+    },
+    {
+      "category": "Kitchen",
+      "subcategory": "Pan Holder"
+    },
+    {
+      "category": "Kitchen",
+      "subcategory": "Liquid Containers"
+    },
+    {
+      "category": "Kitchen",
+      "subcategory": "Cutting Boards"
+    },
+    {
+      "category": "Kitchen",
+      "subcategory": "Food Scale"
+    },
+    {
+      "category": "Kitchen",
+      "subcategory": "Measuring Utensils"
+    },
+    {
+      "category": "Kitchen",
+      "subcategory": "Cups"
+    },
+    {
+      "category": "Kitchen Appliances",
+      "subcategory": "Kettles"
+    },
+    {
+      "category": "Kitchen Appliances",
+      "subcategory": "Coffee Makers"
+    },
+    {
+      "category": "Kitchen Appliances",
+      "subcategory": "Blenders"
+    },
+    {
+      "category": "Kitchen Appliances",
+      "subcategory": "Mixers"
+    },
+    {
+      "category": "Kitchen Appliances",
+      "subcategory": "Stoves"
+    },
+    {
+      "category": "Kitchen Appliances",
+      "subcategory": "Ovens"
+    },
+    {
+      "category": "Kitchen Appliances",
+      "subcategory": "Microwaves"
+    },
+    {
+      "category": "Kitchen Appliances",
+      "subcategory": "Fans"
+    },
+    {
+      "category": "Kitchen Appliances",
+      "subcategory": "Air Fryers"
+    },
+    {
+      "category": "Kitchen Appliances",
+      "subcategory": "Steamers"
+    },
+    {
+      "category": "Kitchen Appliances",
+      "subcategory": "Washing Machines"
+    },
+    {
+      "category": "Kitchen Appliances",
+      "subcategory": "Toasters"
+    },
+    {
+      "category": "Kitchen Appliances",
+      "subcategory": "Grills"
+    },
+    {
+      "category": "Kitchen Appliances",
+      "subcategory": "Dishwashers"
+    },
+    {
+      "category": "Kitchen Appliances",
+      "subcategory": "Stoves"
+    },
+    {
+      "category": "Kitchen Appliances",
+      "subcategory": "Juicers"
+    },
+    {
+      "category": "Kitchen Appliances",
+      "subcategory": "Hoovers"
+    },
+    {
+      "category": "Laptop and Tablet Parts",
+      "subcategory": "Screens"
+    },
+    {
+      "category": "Laptop and Tablet Parts",
+      "subcategory": "Frames"
+    },
+    {
+      "category": "Laptop and Tablet Parts",
+      "subcategory": "Motherboards"
+    },
+    {
+      "category": "Laptop and Tablet Parts",
+      "subcategory": "Batteries"
+    },
+    {
+      "category": "Laptop and Tablet Parts",
+      "subcategory": "Keyboard"
+    },
+    {
+      "category": "Laptop and Tablet Parts",
+      "subcategory": "Hinges"
+    },
+    {
+      "category": "Laptop and Tablet Parts",
+      "subcategory": "Chargers"
+    },
+    {
+      "category": "Laptop and Tablet Parts",
+      "subcategory": "Wires"
+    },
+    {
+      "category": "Laptops and Tablets",
+      "subcategory": "Lenovo"
+    },
+    {
+      "category": "Laptops and Tablets",
+      "subcategory": "HP"
+    },
+    {
+      "category": "Laptops and Tablets",
+      "subcategory": "Dell"
+    },
+    {
+      "category": "Laptops and Tablets",
+      "subcategory": "Apple"
+    },
+    {
+      "category": "Laptops and Tablets",
+      "subcategory": "Acer"
+    },
+    {
+      "category": "Laptops and Tablets",
+      "subcategory": "Asus"
+    },
+    {
+      "category": "Laptops and Tablets",
+      "subcategory": "Toshiba"
+    },
+    {
+      "category": "Laptops and Tablets",
+      "subcategory": "IBM"
+    },
+    {
+      "category": "Living Room",
+      "subcategory": "Sofa"
+    },
+    {
+      "category": "Living Room",
+      "subcategory": "Side Chairs"
+    },
+    {
+      "category": "Living Room",
+      "subcategory": "Tables"
+    },
+    {
+      "category": "Living Room",
+      "subcategory": "Clocks"
+    },
+    {
+      "category": "Living Room",
+      "subcategory": "Mirrors"
+    },
+    {
+      "category": "Living Room",
+      "subcategory": "Carpets"
+    },
+    {
+      "category": "Living Room",
+      "subcategory": "Plants"
+    },
+    {
+      "category": "Living Room",
+      "subcategory": "Tea Set"
+    },
+    {
+      "category": "Living Room",
+      "subcategory": "Paintings"
+    },
+    {
+      "category": "Living Room",
+      "subcategory": "Vases"
+    },
+    {
+      "category": "Living Room",
+      "subcategory": "Cushioning"
+    },
+    {
+      "category": "Living Room",
+      "subcategory": "Fireplace"
+    },
+    {
+      "category": "Living Room",
+      "subcategory": "Curtains"
+    },
+    {
+      "category": "Living Room",
+      "subcategory": "Bookshelf"
+    },
+    {
+      "category": "Living Room",
+      "subcategory": "Home Fragrances"
+    },
+    {
+      "category": "Makeup",
+      "subcategory": "Lip Cosmetics"
+    },
+    {
+      "category": "Makeup",
+      "subcategory": "Conselear"
+    },
+    {
+      "category": "Makeup",
+      "subcategory": "Foundation"
+    },
+    {
+      "category": "Makeup",
+      "subcategory": "Eye Cosmetics"
+    },
+    {
+      "category": "Makeup",
+      "subcategory": "Nail Polish"
+    },
+    {
+      "category": "Makeup",
+      "subcategory": "Makeup Brushes"
+    },
+    {
+      "category": "Makeup",
+      "subcategory": "Blenders"
+    },
+    {
+      "category": "Makeup",
+      "subcategory": "Palets"
+    },
+    {
+      "category": "Makeup",
+      "subcategory": "Face Powder"
+    },
+    {
+      "category": "Makeup",
+      "subcategory": "Cleanser"
+    },
+    {
+      "category": "Mobile Accessories",
+      "subcategory": "Battery Charging Cases"
+    },
+    {
+      "category": "Mobile Accessories",
+      "subcategory": "Mobile Keyboards"
+    },
+    {
+      "category": "Mobile Accessories",
+      "subcategory": "Mobile Covers"
+    },
+    {
+      "category": "Mobile Accessories",
+      "subcategory": "Power Banks"
+    },
+    {
+      "category": "Mobile Accessories",
+      "subcategory": "Screen Protectors"
+    },
+    {
+      "category": "Mobile Accessories",
+      "subcategory": "Selfie Lights and Sticks"
+    },
+    {
+      "category": "Mobile Accessories",
+      "subcategory": "Cable Organizer"
+    },
+    {
+      "category": "Mobile Accessories",
+      "subcategory": "Adapters, Holders and Stands"
+    },
+    {
+      "category": "Mobile Accessories",
+      "subcategory": "Phone Bands"
+    },
+    {
+      "category": "Mobile Accessories",
+      "subcategory": "Chargers"
+    },
+    {
+      "category": "Mobile Accessories",
+      "subcategory": "Cables"
+    },
+    {
+      "category": "Mobile Accessories",
+      "subcategory": "Plugs"
+    },
+    {
+      "category": "Mobile Parts",
+      "subcategory": "Mobile Screen"
+    },
+    {
+      "category": "Mobile Parts",
+      "subcategory": "Phone Battery"
+    },
+    {
+      "category": "Mobile Parts",
+      "subcategory": "Mobile Frames"
+    },
+    {
+      "category": "Mobile Parts",
+      "subcategory": "SIM Card Tools"
+    },
+    {
+      "category": "Mobile Parts",
+      "subcategory": "Mobile Circuits"
+    },
+    {
+      "category": "Mobile Parts",
+      "subcategory": "Repair Kits"
+    },
+    {
+      "category": "Mobile Parts",
+      "subcategory": "Mobile Camera"
+    },
+    {
+      "category": "Mobile Parts",
+      "subcategory": "Mobile Motherboard"
+    },
+    {
+      "category": "Mobile Phones",
+      "subcategory": "Apple"
+    },
+    {
+      "category": "Mobile Phones",
+      "subcategory": "Samsung"
+    },
+    {
+      "category": "Mobile Phones",
+      "subcategory": "LG"
+    },
+    {
+      "category": "Mobile Phones",
+      "subcategory": "Sony"
+    },
+    {
+      "category": "Mobile Phones",
+      "subcategory": "Huawei"
+    },
+    {
+      "category": "Mobile Phones",
+      "subcategory": "Motorola"
+    },
+    {
+      "category": "Mobile Phones",
+      "subcategory": "Nokia"
+    },
+    {
+      "category": "Mobile Phones",
+      "subcategory": "Oppo"
+    },
+    {
+      "category": "Mobile Phones",
+      "subcategory": "Lenovo"
+    },
+    {
+      "category": "Mobile Phones",
+      "subcategory": "Blackview"
+    },
+    {
+      "category": "Networking",
+      "subcategory": "Switches"
+    },
+    {
+      "category": "Networking",
+      "subcategory": "Hubs"
+    },
+    {
+      "category": "Networking",
+      "subcategory": "Gateways"
+    },
+    {
+      "category": "Networking",
+      "subcategory": "Repeaters"
+    },
+    {
+      "category": "Networking",
+      "subcategory": "Bridges"
+    },
+    {
+      "category": "Networking",
+      "subcategory": "Routers"
+    },
+    {
+      "category": "Networking",
+      "subcategory": "NIC Cards"
+    },
+    {
+      "category": "Networking",
+      "subcategory": "Modems"
+    },
+    {
+      "category": "Networking",
+      "subcategory": "Connection Wires"
+    },
+    {
+      "category": "Outerwear",
+      "subcategory": "Jackets"
+    },
+    {
+      "category": "Outerwear",
+      "subcategory": "Coats"
+    },
+    {
+      "category": "Outerwear",
+      "subcategory": "Blazers"
+    },
+    {
+      "category": "Outerwear",
+      "subcategory": "Sweaters"
+    },
+    {
+      "category": "Outerwear",
+      "subcategory": "Cardigans"
+    },
+    {
+      "category": "PC Components",
+      "subcategory": "Operating System"
+    },
+    {
+      "category": "PC Components",
+      "subcategory": "Power Supply Unit"
+    },
+    {
+      "category": "PC Components",
+      "subcategory": "Motherboard"
+    },
+    {
+      "category": "PC Components",
+      "subcategory": "CPU"
+    },
+    {
+      "category": "PC Components",
+      "subcategory": "RAM"
+    },
+    {
+      "category": "PC Components",
+      "subcategory": "Cooling Devices"
+    },
+    {
+      "category": "PC Components",
+      "subcategory": "Monitor"
+    },
+    {
+      "category": "Party",
+      "subcategory": "Balloons"
+    },
+    {
+      "category": "Party",
+      "subcategory": "Ribbons"
+    },
+    {
+      "category": "Party",
+      "subcategory": "Birthday Banner"
+    },
+    {
+      "category": "Party",
+      "subcategory": "Candles"
+    },
+    {
+      "category": "Party",
+      "subcategory": "Napkins"
+    },
+    {
+      "category": "Party",
+      "subcategory": "Plastic Plates and Cups"
+    },
+    {
+      "category": "Party",
+      "subcategory": "Pinata"
+    },
+    {
+      "category": "Pets Appliances",
+      "subcategory": "Harnesses"
+    },
+    {
+      "category": "Pets Appliances",
+      "subcategory": "Chewing Toys"
+    },
+    {
+      "category": "Pets Appliances",
+      "subcategory": "Carriers"
+    },
+    {
+      "category": "Pets Appliances",
+      "subcategory": "Pet Homes"
+    },
+    {
+      "category": "Shoes",
+      "subcategory": "Sneaker"
+    },
+    {
+      "category": "Shoes",
+      "subcategory": "High Heels"
+    },
+    {
+      "category": "Shoes",
+      "subcategory": "Slippers"
+    },
+    {
+      "category": "Shoes",
+      "subcategory": "Sandals"
+    },
+    {
+      "category": "Shoes",
+      "subcategory": "Loafers"
+    },
+    {
+      "category": "Shoes",
+      "subcategory": "Boots"
+    },
+    {
+      "category": "Shoes",
+      "subcategory": "Topsiders"
+    },
+    {
+      "category": "Shoes",
+      "subcategory": "Running Shoes"
+    },
+    {
+      "category": "Shoes",
+      "subcategory": "Uggs"
+    },
+    {
+      "category": "Skincare",
+      "subcategory": "Face Cream"
+    },
+    {
+      "category": "Skincare",
+      "subcategory": "Tanning Cream"
+    },
+    {
+      "category": "Skincare",
+      "subcategory": "Cleansers"
+    },
+    {
+      "category": "Skincare",
+      "subcategory": "Massage Oils"
+    },
+    {
+      "category": "Skincare",
+      "subcategory": "Perfumes and Fragrances"
+    },
+    {
+      "category": "Skincare",
+      "subcategory": "Shower gels"
+    },
+    {
+      "category": "Skincare",
+      "subcategory": "Scrubbing Luffa"
+    },
+    {
+      "category": "Smart Home Devices",
+      "subcategory": "Door Locks"
+    },
+    {
+      "category": "Smart Home Devices",
+      "subcategory": "Thermostats"
+    },
+    {
+      "category": "Smart Home Devices",
+      "subcategory": "Lights"
+    },
+    {
+      "category": "Smart Home Devices",
+      "subcategory": "Home Monitors"
+    },
+    {
+      "category": "Smart Home Devices",
+      "subcategory": "Refrigerators"
+    },
+    {
+      "category": "Smart Home Devices",
+      "subcategory": "Air Conditioner"
+    },
+    {
+      "category": "Smart Home Devices",
+      "subcategory": "Printers"
+    },
+    {
+      "category": "Sports",
+      "subcategory": "Sports Balls"
+    },
+    {
+      "category": "Sports",
+      "subcategory": "Rackets"
+    },
+    {
+      "category": "Sports",
+      "subcategory": "Nets"
+    },
+    {
+      "category": "Storage",
+      "subcategory": "USB Flash Drives"
+    },
+    {
+      "category": "Storage",
+      "subcategory": "Memory Cards"
+    },
+    {
+      "category": "Storage",
+      "subcategory": "Micro SD Cards"
+    },
+    {
+      "category": "Storage",
+      "subcategory": "HD Drives"
+    },
+    {
+      "category": "Storage",
+      "subcategory": "SSD Adapters"
+    },
+    {
+      "category": "Storage",
+      "subcategory": "Solid State Drive"
+    },
+    {
+      "category": "Storage",
+      "subcategory": "Disks"
+    },
+    {
+      "category": "Supplements",
+      "subcategory": "Protein Powder"
+    },
+    {
+      "category": "Supplements",
+      "subcategory": "Health Bars"
+    },
+    {
+      "category": "Supplements",
+      "subcategory": "Vitamins"
+    },
+    {
+      "category": "Supplements",
+      "subcategory": "BCAA's"
+    },
+    {
+      "category": "Supplements",
+      "subcategory": "Electrolytes"
+    },
+    {
+      "category": "Supplements",
+      "subcategory": "Pre-Workout"
+    },
+    {
+      "category": "Supplements",
+      "subcategory": "Post-Workout"
+    },
+    {
+      "category": "Supplements",
+      "subcategory": "Creatine"
+    },
+    {
+      "category": "Supplements",
+      "subcategory": "Beta-Alanine"
+    },
+    {
+      "category": "Swimwear",
+      "subcategory": "Bikinis"
+    },
+    {
+      "category": "Swimwear",
+      "subcategory": "One-Piece Swimsuits"
+    },
+    {
+      "category": "Swimwear",
+      "subcategory": "Board Shorts"
+    },
+    {
+      "category": "Televisions",
+      "subcategory": "LG"
+    },
+    {
+      "category": "Televisions",
+      "subcategory": "Samsung"
+    },
+    {
+      "category": "Televisions",
+      "subcategory": "Sharp"
+    },
+    {
+      "category": "Televisions",
+      "subcategory": "Hitachi"
+    },
+    {
+      "category": "Televisions",
+      "subcategory": "Sony"
+    },
+    {
+      "category": "Televisions",
+      "subcategory": "Philips"
+    },
+    {
+      "category": "Televisions",
+      "subcategory": "Panasonic"
+    },
+    {
+      "category": "Tents and Dunes",
+      "subcategory": "Tents"
+    },
+    {
+      "category": "Tents and Dunes",
+      "subcategory": "Chairs"
+    },
+    {
+      "category": "Tents and Dunes",
+      "subcategory": "Tables"
+    },
+    {
+      "category": "Tents and Dunes",
+      "subcategory": "Water Tanks"
+    },
+    {
+      "category": "Tents and Dunes",
+      "subcategory": "Ropes"
+    },
+    {
+      "category": "Tents and Dunes",
+      "subcategory": "Tent Assembly Kit"
+    },
+    {
+      "category": "Tents and Dunes",
+      "subcategory": "Coolers"
+    },
+    {
+      "category": "Tents and Dunes",
+      "subcategory": "Picnic Set"
+    },
+    {
+      "category": "Tents and Dunes",
+      "subcategory": "Lights"
+    },
+    {
+      "category": "Tents and Dunes",
+      "subcategory": "Caravan"
+    },
+    {
+      "category": "Tops",
+      "subcategory": "T-Shirts"
+    },
+    {
+      "category": "Tops",
+      "subcategory": "Polo Shirts"
+    },
+    {
+      "category": "Tops",
+      "subcategory": "Button-Down Shirts"
+    },
+    {
+      "category": "Tops",
+      "subcategory": "Sweatshirts"
+    },
+    {
+      "category": "Tops",
+      "subcategory": "Sleeveless Shirts"
+    },
+    {
+      "category": "Tops",
+      "subcategory": "Blouses"
+    },
+    {
+      "category": "Toys",
+      "subcategory": "Action Figures"
+    },
+    {
+      "category": "Toys",
+      "subcategory": "Animals"
+    },
+    {
+      "category": "Toys",
+      "subcategory": "Dolls"
+    },
+    {
+      "category": "Toys",
+      "subcategory": "Edible Toys"
+    },
+    {
+      "category": "Toys",
+      "subcategory": "Construction Toys"
+    },
+    {
+      "category": "Toys",
+      "subcategory": "Educational Toys"
+    },
+    {
+      "category": "Toys",
+      "subcategory": "Electronic Toys"
+    },
+    {
+      "category": "Toys",
+      "subcategory": "Playground"
+    },
+    {
+      "category": "Toys",
+      "subcategory": "Science"
+    },
+    {
+      "category": "Toys",
+      "subcategory": "Sound toys"
+    },
+    {
+      "category": "Toys",
+      "subcategory": "Spinning Toys"
+    },
+    {
+      "category": "Water Sports",
+      "subcategory": "Swimming Cap"
+    },
+    {
+      "category": "Water Sports",
+      "subcategory": "Swimming Goggles"
+    },
+    {
+      "category": "Water Sports",
+      "subcategory": "Waterboard"
+    },
+    {
+      "category": "Water Sports",
+      "subcategory": "Canoe"
+    },
+    {
+      "category": "Water Sports",
+      "subcategory": "Kayak"
+    },
+    {
+      "category": "Water Sports",
+      "subcategory": "Paddles"
+    },
+    {
+      "category": "Water Sports",
+      "subcategory": "SwimFins"
+    },
+    {
+      "category": "Writing Material",
+      "subcategory": "Paper"
+    },
+    {
+      "category": "Writing Material",
+      "subcategory": "Notebooks"
+    },
+    {
+      "category": "Writing Material",
+      "subcategory": "Clipboards"
+    },
+    {
+      "category": "Writing Material",
+      "subcategory": "Cardboard Projects"
+    }
+  ]

@@ -1,0 +1,21 @@
+/* ---------------------------------------------------
+    FLEX GAP CLASS LOOP
+----------------------------------------------------- */
+@for $i from 0 through 100 {
+   .gap-#{$i} {
+    gap: #{$i}px !important;
+  }
+}
+
+/* ---------------------------------------------------
+    FLEX LAYOUT MIXIN CLASS
+    @inlcude in any class to use flex-layout.
+    (direction,gap,justify-content,align-items)
+----------------------------------------------------- */
+@mixin flex-layout($direction:row,$gap:0px,$justify:flex-start,$align:stretch){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}

@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
+
+$types:(
+  "Heading":  'Inter',
+  "Body"   :  'Inter',
+  "Caption":  'Inter',
+  "Link"   :  'Inter',
+  "U"      :  'Inter',
+
+);
+
+$sizes:(
+  "50":50px,
+  "42":42px,
+  "32":32px,
+  "28":28px,
+  "24":24px,
+  "22":22px,
+  "20":20px,
+  "18":18px,
+  "16":16px,
+  "15":15px,
+  "14":14px,
+  "13":13px,
+  "12":12px,
+  "11":11px,
+  "10":10px,
+);
+
+
+$weights:(
+  "R":400,
+  "M":500,
+  "B":700,
+);
+
+//Heading18M, Heading18R
+
+
+@each $tname,$type in $types {
+@each $sname,$size in $sizes {
+@each $wname,$weight in $weights {
+    .#{$tname}#{$sname}#{$wname} {
+      font-family: $type;
+      font-size:#{$size} !important;
+      font-weight:$weight !important;
+      // font-style: normal;
+      -webkit-font-smoothing: antialiased;
+    }
+    }
+    }
+}

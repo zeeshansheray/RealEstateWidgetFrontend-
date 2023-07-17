@@ -1,0 +1,14 @@
+@for $i from 0 through 1000 {
+   .top-#{$i} {
+    top: #{$i}px !important;
+  }
+  .bottom-#{$i} {
+    bottom: #{$i}px !important;
+  }
+  .left-#{$i} {
+    left: #{$i}px !important;
+  }
+  .right-#{$i} {
+    right: #{$i}px !important;
+  }
+  }
