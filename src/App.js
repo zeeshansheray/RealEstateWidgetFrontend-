@@ -34,20 +34,9 @@ function App(props) {
               <BrowserRouter>
                   <CustomToasters/>
                   <Routes>
-                    <Route exact path  = { '/forgotpassword'}    element = {<ForgotPassword/>}    />
-                    <Route exact path  = { '/emailverify'}    element    = {<EmailVerify/>}    />
-
-                    <Route exact path = "/signup" 
-                      element   = {
-                        <Signup/>
-                      } 
-                    />
-
                     <Route exact path = "/" 
                       element   = {
-                      <UserAuthGuard>
                         <Login/>
-                      </UserAuthGuard>
                       } 
                     />
                   </Routes>
