@@ -27,22 +27,22 @@ export default function CustomTextField({ label, ...props }) {
       )}
       <input
         {...props}
-        value={props.value || props.defaultValue}
-        id={props.id ? props.id : "TextField_v1"}
-        name={props.name}
-        ref={props.inputRef}
-        type={props.type ? props.type : "text"}
-        onChange={props.onChange || props.onBlur}
-        style={{
-          fontSize:props.fontSize ? props.fontSize : "14px",
-          lineHeight:"20px",
-          fontWeight:"400",
-          fontFamily:"Inter",
-          color:ColorSchemeCode.neutral100,
+        value    = {props.value || props.defaultValue}
+        id       = {props.id ? props.id : "TextField_v1"}
+        name     = {props.name}
+        ref      = {props.inputRef}
+        type     = {props.type ? props.type : "text"}
+        onChange = {props.onChange || props.onBlur}
+        style    = {{
+          fontSize    : props.fontSize ? props.fontSize                            : "14px",
+          lineHeight  : "20px",
+          fontWeight  : "400",
+          fontFamily  : "Inter",
+          color       : ColorSchemeCode.neutral100,
           fontSmooting: "antialiased",
-          padding: props.padding ? props.padding : "8px 8px 8px 16px",
-          border: props.helperText && "1px solid " + ColorSchemeCode.danger30,
-          paddingLeft: props.paddingLeft
+          padding     : props.padding ? props.padding                              : "8px 8px 8px 16px",
+          border      : props.helperText && "1px solid " + ColorSchemeCode.danger30,
+          paddingLeft : props.paddingLeft
             ? props.paddingLeft
             : props.position === "start"
             ? "32px"
@@ -50,14 +50,14 @@ export default function CustomTextField({ label, ...props }) {
           background: props.background ? props.background: ColorSchemeCode.primary0,
         }}
         
-        disabled={props.disabled}
-        onFocus={() => setFocus(true)}
-        onBlur={() => setFocus(false)}
-        autoComplete="on"
-        placeholder={props.placeholder}
-        onKeyUp={props.onKeyUp}
-        inputProps={props.inputProps}
-        className={props.className + " borderRadius-6"}
+        disabled     = {props.disabled}
+        onFocus      = {() => setFocus(true)}
+        onBlur       = {() => setFocus(false)}
+        autoComplete = "on"
+        placeholder  = {props.placeholder}
+        onKeyUp      = {props.onKeyUp}
+        inputProps   = {props.inputProps}
+        className    = {props.className + " borderRadius-6"}
       ></input>
       {props.icon && props.position == "start" && (
         <div

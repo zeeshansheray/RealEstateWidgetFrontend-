@@ -18,20 +18,6 @@
 /* ---------------------------------------------------
     PAGES SCSS
 ----------------------------------------------------- */
-@import "./pages/auth.scss";
-@import "./pages/contact.scss";
-@import "./pages/notFound.scss";
-@import "./pages/product.scss";
-@import "./pages/shop.scss";
-@import "./pages/merchant.scss";
-@import "./pages/orders.scss";
-@import "./pages/checkoutsuccess.scss";
-
-
-
-//Admin SCSS
-@import "./pages/admin/dashboard.scss";
-
 
 
 /* ---------------------------------------------------
@@ -46,45 +32,7 @@ SubPages
     Components SCSS
 ----------------------------------------------------- */
 
-@import "../css/component/emailverify.scss";
-
-
-// @import "./component/sidebar.scss";
-// @import "./component/header.scss";
-// @import "./component/email-verify.scss";
-// @import "./component/cards.scss";
-// @import "./component/signup-header.scss";
-// @import "./component/referral-header.scss";
-// @import "./component/tables.scss";
-// @import "./component/sidebar-with-buttons.scss";
-// @import "./component/custom-slider.scss";
-// @import "./component/setting-header.scss";
-// @import "./component//brands-dropdown.scss";
-// @import "./component/toaster.scss";
-// @import "./component/customtiercard.scss";
-// @import "./component/custompass.scss";
-// @import "./component/imagedropbox.scss";
-// @import "./component/designdropdown.scss";
-// @import "./component/viewdetail.scss";
-// @import "./component/tagtextarea.scss";
-// @import "./component/fit-content-input.scss";
-// @import "./component/active-status.scss";
-// @import "./component/copy-text.scss";
-// @import "./component/draggable.scss";
-// @import "./component/customimagedrop.scss";
-// @import "./component/customtexteditor.scss";
-// @import "./component/customselect.scss";
-// @import "./component/button.scss";
-// @import "./component/radio.scss";
-// @import "./component/customtablev2.scss";
-// @import "./component/customscrollcomponent.scss";
-
-@import "./component/navbar.scss";
-@import "./component/hero.scss";
-@import "./component/footer.scss";
-@import "./component/cart.scss";
-
-
+@import "./pages/HomePage.scss";
 
 
 //Global
