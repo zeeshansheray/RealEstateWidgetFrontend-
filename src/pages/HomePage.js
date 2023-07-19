@@ -56,15 +56,16 @@ export default function HomePage() {
         state.data && state?.data.map((data)=>
         <div class="box">
           <div class="top">
-            <img src={data.media[0].MediaURL} alt="" height={"165px"} width="100%" />
+            <img src={data?.media[0]?.MediaURL} alt="" height={"165px"} width="100%" />
             <p className='price Heading16B'>$ {parseInt(data?.listprice)?.toLocaleString()}</p>
           </div>
           <div class="bottom">
-            <h3 className='Heading16M'>{data.unparsedaddress}</h3>
-            <h3 className='Caption14M mt_2 color-info60'>{data.city}</h3>
+            <h3 className='Heading16M'>{data?.unparsedaddress}</h3>
+            <h3 className='Caption14M mt_2 color-info60'>{(data?.neighbourhood || 0) + ' , ' + data?.city}</h3>
             <div class="advants mt_16">
               <p className='Heading13M color-Heading'>
-                  {data?.bedroomstotal || 0} Beds, {data?.bathroomstotalinteger || 0} Baths, {parseInput(data.lotsizedimensions)} Sqft
+                  {data?.bedroomstotal || 0} Beds, {data?.bathroomstotalinteger || 0} Baths, {data.buildingareatotal || data.livingarea} Sqft
+                  {/* {data?.bedroomstotal || 0} Beds, {data?.bathroomstotalinteger || 0} Baths, {parseInput(data.lotsizedimensions)} Sqft */}
               </p>
             </div>
           </div>
