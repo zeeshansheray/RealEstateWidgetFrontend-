@@ -45,6 +45,7 @@ export default function HomePage() {
     }
   }
   
+  let data = {}
 
   return (
     <div id="HomePage" className='middle'>
@@ -52,8 +53,8 @@ export default function HomePage() {
 
         
 
-        {state.loader ? <img className='absoluteMiddle' src={PngIcons.loader} width="50px" height={"auto"} alt="" />  : 
-        state?.data.map((data)=>
+        {/* {state.loader ? <img className='absoluteMiddle' src={PngIcons.loader} width="50px" height={"auto"} alt="" />  : 
+        state?.data.map((data)=> */}
         <div class="box">
           <div class="top">
             <img src={data.media[0].MediaURL} alt="" height={"165px"} width="100%" />
@@ -68,7 +69,8 @@ export default function HomePage() {
               </p>
             </div>
           </div>
-        </div>)}
+        </div>
+        {/* )} */}
     </div>
     </div>
   )
