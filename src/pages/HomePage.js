@@ -19,6 +19,9 @@ export default function HomePage() {
     if(response){
       setState({...state, data : response.data, loader : false})
     }
+    else{
+      setState({...state, data : [], loader : false})
+    }
     console.log('fetched Data ', response)
   }
 
@@ -50,7 +53,7 @@ export default function HomePage() {
     <div id="HomePage" className='middle'>
       <div class="container">
         {state.loader ? <img className='absoluteMiddle' src={PngIcons.loader} width="50px" height={"auto"} alt="" />  : 
-        state?.data.map((data)=>
+        state.data && state?.data.map((data)=>
         <div class="box">
           <div class="top">
             <img src={data.media[0].MediaURL} alt="" height={"165px"} width="100%" />

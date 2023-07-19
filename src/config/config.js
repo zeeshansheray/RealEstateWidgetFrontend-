@@ -13,7 +13,7 @@ if(process.env.REACT_APP_ENV === Environment.DEVELOPMENT){
 console.log('REACT_APP_ENV ', process.env.REACT_APP_ENV)
 
 if(process.env.REACT_APP_ENV === Environment.PRODUCTION){
-    env.API_URL            = 'https://embed.realestateintegrate.com'
+    env.API_URL            = 'https://embed.realestateintegrate.com/api'
 }
 
 
