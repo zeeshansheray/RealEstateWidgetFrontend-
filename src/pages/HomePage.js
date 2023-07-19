@@ -49,9 +49,6 @@ export default function HomePage() {
   return (
     <div id="HomePage" className='middle'>
       <div class="container">
-
-        dasdadasdasdsa
-{/* 
         {state.loader ? <img className='absoluteMiddle' src={PngIcons.loader} width="50px" height={"auto"} alt="" />  : 
         state?.data.map((data)=>
         <div class="box">
@@ -68,7 +65,7 @@ export default function HomePage() {
               </p>
             </div>
           </div>
-        </div>)} */}
+        </div>)}
     </div>
     </div>
   )
