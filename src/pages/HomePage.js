@@ -98,30 +98,50 @@ export default function HomePage() {
   )
 }
 
-const AnyReactComponent = ({ text }) => <SvgIcons.LocationIcon color="#236A73" height="30px" width="30px"/>;
+const Marker = ({ text}) => (
+    <div className='middle'>
+      <SvgIcons.LocationIcon color={'#236A73'} height="40px" width="40px" />
+      {<div className="marker-text Heading14M color-Heading bg-color-white pl-2 pr-2 pb-2 pt-2 borderRadius-4 d-flex"><span>$ </span> { text}</div>}
+    </div>
+  );
 
 function GoogleMap({data}){
+    const [hoveredMarker, setHoveredMarker] = useState(null);
+
   const defaultProps = {
     center: {
       lat: data[0].latitude,
       lng: data[0].longitude
     },
-    zoom: 10.5
+    zoom: 14
   };
+
+  console.log('hoveredMarker ', hoveredMarker)
+
+  function formatNumberWithK(number) {
+    if (number < 1000) {
+      return number.toString();
+    } else if (number >= 1000 && number < 1000000) {
+      const formattedNumber = (number / 1000).toFixed(1);
+      return formattedNumber.endsWith('.0') ? formattedNumber.slice(0, -2) + 'K' : formattedNumber + 'K';
+    } else {
+      return number.toString();
+    }
+  }
 
   return (
     <div style={{ height: '100vh', width: '100%' }}>
       <GoogleMapReact
         bootstrapURLKeys = {{ key: "AIzaSyBIUUEUoLYKBnVKGvVjLchBzdMR-CUa5A4" }}
-        apiKey           = {"AIzaSyBIUUEUoLYKBnVKGvVjLchBzdMR-CUa5A4"}
+        // apiKey           = {"AIzaSyBIUUEUoLYKBnVKGvVjLchBzdMR-CUa5A4"}
         defaultCenter    = {defaultProps.center}
         defaultZoom      = {defaultProps.zoom}
       >
-        {data.map((item) => 
-        <AnyReactComponent
-            lat  = {item.latitude}
-            lng  = {item.longitude}
-            text = "My Marker"
+        {data.map((item, index) => 
+        <Marker
+            lat          = {item.latitude}
+            lng          = {item.longitude}
+            text         = {formatNumberWithK(parseInt(item.listprice))}
         />
         )}
       </GoogleMapReact>
