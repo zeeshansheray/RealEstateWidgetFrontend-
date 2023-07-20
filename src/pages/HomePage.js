@@ -39,9 +39,9 @@ export default function HomePage() {
 
   function calculateAreaInSqft(lengthInInches, widthInInches) {
     const inchesPerFoot = 12;
-    const lengthInFeet = lengthInInches / inchesPerFoot;
-    const widthInFeet = widthInInches / inchesPerFoot;
-    const areaInSqft = lengthInFeet * widthInFeet;
+    const lengthInFeet  = lengthInInches / inchesPerFoot;
+    const widthInFeet   = widthInInches / inchesPerFoot;
+    const areaInSqft    = lengthInFeet * widthInFeet;
     return Math.round(areaInSqft);
   }
   
@@ -58,12 +58,9 @@ export default function HomePage() {
   
 
   return (
-    <div id="HomePage" className='middle'>
-      <div class="container">
-        {state.loader ? <img className='absoluteMiddle' src={PngIcons.loader} width="50px" height={"auto"} alt="" />  : 
-        <>
-         {state.data && <GoogleMap data={state.data}/>}
-        <div className='d-flex justify-flex-end w-100 align-items-center'>
+    <div id="HomePage" className='middle'>        
+      <div className='container'>
+      <div className='d-flex justify-flex-end w-100 align-items-center'>
             <div className='d-flex align-items-center cp' onClick={()=>setState({...state, map : false})}>
                 <img width={"13px"} height={"13px"} src={PngIcons.menu} alt="" />
                 <span className='Heading15M color-Heading ml_4'>Tile</span>
@@ -73,8 +70,15 @@ export default function HomePage() {
                 <span className='Heading15M color-Heading ml_4'>Map</span>
             </div>
         </div>
+      </div>
+      <div className={`mainContainer d-flex h-100vh overflow-scroll w-100  ${state.map && 'paddingFix'}`}>
+      <div class={`container ${state.map && 'w-50'}`}>
+        
+        {state.loader ? <img className='absoluteMiddle' src={PngIcons.loader} width="50px" height={"auto"} alt="" />  : 
+        <>
+     
         {state.data && state?.data.map((data)=>
-        <div class="box">
+        <div class={`box ${state.map && 'twoBoxes'} `}>
           <div class="top">
             <img src={data?.media[0]?.MediaURL} alt="" height={"165px"} width="100%" />
             <p className='price Heading16B'>$ {parseInt(data?.listprice)?.toLocaleString()}</p>
@@ -91,8 +95,13 @@ export default function HomePage() {
           </div>
         </div>)}
         </>
-    }</div>
-
+    }
+      </div>
+      {state.data.length > 0 && state.map && <div className='w-50 mt_10 googleMapBox'>
+      <GoogleMap data={state.data}/>
+      </div>
+      }
+      </div>
 
     </div>
   )
@@ -100,7 +109,7 @@ export default function HomePage() {
 
 const Marker = ({ text}) => (
     <div className='middle'>
-      <SvgIcons.LocationIcon color={'#236A73'} height="40px" width="40px" />
+      <SvgIcons.LocationIcon color={'#236A73'} height="30px" width="30px" />
       {<div className="marker-text Heading14M color-Heading bg-color-white pl-2 pr-2 pb-2 pt-2 borderRadius-4 d-flex"><span>$ </span> { text}</div>}
     </div>
   );
@@ -113,7 +122,7 @@ function GoogleMap({data}){
       lat: data[0].latitude,
       lng: data[0].longitude
     },
-    zoom: 14
+    zoom: 8
   };
 
   console.log('hoveredMarker ', hoveredMarker)
@@ -130,7 +139,7 @@ function GoogleMap({data}){
   }
 
   return (
-    <div style={{ height: '100vh', width: '100%' }}>
+    <div className='h-100 w-100 borderRadius-4 overflow-hidden'>
       <GoogleMapReact
         bootstrapURLKeys = {{ key: "AIzaSyBIUUEUoLYKBnVKGvVjLchBzdMR-CUa5A4" }}
         // apiKey           = {"AIzaSyBIUUEUoLYKBnVKGvVjLchBzdMR-CUa5A4"}

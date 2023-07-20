@@ -1,5 +1,6 @@
 #HomePage{
-    width            : 100%;
+    width     : 100%;
+    margin-top: 32px;
     .boxShadow{
         // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         -webkit-filter: drop-shadow(0px 0px 5px #000);
@@ -21,7 +22,6 @@ body {
   
   .container {
     width: 100%;
-    margin: 100px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -45,8 +45,16 @@ body {
     position: relative;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 5px;
-    margin: 32px 0px;
+    margin: 10px 0px;
     overflow: hidden;
+  }
+
+  .twoBoxes{
+    width: calc(50% - 12px) !important; /* Four boxes in one row */
+  }
+
+  .paddingFix{
+    padding: 0px 32px;
   }
   
   /* Media Query for responsive layout */
@@ -192,6 +200,16 @@ body {
     font-size: 22px;
   }
   
+  .googleMapBox{
+    position: sticky;
+    top     : 0px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  }
 
 }
 
+
+.h-100vh{
+  height: 95vh;
+}
