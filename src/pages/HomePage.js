@@ -1,8 +1,25 @@
-import React from 'react'
+import React, {useState} from 'react'
 import CustomTextField from '../components/googleMap/Autocomplete';
 import { SvgIcons } from '../icons';
+import { useFormik } from 'formik';
 
 export default function HomePage() {
+
+    const initState={
+        location         : {},
+    }
+
+    const formik = useFormik({
+        initialValues      : { ...initState },
+    })
+
+  const onAddressChange = (event) => formik.setValues({ ...formik.values, location: { ...formik.values.location, address: event.target.value } })
+  const locationSummary = (location) => {
+    formik.setValues({ ...formik.values, location: {...location}   })
+}
+
+  console.log('formik ',formik.values)
+
   return (
     <div id="HomePage" className='middle'>
         <h1 className='Heading30B color-white mb_16 boxShadow'>Agents. Tours. Loans. Homes.</h1>
@@ -14,6 +31,9 @@ export default function HomePage() {
             padding     = "24px 40px 24px 24px "
             top         = "24px"
             fontSize    = "18px"
+            locationSummary = {locationSummary}
+            onChange        = {onAddressChange}
+
         />
         </div>
     </div>
