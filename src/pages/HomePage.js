@@ -98,7 +98,7 @@ export default function HomePage() {
   )
 }
 
-const AnyReactComponent = ({ text }) => <SvgIcons.LocationIcon height="25px" width="25px"/>;
+const AnyReactComponent = ({ text }) => <SvgIcons.LocationIcon color="#236A73" height="30px" width="30px"/>;
 
 function GoogleMap({data}){
   const defaultProps = {
@@ -106,7 +106,7 @@ function GoogleMap({data}){
       lat: data[0].latitude,
       lng: data[0].longitude
     },
-    zoom: 10
+    zoom: 10.5
   };
 
   return (
