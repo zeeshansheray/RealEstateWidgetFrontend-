@@ -242,6 +242,14 @@ h1,h2,h3,h4,h5,h6,p{
   justify-content: center;
 }
 
+.MuiCheckbox-root{
+  padding: 0px !important;
+}
+
+.MuiCheckbox-root:hover, .MuiIconButton-colorSecondary:hover{
+  background-color: white !important;
+}
+
 .disabledbutton {
   pointer-events: none !important;
   opacity: 0.5 !important;
@@ -1023,10 +1031,6 @@ label {
   }
 }
 
-.MuiIconButton-colorSecondary:hover {
-  background-color: color(neutral20) !important;
-}
-
 
 
 #Toaster .notification-container {
@@ -1182,30 +1186,6 @@ label {
 
 #Toaster .notification-message {
   color: #45526B;
-}
-
-
-
-#CustomRadio{
-  .MuiRadio-colorSecondary.Mui-checked{
-      color: color(primary50) !important;
-      &:hover{
-          background-color: color(neutral20) !important;
-      }
-  }
-  .MuiIconButton-colorSecondary:hover{
-      background-color: color(neutral20) !important;
-  }
-}
-
-#CustomCheckBox{
-  // .MuiIconButton-colorSecondary:hover{background-color: color(neutral20) !important;}
-  .MuiCheckbox-colorSecondary.Mui-checked{
-      color: color(primary50) !important;
-      // &:hover{
-      //     background-color: color(neutral20) !important;
-      // }
-  }
 }
 
 
