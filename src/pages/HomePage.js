@@ -5,7 +5,6 @@ import { SvgIcons } from '../icons';
 import localforage from 'localforage';
 import GoogleMapReact from 'google-map-react';
 import { ColorSchemeCode } from '../enums/ColorScheme';
-import ClickOutside from '../utils/ClickOutside';
 import CustomCheckBox from '../components/CustomCheckBox';
 import CustomButton from '../components/CustomButton';
 import CustomTextField from '../components/CustomTextField';
@@ -17,13 +16,14 @@ export default function HomePage() {
     data               : [],
     map                : false,
     selectedMarkerIndex: null,
+    filteredData       : []
   })
 
   const [filters, setFilters] = useState({
     propertyType : [],
     price : {
       min : 1,
-      max : 100000
+      max : 10000000
     },
     bedrooms: 'any',
     bathrooms: 'any'
@@ -48,7 +48,7 @@ export default function HomePage() {
     setState({...state, loader : true})
     let data = await localforage.getItem('data');
     if(data){
-        setState({...state, data : data, loader : false})
+        setState({...state, data : data, loader : false, filteredData : data})
     }
     let query = {
       ref : 'des54556'
@@ -61,7 +61,6 @@ export default function HomePage() {
     else{
       setState({...state, data : [], loader : false})
     }
-    // console.log('fetched Data ', response)
   }
 
   useEffect(()=>{
@@ -95,12 +94,15 @@ export default function HomePage() {
   }
   
   const propertyTypes = [
-    'Vacant Land',
-    'Multi-family',
-    'Industrial',
-    'Business',
-    'Retail'
-  ]
+    'agriculture',
+    'business',
+    'industrial',
+    'multi-family',
+    'retail',
+    'single family',
+    'vacant land',
+  ];
+  
 
   const roomTypes = [
     {key : 'Any', value : 'any'},
@@ -114,20 +116,57 @@ export default function HomePage() {
   console.log('filters ', filters.propertyType)
 
   const handlePropertyFunc = (property) => {
-    console.log('onchange')
-    let filterDetail
-    if(filters.propertyType.includes(property)){
-      filterDetail = filters.propertyType.filter((singleProperty)=>{
-        return singleProperty != property
-      })
+    const updatedPropertyType = [...filters.propertyType]; // Create a copy of the propertyType array
+    const propertyLowercase = property.toLowerCase().trim(); // Transform the property to lowercase and trim
+  
+    // Check if the property is already in the filter list, and toggle its inclusion
+    if (updatedPropertyType.includes(propertyLowercase)) {
+      const index = updatedPropertyType.indexOf(propertyLowercase);
+      updatedPropertyType.splice(index, 1);
+    } else {
+      updatedPropertyType.push(propertyLowercase);
     }
-    else{
-      filterDetail = filters.propertyType;
-      filterDetail.push(property)
+  
+    // Update the filters state with the updated propertyType
+    setFilters({ ...filters, propertyType: updatedPropertyType });
+  };
+
+  const applyFilters = () => {
+    let filteredData = state.data;
+  
+    // Filter by property type
+    if (filters.propertyType.length > 0) {
+      filteredData = filteredData.filter((property) =>
+        filters.propertyType.includes(property?.propertysubtype?.toLowerCase())
+      );
     }
-    filters.propertyType = filterDetail
-    setFilters({...filters})
-  }
+  
+    // Filter by price range
+    filteredData = filteredData.filter(
+      (property) =>
+        parseFloat(property.listprice) >= filters.price.min &&
+        parseFloat(property.listprice) <= filters.price.max
+    );
+  
+    // Filter by number of bedrooms
+    if (filters.bedrooms !== 'any') {
+      filteredData = filteredData.filter(
+        (property) => parseInt(property.bedroomstotal) >= parseInt(filters.bedrooms)
+      );
+    }
+  
+    // Filter by number of bathrooms
+    if (filters.bathrooms !== 'any') {
+      filteredData = filteredData.filter(
+        (property) => parseInt(property.bathroomstotalinteger) >= parseInt(filters.bathrooms)
+      );
+    }
+
+  
+    // Update the state with filtered data
+    setState({ ...state, filteredData: filteredData });
+  };
+  
 
   return (
     <div id="HomePage" className='middle'>     
@@ -154,7 +193,7 @@ export default function HomePage() {
                            <CustomButton 
                             btntext   = "Apply"
                             className={"ml_8"}
-
+                            onClick={applyFilters}
                           />
                         </div>
                    </div>
@@ -181,6 +220,7 @@ export default function HomePage() {
                            <CustomButton 
                             btntext   = "Apply"
                             className={"ml_8"}
+                            onClick={applyFilters}
 
                           />
                         </div>
@@ -211,6 +251,8 @@ export default function HomePage() {
                            <CustomButton 
                             btntext   = "Apply"
                             className={"ml_8"}
+                            onClick={applyFilters}
+
                           />
                         </div>
                    </div>
@@ -240,6 +282,7 @@ export default function HomePage() {
                            <CustomButton 
                             btntext   = "Apply"
                             className={"ml_8"}
+                            onClick={applyFilters}
 
                           />
                         </div>
@@ -263,7 +306,7 @@ export default function HomePage() {
         {state.loader ? <img className='absoluteMiddle' src={PngIcons.loader} width="50px" height={"auto"} alt="" />  : 
         <>
      
-        {state.data && state?.data.map((data, idx)=>
+        {state.filteredData && state?.filteredData.map((data, idx)=>
         <div class={`box ${state.map && 'twoBoxes'} `}>
           <div class="top">
             <img src={data?.media[0]?.MediaURL} alt="" height={"165px"} width="100%" />
