@@ -111,9 +111,10 @@ export default function HomePage() {
     {key : '5+', value : 5},
   ]
 
-  console.log('filters ', filters)
+  console.log('filters ', filters.propertyType)
 
   const handlePropertyFunc = (property) => {
+    console.log('onchange')
     let filterDetail
     if(filters.propertyType.includes(property)){
       filterDetail = filters.propertyType.filter((singleProperty)=>{
@@ -124,7 +125,8 @@ export default function HomePage() {
       filterDetail = filters.propertyType;
       filterDetail.push(property)
     }
-    setFilters({...filters, propertyType : filterDetail})
+    filters.propertyType = filterDetail
+    setFilters({...filters})
   }
 
   return (
@@ -139,7 +141,7 @@ export default function HomePage() {
                           <CustomCheckBox 
                             label     = {property}
                             className = {'mt_8'}
-                            value = {filters.propertyType.includes(property)}
+                            value = {filters.propertyType.includes(property) ? true : false}
                             onChange={()=>handlePropertyFunc(property)}
                         />)}
 
