@@ -242,18 +242,24 @@ body {
   }
 
   .singleRoom{
-    flex-grow: 1;
-    flex-basis: 0;
-    transition: all 0.2s ease 0s, visibility 0s ease 0s;
-    padding: 10px;
+    flex-grow       : 1;
+    flex-basis      : 0;
+    transition      : ease 0.3s;
+    padding         : 10px;
     background-color: rgb(255, 255, 255);
-    border-left:1px solid rgb(167, 166, 171);
-    color: rgb(42, 42, 51);
+    border-left     : 1px solid rgb(167, 166, 171);
+    color           : rgb(42, 42, 51);
+    height          : 48px;
   }
 
   .roomBox{
     border:1px solid rgb(167, 166, 171);
     border-left: 0px;
+  }
+
+  .selected{
+    border: 2px solid color(primary50);
+    border-left: 3px solid color(primary50);
   }
 
 }

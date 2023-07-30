@@ -19,6 +19,17 @@ export default function HomePage() {
     selectedMarkerIndex: null,
   })
 
+  const [filters, setFilters] = useState({
+    propertyType : [],
+    price : {
+      min : 1,
+      max : 100000
+    },
+    bedrooms: 'any',
+    bathrooms: 'any'
+
+  })
+
   const [show, setShow] = useState({
     modal   : false,
     selected: '',
@@ -26,7 +37,7 @@ export default function HomePage() {
 
 
   function handleMarkerClick(index) {
-    console.log('selectedMarkerIndex ', index)
+    // console.log('selectedMarkerIndex ', index)
     setState({ ...state, selectedMarkerIndex: index });
   }
 
@@ -50,7 +61,7 @@ export default function HomePage() {
     else{
       setState({...state, data : [], loader : false})
     }
-    console.log('fetched Data ', response)
+    // console.log('fetched Data ', response)
   }
 
   useEffect(()=>{
@@ -63,7 +74,6 @@ export default function HomePage() {
       // Use setTimeout to ensure the GoogleMap component has rendered the markers
       setTimeout(() => {
         const markerElement = containerRef.current.querySelector(`[data-id="${state.selectedMarkerIndex}"]`);
-        console.log('markerElement ', containerRef)
         if (markerElement) {
           containerRef.current.scrollTo({
             behavior: 'smooth',
@@ -76,7 +86,6 @@ export default function HomePage() {
   const handleClickFunc = (e, event) =>{
     e.preventDefault();
     e.stopPropagation();
-    console.log('event ', event)
     if(show.selected == event){
       setShow({...show, selected : '', modal : false})
     }
@@ -94,13 +103,29 @@ export default function HomePage() {
   ]
 
   const roomTypes = [
-    {key : 'Any', value : ''},
+    {key : 'Any', value : 'any'},
     {key : '1+', value : 1},
     {key : '2+', value : 2},
     {key : '3+', value : 3},
     {key : '4+', value : 4},
     {key : '5+', value : 5},
   ]
+
+  console.log('filters ', filters)
+
+  const handlePropertyFunc = (property) => {
+    let filterDetail
+    if(filters.propertyType.includes(property)){
+      filterDetail = filters.propertyType.filter((singleProperty)=>{
+        return singleProperty != property
+      })
+    }
+    else{
+      filterDetail = filters.propertyType;
+      filterDetail.push(property)
+    }
+    setFilters({...filters, propertyType : filterDetail})
+  }
 
   return (
     <div id="HomePage" className='middle'>     
@@ -114,6 +139,8 @@ export default function HomePage() {
                           <CustomCheckBox 
                             label     = {property}
                             className = {'mt_8'}
+                            value = {filters.propertyType.includes(property)}
+                            onChange={()=>handlePropertyFunc(property)}
                         />)}
 
                         <div className='d-flex justify-flex-end mt_16'>
@@ -137,10 +164,10 @@ export default function HomePage() {
                    <div className='filterComponentBox' onClick = {(e)=>{e.preventDefault(); e.stopPropagation();}}>
                       <div className='d-flex space-between'>
                           <div  className='w-48'>
-                            <CustomTextField label={"Min"} type="number" top="38px" icon="$" position="start"/>
+                            <CustomTextField label={"Min"} value={filters.price.min} onChange={(e)=>setFilters({...filters, price : {...filters.price, min : e.target.value}})} type="number" top="39px" icon="$" position="start"/>
                           </div>
                           <div  className='w-48'>
-                            <CustomTextField label={"Max"} top="38px" type="number"  icon="$" position="start"/>
+                            <CustomTextField label={"Max"} value={filters.price.max} onChange={(e)=>setFilters({...filters, price : {...filters.price, max : e.target.value}})} top="39px" type="number"  icon="$" position="start"/>
                           </div>
                       </div>
                       <div className='d-flex justify-flex-end mt_16'>
@@ -163,10 +190,10 @@ export default function HomePage() {
                    
                    {(show.modal && show.selected == "bedrooms") && 
                    <div className='filterComponentBox' onClick = {(e)=>{e.preventDefault(); e.stopPropagation();}}>
-                      <div className='d-flex w-100 roomBox'>
+                      <div className='d-flex w-100 roomBox' >
                       {
                         roomTypes.map((room)=>
-                          <div className='singleRoom middle'>
+                          <div className={`singleRoom middle ${(room.value == filters.bedrooms) && 'selected'}`} onClick={()=>setFilters({...filters , bedrooms : room.value})}>
                               {room.key}
                           </div>
                         )
@@ -182,7 +209,6 @@ export default function HomePage() {
                            <CustomButton 
                             btntext   = "Apply"
                             className={"ml_8"}
-
                           />
                         </div>
                    </div>
@@ -197,7 +223,7 @@ export default function HomePage() {
                     <div className='d-flex w-100 roomBox'>
                       {
                         roomTypes.map((room)=>
-                          <div className='singleRoom middle'>
+                          <div className={`singleRoom middle ${(room.value == filters.bathrooms) && 'selected'}`} onClick={()=>setFilters({...filters , bathrooms : room.value})}>
                               {room.key}
                           </div>
                         )
