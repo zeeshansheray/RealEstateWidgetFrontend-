@@ -55,11 +55,13 @@ export default function HomePage() {
     }
     const {response,error} = await AuthService.GetData({query});
     if(response){
-      setState({...state, data : response.data, loader : false})
-      localforage.setItem('data', response.data)
+      console.log('response ', response)
+      setState({...state, data : response.data, loader : false, filteredData : response.data})
+      await localforage.setItem('data', response.data)
     }
     else{
-      setState({...state, data : [], loader : false})
+      console.log('error ', error)
+      setState({...state, data : [], loader : false, filteredData : []})
     }
   }
 
@@ -83,8 +85,6 @@ export default function HomePage() {
   }, [state.selectedMarkerIndex]);
 
   const handleClickFunc = (e, event) =>{
-    e.preventDefault();
-    e.stopPropagation();
     if(show.selected == event){
       setShow({...show, selected : '', modal : false})
     }
@@ -113,7 +113,6 @@ export default function HomePage() {
     {key : '5+', value : 5},
   ]
 
-  console.log('filters ', filters.propertyType)
 
   const handlePropertyFunc = (property) => {
     const updatedPropertyType = [...filters.propertyType]; // Create a copy of the propertyType array
@@ -127,9 +126,11 @@ export default function HomePage() {
       updatedPropertyType.push(propertyLowercase);
     }
   
-    // Update the filters state with the updated propertyType
     setFilters({ ...filters, propertyType: updatedPropertyType });
+    setShow({...show, modal : true, selected : 'property'})
   };
+
+
 
   const applyFilters = () => {
     let filteredData = state.data;
@@ -165,8 +166,30 @@ export default function HomePage() {
   
     // Update the state with filtered data
     setState({ ...state, filteredData: filteredData });
+    setShow({...show, modal : false, selected : ''})
   };
+
+  useEffect(() => {
+    // Function to handle clicks outside the modal
+    const handleOutsideClick = (e) => {
+      if (show.modal && !e.target.closest('.filterComponentBox')) {
+        setShow({ ...show, selected: '', modal: false });
+      }
+    };
   
+    // Add event listener for clicks on the document body
+    document.body.addEventListener('click', handleOutsideClick);
+  
+    // Clean up the event listener when the component unmounts
+    return () => {
+      document.body.removeEventListener('click', handleOutsideClick);
+    };
+  }, [show]);
+  
+  
+
+  console.log('state ', state.filteredData  )
+
 
   return (
     <div id="HomePage" className='middle'>     
@@ -174,13 +197,13 @@ export default function HomePage() {
       <div className='d-flex justify-flex-end w-100 align-items-center mb_32'>
                 <div className='singleFilter Heading16M d-flex align-items-center' onClick={(e)=>handleClickFunc(e,'property')}>
                    Property Type <span className='ml_8'><SvgIcons.CustomDropDownReplacedTriangleIcon height={12} width={12}  color={ColorSchemeCode.black}/></span>
-                   {(show.modal && show.selected == "property") && 
-                   <div className='filterComponentBox' onClick = {(e)=>{e.preventDefault(); e.stopPropagation();}}>
+                   {(show.modal && (show.selected == "property")) && 
+                   <div className='filterComponentBox'>
                         {propertyTypes.map((property)=>
                           <CustomCheckBox 
                             label     = {property}
-                            className = {'mt_8'}
-                            value = {filters.propertyType.includes(property) ? true : false}
+                            className = {'mt_8 capitalize'}
+                            value = {filters.propertyType.includes(property.toLocaleLowerCase()) ? true : false}
                             onChange={()=>handlePropertyFunc(property)}
                         />)}
 
@@ -199,10 +222,13 @@ export default function HomePage() {
                    </div>
                    }
                 </div>
-                <div className='singleFilter Heading16M d-flex align-items-center' onClick={(e)=>handleClickFunc(e,'price')}>
+
+              <div className='singleFilter Heading16M d-flex align-items-center'>
+                <div onClick={(e)=>handleClickFunc(e,'price')}>
                    Price <span className='ml_8'><SvgIcons.CustomDropDownReplacedTriangleIcon height={12} width={12}  color={ColorSchemeCode.black}/></span>
-                   {(show.modal && show.selected == "price") && 
-                   <div className='filterComponentBox' onClick = {(e)=>{e.preventDefault(); e.stopPropagation();}}>
+                </div>
+                {(show.modal && (show.selected == "price")) &&
+                   <div className='filterComponentBox'>
                       <div className='d-flex space-between'>
                           <div  className='w-48'>
                             <CustomTextField label={"Min"} value={filters.price.min} onChange={(e)=>setFilters({...filters, price : {...filters.price, min : e.target.value}})} type="number" top="39px" icon="$" position="start"/>
@@ -225,11 +251,10 @@ export default function HomePage() {
                           />
                         </div>
                    </div>
-                   }
+                  }
                 </div>
                 <div className='singleFilter Heading16M d-flex align-items-center' onClick={(e)=>handleClickFunc(e,'bedrooms')}>
                    No of Bedrooms <span className='ml_8'><SvgIcons.CustomDropDownReplacedTriangleIcon height={12} width={12}  color={ColorSchemeCode.black}/></span>
-                   
                    {(show.modal && show.selected == "bedrooms") && 
                    <div className='filterComponentBox' onClick = {(e)=>{e.preventDefault(); e.stopPropagation();}}>
                       <div className='d-flex w-100 roomBox' >
@@ -257,8 +282,6 @@ export default function HomePage() {
                         </div>
                    </div>
                    }
-                   
-                   
                 </div>
                 <div className='singleFilter Heading16M d-flex align-items-center' onClick={(e)=>handleClickFunc(e,'bathrooms')}>
                    No of Bathrooms <span className='ml_8'><SvgIcons.CustomDropDownReplacedTriangleIcon height={12} width={12}  color={ColorSchemeCode.black}/></span>
@@ -288,7 +311,6 @@ export default function HomePage() {
                         </div>
                    </div>
                    }
-                   
                 </div>
             <div className='d-flex align-items-center cp' onClick={()=>setState({...state, map : false})}>
                 <img width={"13px"} height={"13px"} src={PngIcons.menu} alt="" />
@@ -300,7 +322,7 @@ export default function HomePage() {
             </div>
         </div>
       </div>
-      <div  ref={containerRef}  className={`mainContainer d-flex h-100vh overflow-scroll w-100  ${state.map && 'paddingFix'}`}>
+      <div className={`mainContainer d-flex h-100vh overflow-scroll w-100  ${state.map && 'paddingFix'}`}>
       <div class={`container ${state.map && 'w-50'}`}>
         
         {state.loader ? <img className='absoluteMiddle' src={PngIcons.loader} width="50px" height={"auto"} alt="" />  : 
@@ -309,7 +331,7 @@ export default function HomePage() {
         {state.filteredData && state?.filteredData.map((data, idx)=>
         <div class={`box ${state.map && 'twoBoxes'} `}>
           <div class="top">
-            <img src={data?.media[0]?.MediaURL} alt="" height={"165px"} width="100%" />
+            <img className='object-fit-cover' src={data?.media[0]?.MediaURL} alt="" height={"165px"} width="100%" />
             <p className='price Heading16B'>$ {parseInt(data?.listprice)?.toLocaleString()}</p>
           </div>
           <div class="bottom">

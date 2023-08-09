@@ -69,6 +69,12 @@ body {
       width: calc(50% - 30px); /* Two boxes in one row */
     }
   }
+
+  @media screen and (min-width: 1400px) {
+    .container .twoBoxes {
+      width: calc(33.33% - 30px) !important; /* Three boxes in one row */
+    }
+  }
   
   @media screen and (max-width: 600px) {
     .container .box {
