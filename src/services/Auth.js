@@ -10,5 +10,5 @@ const GetData   = async ({query}) => await axios.get(env.API_URL+'/getData?'+uti
 const AuthService = {
     GetData         : Handlers.Services(GetData),
 }
-
+// dada
 export default AuthService
