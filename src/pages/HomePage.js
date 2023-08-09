@@ -323,7 +323,7 @@ export default function HomePage() {
         </div>
       </div>
       <div className={`mainContainer d-flex h-100vh overflow-scroll w-100  ${state.map && 'paddingFix'}`}>
-      <div class={`container ${state.map && 'w-50'}`}>
+      <div class={`container ${state.map && 'w-50 mt_430'}`}>
         
         {state.loader ? <img className='absoluteMiddle' src={PngIcons.loader} width="50px" height={"auto"} alt="" />  : 
         <>
