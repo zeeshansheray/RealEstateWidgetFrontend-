@@ -194,8 +194,8 @@ export default function HomePage() {
   return (
     <div id="HomePage" className='middle'>     
       <div className='container mt_32'>
-      <div className='d-flex justify-flex-end w-100 align-items-center mb_32'>
-                <div className='singleFilter Heading16M d-flex align-items-center' onClick={(e)=>handleClickFunc(e,'property')}>
+      <div className='d-flex justify-flex-end w-100 align-items-center mb_32 filterContainer'>
+              <div className='singleFilter Heading16M d-flex align-items-center' onClick={(e)=>handleClickFunc(e,'property')}>
                    Property Type <span className='ml_8'><SvgIcons.CustomDropDownReplacedTriangleIcon height={12} width={12}  color={ColorSchemeCode.black}/></span>
                    {(show.modal && (show.selected == "property")) && 
                    <div className='filterComponentBox'>
@@ -223,18 +223,16 @@ export default function HomePage() {
                    }
                 </div>
 
-              <div className='singleFilter Heading16M d-flex align-items-center'>
-                <div onClick={(e)=>handleClickFunc(e,'price')}>
+              <div className='singleFilter Heading16M d-flex align-items-center' onClick={(e)=>handleClickFunc(e,'price')}>
                    Price <span className='ml_8'><SvgIcons.CustomDropDownReplacedTriangleIcon height={12} width={12}  color={ColorSchemeCode.black}/></span>
-                </div>
                 {(show.modal && (show.selected == "price")) &&
                    <div className='filterComponentBox'>
                       <div className='d-flex space-between'>
                           <div  className='w-48'>
-                            <CustomTextField label={"Min"} value={filters.price.min} onChange={(e)=>setFilters({...filters, price : {...filters.price, min : e.target.value}})} type="number" top="39px" icon="$" position="start"/>
+                            <CustomTextField onClick={(e) => e.stopPropagation()}  label={"Min"} value={filters.price.min} onChange={(e)=>{setFilters({...filters, price : {...filters.price, min : e.target.value}}); e.stopPropagation();}} type="number" top="39px" icon="$" position="start"/>
                           </div>
                           <div  className='w-48'>
-                            <CustomTextField label={"Max"} value={filters.price.max} onChange={(e)=>setFilters({...filters, price : {...filters.price, max : e.target.value}})} top="39px" type="number"  icon="$" position="start"/>
+                            <CustomTextField onClick={(e) => e.stopPropagation()}  label={"Max"} value={filters.price.max} onChange={(e)=>setFilters({...filters, price : {...filters.price, max : e.target.value}})} top="39px" type="number"  icon="$" position="start"/>
                           </div>
                       </div>
                       <div className='d-flex justify-flex-end mt_16'>
@@ -256,11 +254,11 @@ export default function HomePage() {
                 <div className='singleFilter Heading16M d-flex align-items-center' onClick={(e)=>handleClickFunc(e,'bedrooms')}>
                    No of Bedrooms <span className='ml_8'><SvgIcons.CustomDropDownReplacedTriangleIcon height={12} width={12}  color={ColorSchemeCode.black}/></span>
                    {(show.modal && show.selected == "bedrooms") && 
-                   <div className='filterComponentBox' onClick = {(e)=>{e.preventDefault(); e.stopPropagation();}}>
+                   <div className='filterComponentBox'>
                       <div className='d-flex w-100 roomBox' >
                       {
                         roomTypes.map((room)=>
-                          <div className={`singleRoom middle ${(room.value == filters.bedrooms) && 'selected'}`} onClick={()=>setFilters({...filters , bedrooms : room.value})}>
+                          <div className={`singleRoom middle ${(room.value == filters.bedrooms) && 'selected'}`} onClick={(e)=>{e.stopPropagation(); setFilters({...filters , bedrooms : room.value})}}>
                               {room.key}
                           </div>
                         )
@@ -286,11 +284,11 @@ export default function HomePage() {
                 <div className='singleFilter Heading16M d-flex align-items-center' onClick={(e)=>handleClickFunc(e,'bathrooms')}>
                    No of Bathrooms <span className='ml_8'><SvgIcons.CustomDropDownReplacedTriangleIcon height={12} width={12}  color={ColorSchemeCode.black}/></span>
                    {(show.modal && show.selected == "bathrooms") && 
-                   <div className='filterComponentBox' onClick = {(e)=>{e.preventDefault(); e.stopPropagation();}}>
+                   <div className='filterComponentBox'>
                     <div className='d-flex w-100 roomBox'>
                       {
                         roomTypes.map((room)=>
-                          <div className={`singleRoom middle ${(room.value == filters.bathrooms) && 'selected'}`} onClick={()=>setFilters({...filters , bathrooms : room.value})}>
+                          <div className={`singleRoom middle ${(room.value == filters.bathrooms) && 'selected'}`} onClick={(e)=>{e.stopPropagation(); setFilters({...filters , bathrooms : room.value})}}>
                               {room.key}
                           </div>
                         )
@@ -312,6 +310,7 @@ export default function HomePage() {
                    </div>
                    }
                 </div>
+            <div className='d-flex justify-flex-end mapIcons'>
             <div className='d-flex align-items-center cp' onClick={()=>setState({...state, map : false})}>
                 <img width={"13px"} height={"13px"} src={PngIcons.menu} alt="" />
                 <span className='Heading15M color-Heading ml_4'>Tile</span>
@@ -319,6 +318,7 @@ export default function HomePage() {
             <div className='d-flex align-items-center ml_20 cp' onClick={()=>setState({...state, map : true})}>
                 <SvgIcons.LocationIcon />
                 <span className='Heading15M color-Heading ml_4'>Map</span>
+            </div>
             </div>
         </div>
       </div>

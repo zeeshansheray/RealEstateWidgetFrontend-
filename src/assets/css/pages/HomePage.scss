@@ -80,6 +80,23 @@ body {
     .container .box {
       width: 100%; /* One box per row */
     }
+
+    .filterContainer{
+      flex-direction: column !important;
+      margin-bottom: 8px !important;
+    }
+
+    .singleFilter{
+      width: 100% !important;
+      margin-bottom: 16px;
+      margin-right: 0px !important;
+
+    }
+
+    .mapIcons{
+      width: 100%;
+      margin-right: 16px;
+    }
   }
   
   .container .box .top {
