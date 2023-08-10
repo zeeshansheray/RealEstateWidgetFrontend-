@@ -346,6 +346,7 @@ export default function HomePage() {
         </div>)}
         </>
     }
+    {console.log('state ', state.selectedMarkerIndex)}
       </div>
       {state.data.length > 0 && state.map && <div className='w-50 mt_10 googleMapBox'>
       <GoogleMap data={state.filteredData} onMarkerClick={handleMarkerClick}/>
@@ -353,7 +354,7 @@ export default function HomePage() {
       }
       </div>
       <CustomsModal 
-        open={state.selectedMarkerIndex ? true : false}
+        open={(state.selectedMarkerIndex == 0  || state.selectedMarkerIndex) ? true : false}
         onClose={()=>setState({...state, selectedMarkerIndex : null})}
         component={
         <ModalComponent 
@@ -414,6 +415,7 @@ function GoogleMap({data, onMarkerClick}){
     </div>
   );
 }
+
 
 const ModalComponent = ({onClose, state}) =>{
   return(
