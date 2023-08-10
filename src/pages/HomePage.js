@@ -535,14 +535,14 @@ const ModalComponent = ({onClose, state}) =>{
             {state?.filteredData[state?.selectedMarkerIndex]?.communityfeatures?.length > 0 && <div className='d-flex flex-wrap mb_8'>
               <h3 className='Body14M w-40'>Community Features : </h3>
               <div className='d-flex flex-wrap w-60'>
-                {state?.filteredData[state?.selectedMarkerIndex]?.communityfeatures?.map((feature)=><h3 className='Body14R'>&nbsp;{feature}</h3>)}
+                {state?.filteredData[state?.selectedMarkerIndex]?.communityfeatures?.map((feature)=><h3 className='Body14R'>{feature}</h3>)}
               </div>
             </div>}
 
             {state?.filteredData[state?.selectedMarkerIndex]?.securityfeatures?.length > 0 && <div className='mt_8 d-flex flex-wrap mb_8'>
               <h3 className='Body14M w-40'>Security Features : </h3>
                 <div className='d-flex flex-wrap w-60' >
-                  {state?.filteredData[state?.selectedMarkerIndex]?.securityfeatures?.map((feature,idx)=><span className='Body14R'>&nbsp;{feature} {(idx < state?.filteredData[state?.selectedMarkerIndex]?.securityfeatures?.length-1) && ','}</span>)}
+                  {state?.filteredData[state?.selectedMarkerIndex]?.securityfeatures?.map((feature,idx)=><span className='Body14R'>{feature} {(idx < state?.filteredData[state?.selectedMarkerIndex]?.securityfeatures?.length-1) && ','}</span>)}
                 </div>            
             </div>}
 
@@ -550,7 +550,7 @@ const ModalComponent = ({onClose, state}) =>{
             {state?.filteredData[state?.selectedMarkerIndex]?.fireplacefeatures?.length > 0 && <div className='d-flex flex-wrap mb_8'>
               <h3 className='Body14M w-40'>Security Features : </h3>
               <div className='d-flex w-60 flex-wrap'>
-                {state?.filteredData[state?.selectedMarkerIndex]?.fireplacefeatures?.map((feature,idx)=><span className='Body14R'>&nbsp;{feature} {(idx < state?.filteredData[state?.selectedMarkerIndex]?.securityfeatures?.length-1) && ','}</span>)}
+                {state?.filteredData[state?.selectedMarkerIndex]?.fireplacefeatures?.map((feature,idx)=><span className='Body14R'>{feature} {(idx < state?.filteredData[state?.selectedMarkerIndex]?.securityfeatures?.length-1) && ','}</span>)}
               </div>
             </div>}
             
@@ -565,7 +565,7 @@ const ModalComponent = ({onClose, state}) =>{
 
             {state?.filteredData[state?.selectedMarkerIndex]?.lotfeatures?.length > 0 && <div className='d-flex flex-wrap mb_8'>
               <h3 className='Body14M mt_2 mb_4 w-40'>Lot Features : </h3>
-              {state?.filteredData[state?.selectedMarkerIndex]?.lotfeatures?.map((feature)=><h3 className='Body14R lotFeature mt_2 mb_4'>&nbsp;{feature}</h3>)}
+              {state?.filteredData[state?.selectedMarkerIndex]?.lotfeatures?.map((feature)=><h3 className='Body14R lotFeature mt_2 mb_4'>{feature}</h3>)}
             </div>}
 
             
