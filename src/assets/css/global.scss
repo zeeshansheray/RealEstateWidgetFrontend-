@@ -91,6 +91,9 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 2
   overflow: scroll;
 }
 
+.text-align-justify{
+  text-align: justify;
+}
 
 
 //Empty State
@@ -355,6 +358,24 @@ a.hover-none:hover {
 
 .s {
   padding: 6px 24px !important;
+}
+
+.lotFeature{
+  padding: 4px 8px;
+  background-color: color(primary50);
+  color: white;
+  border-radius: 4px;
+  margin-right: 8px !important;
+}
+
+.leftModalSection{
+  max-height: 87vh;
+  overflow-y: auto;
+}
+
+.rightModalSection{
+  max-height: 87vh;
+  overflow-y: auto;
 }
 
 .tableRowHover:hover {
@@ -1217,3 +1238,21 @@ html {
 ::-webkit-scrollbar-thumb {
   background: #FF0000;
 }
+
+
+  
+  @media screen and (max-width: 600px) {
+
+    .flexDirection{
+      flex-direction: row-reverse;
+    }
+
+    .leftModalSection{
+      max-height: 100% !important;
+      margin-top: 32px;
+    }
+
+    .rightModalSection{
+      max-height: 100% !important;
+    }
+  }

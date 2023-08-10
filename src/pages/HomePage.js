@@ -8,6 +8,7 @@ import { ColorSchemeCode } from '../enums/ColorScheme';
 import CustomCheckBox from '../components/CustomCheckBox';
 import CustomButton from '../components/CustomButton';
 import CustomTextField from '../components/CustomTextField';
+import CustomsModal from './../components/CustomModal';
 
 export default function HomePage() {
 
@@ -16,7 +17,7 @@ export default function HomePage() {
     data               : [],
     map                : false,
     selectedMarkerIndex: null,
-    filteredData       : []
+    filteredData       : [],
   })
 
   const [filters, setFilters] = useState({
@@ -37,7 +38,6 @@ export default function HomePage() {
 
 
   function handleMarkerClick(index) {
-    // console.log('selectedMarkerIndex ', index)
     setState({ ...state, selectedMarkerIndex: index });
   }
 
@@ -329,7 +329,7 @@ export default function HomePage() {
         <>
      
         {state.filteredData && state?.filteredData.map((data, idx)=>
-        <div class={`box ${state.map && 'twoBoxes'} `}>
+        <div class={`box ${state.map && 'twoBoxes'} `} onClick={()=>setState({...state, selectedMarkerIndex : idx})}>
           <div class="top">
             <img className='object-fit-cover' src={data?.media[0]?.MediaURL} alt="" height={"165px"} width="100%" />
             <p className='price Heading16B'>{data?.listprice ? `$ ${parseInt(data?.listprice)?.toLocaleString()}` : 'N/A'}</p>
@@ -348,11 +348,21 @@ export default function HomePage() {
     }
       </div>
       {state.data.length > 0 && state.map && <div className='w-50 mt_10 googleMapBox'>
-      <GoogleMap data={state.data} onMarkerClick={handleMarkerClick}/>
+      <GoogleMap data={state.filteredData} onMarkerClick={handleMarkerClick}/>
       </div>
       }
       </div>
-
+      <CustomsModal 
+        open={state.selectedMarkerIndex ? true : false}
+        onClose={()=>setState({...state, selectedMarkerIndex : null})}
+        component={
+        <ModalComponent 
+          onClose={()=>setState({...state, selectedMarkerIndex : null})}
+          state = {state}
+          />
+        }
+        minWidth={"85%"}
+      />
     </div>
   )
 }
@@ -403,4 +413,173 @@ function GoogleMap({data, onMarkerClick}){
       </GoogleMapReact>
     </div>
   );
+}
+
+const ModalComponent = ({onClose, state}) =>{
+  return(
+    <div className='position-relative'>
+        <div className='d-flex justify-flex-end' style={{left : '0px', top: '0px', position: 'sticky', zIndex: 1000}} onClick={()=>onClose()}>
+            <SvgIcons.CrossIcon className="cp" color={ColorSchemeCode.black}/>
+        </div>
+        <div className='row flexDirection'>
+          <div className='col-md-7 col-12 col-lg-12 col-xl-7 leftModalSection'>
+            <img className='w-100 object-fit-cover mb_16' height={300} src={state?.filteredData[state?.selectedMarkerIndex]?.media[0]?.MediaURL} />
+            <div className='d-flex flex-wrap space-between'>
+                {state?.filteredData[state?.selectedMarkerIndex]?.media.map((singleImge, idx)=>singleImge.MediaCategory == "Property Photo" && <img className={`${(idx == state?.filteredData[state?.selectedMarkerIndex]?.media?.length-1 && (state?.filteredData[state?.selectedMarkerIndex]?.media %2 == 0) && singleImge.MediaCategory == "Property Photo" )  ? 'w-100' : 'w-49' } object-fit-cover mb_16`} height={300} src={singleImge?.MediaURL} />)}
+            </div>
+          </div>
+          <div className='col-md-5 col-12 col-lg-12 col-xl-5 rightModalSection'>
+              <p className='price Heading28B mb_8 d-flex align-items-center'>{state?.filteredData[state?.selectedMarkerIndex]?.listprice ? `$ ${parseInt(state?.filteredData[state?.selectedMarkerIndex]?.listprice)?.toLocaleString()}` : 'N/A'}
+              <p className='Heading15M color-Heading pt_10 ml_16'>
+                  {state?.filteredData[state?.selectedMarkerIndex]?.bedroomstotal || 0} Bd | {state?.filteredData[state?.selectedMarkerIndex]?.bathroomstotalinteger || 0} Ba | {state?.filteredData[state?.selectedMarkerIndex]?.buildingareatotal || (state?.filteredData[state?.selectedMarkerIndex]?.livingarea || 0)} Sqft
+              </p>
+            </p>
+            <h3 className='Heading18M'>{state?.filteredData[state?.selectedMarkerIndex]?.unparsedaddress}
+            </h3>
+            <h3 className='Caption16M mt_2 color-info60'>{(state?.filteredData[state?.selectedMarkerIndex]?.neighbourhood ? (state?.filteredData[state?.selectedMarkerIndex]?.neighbourhood + ' , ') : "") + state?.filteredData[state?.selectedMarkerIndex]?.city}</h3>
+          
+            
+            <h3 className='Heading20B mt_32 mb_8'>Details:</h3>
+            <div className='d-flex'>
+              <h3 className='Body14M mt_2 mb_4 w-40'>Address : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60 capitalize'>{state?.filteredData[state?.selectedMarkerIndex]?.unparsedaddress + ', ' + state?.filteredData[state?.selectedMarkerIndex]?.stateorprovince +  ', ' + state?.filteredData[state?.selectedMarkerIndex]?.country + ', ' + state?.filteredData[state?.selectedMarkerIndex]?.postalcode }</h3>
+            </div>
+            <div className='d-flex'>
+              <h3 className='Body14M mt_2 mb_4 w-40'>Property Type : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.propertysubtype}</h3>
+            </div>
+            <div className='d-flex'>
+              <h3 className='Body14M mt_2 mb_4 w-40'>MLS® : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.listingid}</h3>
+            </div>
+
+            {state?.filteredData[state?.selectedMarkerIndex]?.parkingtotal &&<div className='d-flex'>
+              <h3 className='Body14M mt_2 mb_4 w-40'>Parking Spots : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.parkingtotal}</h3>
+            </div>}
+
+            {state?.filteredData[state?.selectedMarkerIndex]?.parkingfeatures?.length > 1 &&<div className='d-flex'>
+              <h3 className='Body14M mt_2 mb_4 w-40'>Parking Type : </h3>
+              <h3 className='Body14R mt_2 mb_4  w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.parkingfeatures}</h3>
+            </div>}
+
+            {state?.filteredData[state?.selectedMarkerIndex]?.yearbuilt &&<div className='d-flex'>
+              <h3 className='Body14M mt_2 mb_4 w-40'>Year Built : </h3>
+              <h3 className='Body14R mt_2 mb_4  w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.yearbuilt}</h3>
+            </div>}
+
+            {state?.filteredData[state?.selectedMarkerIndex]?.fireplacestotal &&<div className='d-flex'>
+              <h3 className='Body14M mt_2 mb_4 w-40'>Fireplaces : </h3>
+              <h3 className='Body14R mt_2 mb_4  w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.fireplacestotal}</h3>
+            </div>}
+
+            {state?.filteredData[state?.selectedMarkerIndex]?.heating?.length > 0 &&<div className='d-flex'>
+              <h3 className='Body14M mt_2 mb_4 w-40'>Heating : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.heating || 'N/A'}</h3>
+            </div>}
+
+              {state?.filteredData[state?.selectedMarkerIndex]?.colling?.length > 0 &&<div className='d-flex'>
+              <h3 className='Body14M mt_2 mb_4 w-40'>Cooling : </h3>
+              <h3 className='Body14R mt_2 mb_4 2-60'>{state?.filteredData[state?.selectedMarkerIndex]?.colling || 'N/A'}</h3>
+            </div>}
+
+            {state?.filteredData[state?.selectedMarkerIndex]?.flooring?.length > 0 &&<div className='d-flex'>
+              <h3 className='Body14M mt_2 mb_4 w-40'>Flooring : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.flooring}</h3>
+            </div>}
+
+            {state?.filteredData[state?.selectedMarkerIndex]?.taxannualamount > 0 && 
+            <div className='d-flex'>
+              <h3 className='Body14M mt_2 mb_4 w-40'>Gross Property Tax : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60'>${state?.filteredData[state?.selectedMarkerIndex]?.taxannualamount}</h3>
+            </div>}
+
+            {state?.filteredData[state?.selectedMarkerIndex]?.structuretype &&<div className='d-flex'>
+              <h3 className='Body14M mt_2 mb_4 w-40'>Structure Type : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.structuretype}</h3>
+            </div>}
+
+            {state?.filteredData[state?.selectedMarkerIndex]?.watersource?.length > 0 &&<div className='d-flex'>
+              <h3 className='Body14M mt_2 mb_4 w-40'>Water Source : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.watersource}</h3>
+            </div>}
+
+            {state?.filteredData[state?.selectedMarkerIndex]?.sewer?.length > 0 &&<div className='d-flex'>
+              <h3 className='Body14M mt_2 mb_4 w-40'>Sewer Type : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.sewer}</h3>
+            </div>}
+
+            {state?.filteredData[state?.selectedMarkerIndex]?.commoninterest && <div className='d-flex'>
+              <h3 className='Body14M mt_2 mb_4 w-40'>Ownership Type : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.commoninterest}</h3>
+            </div>}
+
+            {state?.filteredData[state?.selectedMarkerIndex]?.condofee && <div className='d-flex'>
+              <h3 className='Body14M mt_2 mb_4 w-40'>Condo Fees : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.condofee + ' ' + state?.filteredData[state?.selectedMarkerIndex]?.associationfeefrequency}</h3>
+            </div>}
+            {state?.filteredData[state?.selectedMarkerIndex]?.associationfeeincludes?.length > 1 && <div className='d-flex'>
+              <h3 className='Body14M mt_2 mb_4 w-40'>Condo Fees Includes : </h3>
+              <div className='w-60 d-flex flex-wrap'>
+              {state?.filteredData[state?.selectedMarkerIndex]?.associationfeeincludes?.map((feature, idx)=><span className='Body14R'>{feature}  {(idx < state?.filteredData[state?.selectedMarkerIndex]?.appliances?.length-1) && ','}</span>)}
+              </div>
+            </div>}
+
+            {state?.filteredData[state?.selectedMarkerIndex]?.lotsizedimensions && state?.filteredData[state?.selectedMarkerIndex]?.lotsizeunits  && <div className='d-flex'>
+              <h3 className='Body14M mt_2 mb_4 w-40'>Lot Dimensions : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.lotsizedimensions + ' ' + state?.filteredData[state?.selectedMarkerIndex]?.lotsizeunits}</h3>
+            </div>}
+            
+           
+
+            {state?.filteredData[state?.selectedMarkerIndex]?.communityfeatures?.length > 0 && <div className='d-flex flex-wrap mb_8'>
+              <h3 className='Body14M w-40'>Community Features : </h3>
+              <div className='d-flex flex-wrap w-60'>
+                {state?.filteredData[state?.selectedMarkerIndex]?.communityfeatures?.map((feature)=><h3 className='Body14R'>&nbsp;{feature}</h3>)}
+              </div>
+            </div>}
+
+            {state?.filteredData[state?.selectedMarkerIndex]?.securityfeatures?.length > 0 && <div className='mt_8 d-flex flex-wrap mb_8'>
+              <h3 className='Body14M w-40'>Security Features : </h3>
+                <div className='d-flex flex-wrap w-60' >
+                  {state?.filteredData[state?.selectedMarkerIndex]?.securityfeatures?.map((feature,idx)=><span className='Body14R'>&nbsp;{feature} {(idx < state?.filteredData[state?.selectedMarkerIndex]?.securityfeatures?.length-1) && ','}</span>)}
+                </div>            
+            </div>}
+
+
+            {state?.filteredData[state?.selectedMarkerIndex]?.fireplacefeatures?.length > 0 && <div className='d-flex flex-wrap mb_8'>
+              <h3 className='Body14M w-40'>Security Features : </h3>
+              <div className='d-flex w-60 flex-wrap'>
+                {state?.filteredData[state?.selectedMarkerIndex]?.fireplacefeatures?.map((feature,idx)=><span className='Body14R'>&nbsp;{feature} {(idx < state?.filteredData[state?.selectedMarkerIndex]?.securityfeatures?.length-1) && ','}</span>)}
+              </div>
+            </div>}
+            
+            
+            
+            {state?.filteredData[state?.selectedMarkerIndex]?.appliances?.length > 0 && <div className='d-flex flex-wrap mb_8'>
+              <h3 className='Body14M w-40'>Appliances : </h3>
+              <div className='d-flex w-60 flex-wrap'>
+                {state?.filteredData[state?.selectedMarkerIndex]?.appliances?.map((feature, idx)=><span className='Body14R'>{feature}  {(idx < state?.filteredData[state?.selectedMarkerIndex]?.appliances?.length-1) && ','}</span>)}
+              </div>
+            </div>}
+
+            {state?.filteredData[state?.selectedMarkerIndex]?.lotfeatures?.length > 0 && <div className='d-flex flex-wrap mb_8'>
+              <h3 className='Body14M mt_2 mb_4 w-40'>Lot Features : </h3>
+              {state?.filteredData[state?.selectedMarkerIndex]?.lotfeatures?.map((feature)=><h3 className='Body14R lotFeature mt_2 mb_4'>&nbsp;{feature}</h3>)}
+            </div>}
+
+            
+
+            <h3 className='Heading20B mt_32 mb_8'>Overview:</h3>
+            <div className='d-flex'>
+              <h3 className='Body14R mt_2 mb_4 word-break text-align-justify'>{state?.filteredData[state?.selectedMarkerIndex]?.publicremarks}</h3>
+            </div>
+
+          </div>
+
+        </div>
+        {/* {state?.filteredData[state?.selectedMarkerIndex]?.listprice}/ */}
+        {console.log('selected ', state?.filteredData[state?.selectedMarkerIndex])}
+    </div>
+  )
 }
