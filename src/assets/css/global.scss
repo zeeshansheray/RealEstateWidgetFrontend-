@@ -393,20 +393,6 @@ a.hover-none:hover {
   display: none !important;
 }
 
-.content {
-  width: 100%;
-  // overflow-y    : scroll;
-  // height: 100vh;
-  z-index: 0;
-  padding-top: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  overflow-x: hidden;
-  background: color(white);
-  border-left: 0.5px solid color(neutral0);
-  // border-radius : 24px 0px 0px 24px;
-}
-
 .align-self {
   align-self: center;
 }
@@ -1251,6 +1237,22 @@ html {
       font-size: 22px !important;
     }
 
+    .Body14R{
+      font-size: 13px !important;
+    }
+
+    .labelName{
+      width: 45% !important;
+    }
+
+    .content{
+      width: 55% !important;
+    }
+
+    .Body14M{
+      font-size: 13px !important;
+    }
+
     .Heading15M{
       font-size: 14px !important;
     }
@@ -1262,5 +1264,7 @@ html {
 
     .rightModalSection{
       max-height: 100% !important;
+      padding-right: 8px !important;
+      padding-left: 8px !important;
     }
   }

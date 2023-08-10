@@ -443,107 +443,107 @@ const ModalComponent = ({onClose, state}) =>{
             
             <h3 className='Heading20B mt_32 mb_8'>Details:</h3>
             <div className='d-flex'>
-              <h3 className='Body14M mt_2 mb_4 w-40'>Address : </h3>
-              <h3 className='Body14R mt_2 mb_4 w-60 capitalize'>{state?.filteredData[state?.selectedMarkerIndex]?.unparsedaddress + ', ' + state?.filteredData[state?.selectedMarkerIndex]?.stateorprovince +  ', ' + state?.filteredData[state?.selectedMarkerIndex]?.country + ', ' + state?.filteredData[state?.selectedMarkerIndex]?.postalcode }</h3>
+              <h3 className='Body14M mt_2 mb_4 w-40 labelName'>Address : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60 content capitalize'>{state?.filteredData[state?.selectedMarkerIndex]?.unparsedaddress + ', ' + state?.filteredData[state?.selectedMarkerIndex]?.stateorprovince +  ', ' + state?.filteredData[state?.selectedMarkerIndex]?.country + ', ' + state?.filteredData[state?.selectedMarkerIndex]?.postalcode }</h3>
             </div>
             <div className='d-flex'>
-              <h3 className='Body14M mt_2 mb_4 w-40'>Property Type : </h3>
-              <h3 className='Body14R mt_2 mb_4 w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.propertysubtype}</h3>
+              <h3 className='Body14M mt_2 mb_4 w-40 labelName'>Property Type : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60 content'>{state?.filteredData[state?.selectedMarkerIndex]?.propertysubtype}</h3>
             </div>
             <div className='d-flex'>
-              <h3 className='Body14M mt_2 mb_4 w-40'>MLS® : </h3>
-              <h3 className='Body14R mt_2 mb_4 w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.listingid}</h3>
+              <h3 className='Body14M mt_2 mb_4 w-40 labelName'>MLS® : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60 content'>{state?.filteredData[state?.selectedMarkerIndex]?.listingid}</h3>
             </div>
 
             {state?.filteredData[state?.selectedMarkerIndex]?.parkingtotal &&<div className='d-flex'>
-              <h3 className='Body14M mt_2 mb_4 w-40'>Parking Spots : </h3>
-              <h3 className='Body14R mt_2 mb_4 w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.parkingtotal}</h3>
+              <h3 className='Body14M mt_2 mb_4 w-40 labelName'>Parking Spots : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60 content'>{state?.filteredData[state?.selectedMarkerIndex]?.parkingtotal}</h3>
             </div>}
 
             {state?.filteredData[state?.selectedMarkerIndex]?.parkingfeatures?.length > 1 &&<div className='d-flex'>
-              <h3 className='Body14M mt_2 mb_4 w-40'>Parking Type : </h3>
-              <h3 className='Body14R mt_2 mb_4  w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.parkingfeatures}</h3>
+              <h3 className='Body14M mt_2 mb_4 w-40 labelName'>Parking Type : </h3>
+              <h3 className='Body14R mt_2 mb_4  w-60 content'>{state?.filteredData[state?.selectedMarkerIndex]?.parkingfeatures}</h3>
             </div>}
 
             {state?.filteredData[state?.selectedMarkerIndex]?.yearbuilt &&<div className='d-flex'>
-              <h3 className='Body14M mt_2 mb_4 w-40'>Year Built : </h3>
-              <h3 className='Body14R mt_2 mb_4  w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.yearbuilt}</h3>
+              <h3 className='Body14M mt_2 mb_4 w-40 labelName'>Year Built : </h3>
+              <h3 className='Body14R mt_2 mb_4  w-60 content'>{state?.filteredData[state?.selectedMarkerIndex]?.yearbuilt}</h3>
             </div>}
 
             {state?.filteredData[state?.selectedMarkerIndex]?.fireplacestotal &&<div className='d-flex'>
-              <h3 className='Body14M mt_2 mb_4 w-40'>Fireplaces : </h3>
-              <h3 className='Body14R mt_2 mb_4  w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.fireplacestotal}</h3>
+              <h3 className='Body14M mt_2 mb_4 w-40 labelName'>Fireplaces : </h3>
+              <h3 className='Body14R mt_2 mb_4  w-60 content'>{state?.filteredData[state?.selectedMarkerIndex]?.fireplacestotal}</h3>
             </div>}
 
             {state?.filteredData[state?.selectedMarkerIndex]?.heating?.length > 0 &&<div className='d-flex'>
-              <h3 className='Body14M mt_2 mb_4 w-40'>Heating : </h3>
-              <h3 className='Body14R mt_2 mb_4 w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.heating || 'N/A'}</h3>
+              <h3 className='Body14M mt_2 mb_4 w-40 labelName'>Heating : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60 content'>{state?.filteredData[state?.selectedMarkerIndex]?.heating || 'N/A'}</h3>
             </div>}
 
               {state?.filteredData[state?.selectedMarkerIndex]?.colling?.length > 0 &&<div className='d-flex'>
-              <h3 className='Body14M mt_2 mb_4 w-40'>Cooling : </h3>
-              <h3 className='Body14R mt_2 mb_4 2-60'>{state?.filteredData[state?.selectedMarkerIndex]?.colling || 'N/A'}</h3>
+              <h3 className='Body14M mt_2 mb_4 w-40 labelName'>Cooling : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60 content'>{state?.filteredData[state?.selectedMarkerIndex]?.colling || 'N/A'}</h3>
             </div>}
 
             {state?.filteredData[state?.selectedMarkerIndex]?.flooring?.length > 0 &&<div className='d-flex'>
-              <h3 className='Body14M mt_2 mb_4 w-40'>Flooring : </h3>
-              <h3 className='Body14R mt_2 mb_4 w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.flooring}</h3>
+              <h3 className='Body14M mt_2 mb_4 w-40 labelName'>Flooring : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60 content'>{state?.filteredData[state?.selectedMarkerIndex]?.flooring}</h3>
             </div>}
 
             {state?.filteredData[state?.selectedMarkerIndex]?.taxannualamount > 0 && 
             <div className='d-flex'>
-              <h3 className='Body14M mt_2 mb_4 w-40'>Gross Property Tax : </h3>
-              <h3 className='Body14R mt_2 mb_4 w-60'>${state?.filteredData[state?.selectedMarkerIndex]?.taxannualamount}</h3>
+              <h3 className='Body14M mt_2 mb_4 w-40 labelName'>Gross Property Tax : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60 content'>${state?.filteredData[state?.selectedMarkerIndex]?.taxannualamount}</h3>
             </div>}
 
             {state?.filteredData[state?.selectedMarkerIndex]?.structuretype &&<div className='d-flex'>
-              <h3 className='Body14M mt_2 mb_4 w-40'>Structure Type : </h3>
-              <h3 className='Body14R mt_2 mb_4 w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.structuretype}</h3>
+              <h3 className='Body14M mt_2 mb_4 w-40 labelName'>Structure Type : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60 content'>{state?.filteredData[state?.selectedMarkerIndex]?.structuretype}</h3>
             </div>}
 
             {state?.filteredData[state?.selectedMarkerIndex]?.watersource?.length > 0 &&<div className='d-flex'>
-              <h3 className='Body14M mt_2 mb_4 w-40'>Water Source : </h3>
-              <h3 className='Body14R mt_2 mb_4 w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.watersource}</h3>
+              <h3 className='Body14M mt_2 mb_4 w-40 labelName'>Water Source : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60 content'>{state?.filteredData[state?.selectedMarkerIndex]?.watersource}</h3>
             </div>}
 
             {state?.filteredData[state?.selectedMarkerIndex]?.sewer?.length > 0 &&<div className='d-flex'>
-              <h3 className='Body14M mt_2 mb_4 w-40'>Sewer Type : </h3>
-              <h3 className='Body14R mt_2 mb_4 w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.sewer}</h3>
+              <h3 className='Body14M mt_2 mb_4 w-40 labelName'>Sewer Type : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60 content'>{state?.filteredData[state?.selectedMarkerIndex]?.sewer}</h3>
             </div>}
 
             {state?.filteredData[state?.selectedMarkerIndex]?.commoninterest && <div className='d-flex'>
-              <h3 className='Body14M mt_2 mb_4 w-40'>Ownership Type : </h3>
-              <h3 className='Body14R mt_2 mb_4 w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.commoninterest}</h3>
+              <h3 className='Body14M mt_2 mb_4 w-40 labelName'>Ownership Type : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60 content'>{state?.filteredData[state?.selectedMarkerIndex]?.commoninterest}</h3>
             </div>}
 
             {state?.filteredData[state?.selectedMarkerIndex]?.condofee && <div className='d-flex'>
-              <h3 className='Body14M mt_2 mb_4 w-40'>Condo Fees : </h3>
-              <h3 className='Body14R mt_2 mb_4 w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.condofee + ' ' + state?.filteredData[state?.selectedMarkerIndex]?.associationfeefrequency}</h3>
+              <h3 className='Body14M mt_2 mb_4 w-40 labelName'>Condo Fees : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60 content'>{state?.filteredData[state?.selectedMarkerIndex]?.condofee + ' ' + state?.filteredData[state?.selectedMarkerIndex]?.associationfeefrequency}</h3>
             </div>}
             {state?.filteredData[state?.selectedMarkerIndex]?.associationfeeincludes?.length > 1 && <div className='d-flex'>
-              <h3 className='Body14M mt_2 mb_4 w-40'>Condo Fees Includes : </h3>
-              <div className='w-60 d-flex flex-wrap'>
+              <h3 className='Body14M mt_2 mb_4 w-40 labelName'>Condo Fees Includes : </h3>
+              <div className='w-60 content d-flex flex-wrap'>
               {state?.filteredData[state?.selectedMarkerIndex]?.associationfeeincludes?.map((feature, idx)=><span className='Body14R'>{feature}  {(idx < state?.filteredData[state?.selectedMarkerIndex]?.appliances?.length-1) && ','}</span>)}
               </div>
             </div>}
 
             {state?.filteredData[state?.selectedMarkerIndex]?.lotsizedimensions && state?.filteredData[state?.selectedMarkerIndex]?.lotsizeunits  && <div className='d-flex'>
-              <h3 className='Body14M mt_2 mb_4 w-40'>Lot Dimensions : </h3>
-              <h3 className='Body14R mt_2 mb_4 w-60'>{state?.filteredData[state?.selectedMarkerIndex]?.lotsizedimensions + ' ' + state?.filteredData[state?.selectedMarkerIndex]?.lotsizeunits}</h3>
+              <h3 className='Body14M mt_2 mb_4 w-40 labelName'>Lot Dimensions : </h3>
+              <h3 className='Body14R mt_2 mb_4 w-60 content'>{state?.filteredData[state?.selectedMarkerIndex]?.lotsizedimensions + ' ' + state?.filteredData[state?.selectedMarkerIndex]?.lotsizeunits}</h3>
             </div>}
             
            
 
             {state?.filteredData[state?.selectedMarkerIndex]?.communityfeatures?.length > 0 && <div className='d-flex flex-wrap mb_8'>
               <h3 className='Body14M w-40'>Community Features : </h3>
-              <div className='d-flex flex-wrap w-60'>
+              <div className='d-flex flex-wrap w-60 content'>
                 {state?.filteredData[state?.selectedMarkerIndex]?.communityfeatures?.map((feature)=><h3 className='Body14R'>{feature}</h3>)}
               </div>
             </div>}
 
             {state?.filteredData[state?.selectedMarkerIndex]?.securityfeatures?.length > 0 && <div className='mt_8 d-flex flex-wrap mb_8'>
               <h3 className='Body14M w-40'>Security Features : </h3>
-                <div className='d-flex flex-wrap w-60' >
+                <div className='d-flex flex-wrap content w-60' >
                   {state?.filteredData[state?.selectedMarkerIndex]?.securityfeatures?.map((feature,idx)=><span className='Body14R'>{feature} {(idx < state?.filteredData[state?.selectedMarkerIndex]?.securityfeatures?.length-1) && ','}</span>)}
                 </div>            
             </div>}
@@ -551,7 +551,7 @@ const ModalComponent = ({onClose, state}) =>{
 
             {state?.filteredData[state?.selectedMarkerIndex]?.fireplacefeatures?.length > 0 && <div className='d-flex flex-wrap mb_8'>
               <h3 className='Body14M w-40'>Security Features : </h3>
-              <div className='d-flex w-60 flex-wrap'>
+              <div className='d-flex w-60 flex-wrap content'>
                 {state?.filteredData[state?.selectedMarkerIndex]?.fireplacefeatures?.map((feature,idx)=><span className='Body14R'>{feature} {(idx < state?.filteredData[state?.selectedMarkerIndex]?.securityfeatures?.length-1) && ','}</span>)}
               </div>
             </div>}
@@ -560,13 +560,13 @@ const ModalComponent = ({onClose, state}) =>{
             
             {state?.filteredData[state?.selectedMarkerIndex]?.appliances?.length > 0 && <div className='d-flex flex-wrap mb_8'>
               <h3 className='Body14M w-40'>Appliances : </h3>
-              <div className='d-flex w-60 flex-wrap'>
+              <div className='d-flex w-60 flex-wrap content'>
                 {state?.filteredData[state?.selectedMarkerIndex]?.appliances?.map((feature, idx)=><span className='Body14R'>{feature}  {(idx < state?.filteredData[state?.selectedMarkerIndex]?.appliances?.length-1) && ','}</span>)}
               </div>
             </div>}
 
             {state?.filteredData[state?.selectedMarkerIndex]?.lotfeatures?.length > 0 && <div className='d-flex flex-wrap mb_8'>
-              <h3 className='Body14M mt_2 mb_4 w-40'>Lot Features : </h3>
+              <h3 className='Body14M mt_2 mb_4 w-40 '>Lot Features : </h3>
               {state?.filteredData[state?.selectedMarkerIndex]?.lotfeatures?.map((feature)=><h3 className='Body14R lotFeature mt_2 mb_4'>{feature}</h3>)}
             </div>}
 
