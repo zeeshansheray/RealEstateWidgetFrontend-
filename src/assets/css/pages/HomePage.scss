@@ -79,6 +79,12 @@ body {
   @media screen and (max-width: 600px) {
     .container .box {
       width: 100%; /* One box per row */
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+
+    .twoBoxes{
+      width: 100% !important;
     }
 
     .filterContainer{
@@ -116,10 +122,77 @@ body {
 
     .mt_430{
       margin-top: 430px !important;
+      padding-left: 0px !important;
+      padding-right: 0px !important;
     }
 
     .singleFilter{
       width: 100% !important;
+      margin-bottom: 16px;
+      margin-right: 0px !important;
+
+    }
+
+    .mapIcons{
+      width: 100%;
+      margin-right: 16px;
+    }
+  }
+
+
+  @media screen and (min-width: 601px) and (max-width: 991px) {
+    .container .box {
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+
+    .twoBoxes{
+      width: 100% !important;
+    }
+
+    .filterContainer{
+      flex-direction: row !important;
+      margin-bottom: 8px !important;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .mainContainer{
+      display: flex !important;
+    }
+
+    .container{
+      width:  100% !important;
+      padding: 0px 16px !important;
+
+    }
+
+    .paddingFix{
+      padding: 0px 16px !important;
+    }
+
+    .mainContainer{
+      flex-flow: row-reverse !important;
+      position: relative !important
+    }
+
+    .googleMapBox{
+      width: calc(100% - 36px)!important;
+      position: absolute !important;
+      z-index: 100;
+      left: 16px;
+      height: 400px;
+
+    }
+
+    .mt_430{
+      margin-top: 430px !important;
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+
+    .singleFilter{
+      width: 48% !important;
       margin-bottom: 16px;
       margin-right: 0px !important;
 

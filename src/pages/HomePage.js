@@ -332,7 +332,7 @@ export default function HomePage() {
         <div class={`box ${state.map && 'twoBoxes'} `}>
           <div class="top">
             <img className='object-fit-cover' src={data?.media[0]?.MediaURL} alt="" height={"165px"} width="100%" />
-            <p className='price Heading16B'>$ {parseInt(data?.listprice)?.toLocaleString()}</p>
+            <p className='price Heading16B'>{data?.listprice ? `$ ${parseInt(data?.listprice)?.toLocaleString()}` : 'N/A'}</p>
           </div>
           <div class="bottom">
             <h3 className='Heading16M'>{data?.unparsedaddress}</h3>
