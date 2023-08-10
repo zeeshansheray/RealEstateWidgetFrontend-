@@ -47,9 +47,9 @@ export default function HomePage() {
   const onLoad = async() => {
     setState({...state, loader : true})
     let data = await localforage.getItem('data');
-    if(data){
-        setState({...state, data : data, loader : false, filteredData : data})
-    }
+    // if(data){
+    //     setState({...state, data : data, loader : false, filteredData : data})
+    // }
     let query = {
       ref : 'des54556'
     }
