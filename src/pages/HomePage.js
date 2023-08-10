@@ -331,7 +331,7 @@ export default function HomePage() {
         {state.filteredData && state?.filteredData.map((data, idx)=>
         <div class={`box ${state.map && 'twoBoxes'} `} onClick={()=>setState({...state, selectedMarkerIndex : idx})}>
           <div class="top">
-            <img className='' src={data?.media[0]?.MediaURL} alt="" height={"165px"} width="100%" />
+            <img className='object-fit-cover' src={data?.media[0]?.MediaURL} alt="" height={"165px"} width="100%" />
             <p className='price Heading16B'>{data?.listprice ? `$ ${parseInt(data?.listprice)?.toLocaleString()}` : 'N/A'}</p>
           </div>
           <div class="bottom">
@@ -362,7 +362,7 @@ export default function HomePage() {
           state = {state}
           />
         }
-        minWidth={"85%"}
+        minWidth={"100%"}
       />
     </div>
   )
@@ -425,9 +425,9 @@ const ModalComponent = ({onClose, state}) =>{
         </div>
         <div className='row flexDirection'>
           <div className='col-md-7 col-12 col-lg-12 col-xl-7 leftModalSection'>
-            <img className='w-100 mb_16 modalImages' height={300} src={state?.filteredData[state?.selectedMarkerIndex]?.media[0]?.MediaURL} />
+            <img className='w-100 mb_16 modalImages' height={500} src={state?.filteredData[state?.selectedMarkerIndex]?.media[0]?.MediaURL} />
             <div className='d-flex flex-wrap space-between'>
-                {state?.filteredData[state?.selectedMarkerIndex]?.media.map((singleImge, idx)=>singleImge.MediaCategory == "Property Photo" && idx > 1 && <img className={`modalImages ${(idx == state?.filteredData[state?.selectedMarkerIndex]?.media?.length-1 && (state?.filteredData[state?.selectedMarkerIndex]?.media %2 == 0) && singleImge.MediaCategory == "Property Photo" )  ? 'w-100' : 'w-49' } mb_16`} height={300} src={singleImge?.MediaURL} />)}
+                {state?.filteredData[state?.selectedMarkerIndex]?.media.map((singleImge, idx)=>singleImge.MediaCategory == "Property Photo" && idx > 1 && <img className={`modalImages  object-fit-cover ${(idx == state?.filteredData[state?.selectedMarkerIndex]?.media?.length-1 && (state?.filteredData[state?.selectedMarkerIndex]?.media %2 == 0) && singleImge.MediaCategory == "Property Photo" )  ? 'w-100' : 'w-49' } mb_16`} height={247} src={singleImge?.MediaURL} />)}
             </div>
           </div>
           <div className='col-md-5 col-12 col-lg-12 col-xl-5 rightModalSection'>
