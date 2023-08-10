@@ -425,9 +425,9 @@ const ModalComponent = ({onClose, state}) =>{
         </div>
         <div className='row flexDirection'>
           <div className='col-md-7 col-12 col-lg-12 col-xl-7 leftModalSection'>
-            <img className='w-100 mb_16' height={300} src={state?.filteredData[state?.selectedMarkerIndex]?.media[0]?.MediaURL} />
+            <img className='w-100 mb_16 modalImages' height={300} src={state?.filteredData[state?.selectedMarkerIndex]?.media[0]?.MediaURL} />
             <div className='d-flex flex-wrap space-between'>
-                {state?.filteredData[state?.selectedMarkerIndex]?.media.map((singleImge, idx)=>singleImge.MediaCategory == "Property Photo" && <img className={`${(idx == state?.filteredData[state?.selectedMarkerIndex]?.media?.length-1 && (state?.filteredData[state?.selectedMarkerIndex]?.media %2 == 0) && singleImge.MediaCategory == "Property Photo" )  ? 'w-100' : 'w-49' } mb_16`} height={300} src={singleImge?.MediaURL} />)}
+                {state?.filteredData[state?.selectedMarkerIndex]?.media.map((singleImge, idx)=>singleImge.MediaCategory == "Property Photo" && <img className={`modalImages ${(idx == state?.filteredData[state?.selectedMarkerIndex]?.media?.length-1 && (state?.filteredData[state?.selectedMarkerIndex]?.media %2 == 0) && singleImge.MediaCategory == "Property Photo" )  ? 'w-100' : 'w-49' } mb_16`} height={300} src={singleImge?.MediaURL} />)}
             </div>
           </div>
           <div className='col-md-5 col-12 col-lg-12 col-xl-5 rightModalSection'>
@@ -522,8 +522,8 @@ const ModalComponent = ({onClose, state}) =>{
             </div>}
             {state?.filteredData[state?.selectedMarkerIndex]?.associationfeeincludes?.length > 1 && <div className='d-flex'>
               <h3 className='Body14M mt_2 mb_4 w-40 labelName'>Condo Fees Includes : </h3>
-              <div className='w-60 content d-flex flex-wrap'>
-              {state?.filteredData[state?.selectedMarkerIndex]?.associationfeeincludes?.map((feature, idx)=><span className='Body14R'>{feature}  {(idx < state?.filteredData[state?.selectedMarkerIndex]?.appliances?.length-1) && ','}</span>)}
+              <div className='w-60 Body14R content d-flex flex-wrap'>
+                {state?.filteredData[state?.selectedMarkerIndex]?.associationfeeincludes?.map((feature, idx)=><span className='Body14R'>{feature}  {(idx < state?.filteredData[state?.selectedMarkerIndex]?.appliances?.length-1) && ','}</span>)}
               </div>
             </div>}
 
@@ -535,14 +535,14 @@ const ModalComponent = ({onClose, state}) =>{
            
 
             {state?.filteredData[state?.selectedMarkerIndex]?.communityfeatures?.length > 0 && <div className='d-flex flex-wrap mb_8'>
-              <h3 className='Body14M w-40'>Community Features : </h3>
+              <h3 className='Body14M w-40 labelName'>Community Features : </h3>
               <div className='d-flex flex-wrap w-60 content'>
                 {state?.filteredData[state?.selectedMarkerIndex]?.communityfeatures?.map((feature)=><h3 className='Body14R'>{feature}</h3>)}
               </div>
             </div>}
 
             {state?.filteredData[state?.selectedMarkerIndex]?.securityfeatures?.length > 0 && <div className='mt_8 d-flex flex-wrap mb_8'>
-              <h3 className='Body14M w-40'>Security Features : </h3>
+              <h3 className='Body14M w-40 labelName'>Security Features : </h3>
                 <div className='d-flex flex-wrap content w-60' >
                   {state?.filteredData[state?.selectedMarkerIndex]?.securityfeatures?.map((feature,idx)=><span className='Body14R'>{feature} {(idx < state?.filteredData[state?.selectedMarkerIndex]?.securityfeatures?.length-1) && ','}</span>)}
                 </div>            
@@ -550,7 +550,7 @@ const ModalComponent = ({onClose, state}) =>{
 
 
             {state?.filteredData[state?.selectedMarkerIndex]?.fireplacefeatures?.length > 0 && <div className='d-flex flex-wrap mb_8'>
-              <h3 className='Body14M w-40'>Security Features : </h3>
+              <h3 className='Body14M w-40 labelName'>Security Features : </h3>
               <div className='d-flex w-60 flex-wrap content'>
                 {state?.filteredData[state?.selectedMarkerIndex]?.fireplacefeatures?.map((feature,idx)=><span className='Body14R'>{feature} {(idx < state?.filteredData[state?.selectedMarkerIndex]?.securityfeatures?.length-1) && ','}</span>)}
               </div>
@@ -559,14 +559,14 @@ const ModalComponent = ({onClose, state}) =>{
             
             
             {state?.filteredData[state?.selectedMarkerIndex]?.appliances?.length > 0 && <div className='d-flex flex-wrap mb_8'>
-              <h3 className='Body14M w-40'>Appliances : </h3>
+              <h3 className='Body14M w-40 labelName'>Appliances : </h3>
               <div className='d-flex w-60 flex-wrap content'>
                 {state?.filteredData[state?.selectedMarkerIndex]?.appliances?.map((feature, idx)=><span className='Body14R'>{feature}  {(idx < state?.filteredData[state?.selectedMarkerIndex]?.appliances?.length-1) && ','}</span>)}
               </div>
             </div>}
 
             {state?.filteredData[state?.selectedMarkerIndex]?.lotfeatures?.length > 0 && <div className='d-flex flex-wrap mb_8'>
-              <h3 className='Body14M mt_2 mb_4 w-40 '>Lot Features : </h3>
+              <h3 className='Body14M mt_2 mb_4 w-40 labelName'>Lot Features : </h3>
               {state?.filteredData[state?.selectedMarkerIndex]?.lotfeatures?.map((feature)=><h3 className='Body14R lotFeature mt_2 mb_4'>{feature}</h3>)}
             </div>}
 
