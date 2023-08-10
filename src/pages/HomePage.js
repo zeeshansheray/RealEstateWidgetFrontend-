@@ -427,7 +427,7 @@ const ModalComponent = ({onClose, state}) =>{
           <div className='col-md-7 col-12 col-lg-12 col-xl-7 leftModalSection'>
             <img className='w-100 mb_16 modalImages' height={300} src={state?.filteredData[state?.selectedMarkerIndex]?.media[0]?.MediaURL} />
             <div className='d-flex flex-wrap space-between'>
-                {state?.filteredData[state?.selectedMarkerIndex]?.media.map((singleImge, idx)=>singleImge.MediaCategory == "Property Photo" && <img className={`modalImages ${(idx == state?.filteredData[state?.selectedMarkerIndex]?.media?.length-1 && (state?.filteredData[state?.selectedMarkerIndex]?.media %2 == 0) && singleImge.MediaCategory == "Property Photo" )  ? 'w-100' : 'w-49' } mb_16`} height={300} src={singleImge?.MediaURL} />)}
+                {state?.filteredData[state?.selectedMarkerIndex]?.media.map((singleImge, idx)=>singleImge.MediaCategory == "Property Photo" && idx > 1 && <img className={`modalImages ${(idx == state?.filteredData[state?.selectedMarkerIndex]?.media?.length-1 && (state?.filteredData[state?.selectedMarkerIndex]?.media %2 == 0) && singleImge.MediaCategory == "Property Photo" )  ? 'w-100' : 'w-49' } mb_16`} height={300} src={singleImge?.MediaURL} />)}
             </div>
           </div>
           <div className='col-md-5 col-12 col-lg-12 col-xl-5 rightModalSection'>
