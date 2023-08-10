@@ -331,7 +331,7 @@ export default function HomePage() {
         {state.filteredData && state?.filteredData.map((data, idx)=>
         <div class={`box ${state.map && 'twoBoxes'} `} onClick={()=>setState({...state, selectedMarkerIndex : idx})}>
           <div class="top">
-            <img className='object-fit-cover' src={data?.media[0]?.MediaURL} alt="" height={"165px"} width="100%" />
+            <img className='object-fit-cover coverImg' src={data?.media[0]?.MediaURL} alt="" height={"185px"} width="100%" />
             <p className='price Heading16B'>{data?.listprice ? `$ ${parseInt(data?.listprice)?.toLocaleString()}` : 'N/A'}</p>
           </div>
           <div class="bottom">

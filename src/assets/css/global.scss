@@ -1266,11 +1266,24 @@ html {
     .leftModalSection{
       max-height: 100% !important;
       margin-top: 32px;
+      height: 100% !important;
+
     }
 
     .rightModalSection{
       max-height: 100% !important;
       padding-right: 8px !important;
       padding-left: 8px !important;
+      height: 100% !important;
+    }
+  }
+
+  @media screen and (min-width: 601px) and (max-width: 991px) {
+    .leftModalSection{
+      height: 100% !important;
+    }
+
+    .rightModalSection{
+      height: 100% !important;
     }
   }
