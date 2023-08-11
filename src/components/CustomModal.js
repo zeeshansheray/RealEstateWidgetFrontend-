@@ -18,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
     borderRadius   : '8px',
     width          : '90%',
     zIndex         : '100 !important',
-    overflowY : 'auto',
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
