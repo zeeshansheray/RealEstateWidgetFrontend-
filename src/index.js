@@ -4,11 +4,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import '../src/assets/css/global.scss'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+function embedApp(containerId) {
+  ReactDOM.render(<App />, document.getElementById(containerId || 'root'));
+}
 
-reportWebVitals();
+embedApp()
