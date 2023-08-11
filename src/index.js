@@ -7,3 +7,5 @@ export function embedApp(containerId) {
   console.log('containerId ',containerId)
   ReactDOM.render(<App />, document.getElementById(containerId || 'root'));
 }
+
+embedApp()
