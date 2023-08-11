@@ -17,11 +17,13 @@ const useStyles = makeStyles((theme) => ({
     fontFamily     : 'Inter',
     borderRadius   : '8px',
     width          : '90%',
-    zIndex         : '100 !important'
+    zIndex         : '100 !important',
+    overflowY : 'auto',
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
     padding        : props=> props.padding || '24px',
+    overflowY : 'auto',
     maxWidth       : props => props.maxWidth || '400px',
     minWidth       : props => props.minWidth || '100px',
     position       : props => props.position || 'relative',
