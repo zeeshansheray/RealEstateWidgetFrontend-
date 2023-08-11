@@ -10,7 +10,7 @@ function initCounterWidget(containerId) {
   
     // Load the widget's built JavaScript and CSS files
     const script = document.createElement('script');
-    script.src = './build/static/js/main.eaafacdb.js'; // Replace with your actual path
+    script.src = './build/static/js/main.0cb646c2.js'; // Replace with your actual path
     document.head.appendChild(script);
   
     // Wait for the script to load
