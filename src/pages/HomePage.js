@@ -12,6 +12,17 @@ import CustomsModal from './../components/CustomModal';
 
 export default function HomePage() {
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsOpen(false);
+  };
+
+
   const [state, setState] = useState({
     loader             : true,
     data               : [],
@@ -47,9 +58,9 @@ export default function HomePage() {
   const onLoad = async() => {
     setState({...state, loader : true})
     let data = await localforage.getItem('data');
-    // if(data){
-    //     setState({...state, data : data, loader : false, filteredData : data})
-    // }
+    if(data){
+        setState({...state, data : data, loader : false, filteredData : data})
+    }
     let query = {
       ref : 'des54556'
     }
@@ -353,7 +364,8 @@ export default function HomePage() {
       </div>
       }
       </div>
-      <CustomsModal 
+      {(state.selectedMarkerIndex == 0  || state.selectedMarkerIndex) && <Modal state={state} setState={setState} />}
+      {/* <CustomsModal 
         open={(state.selectedMarkerIndex == 0  || state.selectedMarkerIndex) ? true : false}
         onClose={()=>setState({...state, selectedMarkerIndex : null})}
         component={
@@ -363,7 +375,7 @@ export default function HomePage() {
           />
         }
         minWidth={"100%"}
-      />
+      /> */}
     </div>
   )
 }
@@ -585,3 +597,19 @@ const ModalComponent = ({onClose, state}) =>{
     </div>
   )
 }
+
+
+const Modal = ({state, setState}) => {
+  return (
+    <div className="modal-example">
+         <div className="modal-overlay">
+          <div className="modal-content">
+         <ModalComponent 
+         onClose={()=>setState({...state, selectedMarkerIndex : null})}
+         state = {state}
+         />
+         </div>
+         </div>
+    </div>
+  );
+};
