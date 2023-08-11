@@ -8,4 +8,4 @@ export function embedApp(containerId) {
   ReactDOM.render(<App />, document.getElementById(containerId || 'root'));
 }
 
-embedApp()
+embedApp('my-embed-container')
