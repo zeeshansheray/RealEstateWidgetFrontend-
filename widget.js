@@ -1,31 +1,22 @@
-// widget.js
+import App from "./src/App";
 
-// Define a function to initialize the CounterWidget
-function initCounterWidget(containerId) {
-    const container = document.getElementById(containerId) || document.createElement('div');
-  
-    if (!document.getElementById(containerId)) {
-      document.body.appendChild(container);
-    }
-  
-    // Load the widget's built JavaScript and CSS files
-    const script = document.createElement('script');
-    script.src = './build/static/js/main.0cb646c2.js'; // Replace with your actual path
-    document.head.appendChild(script);
-  
-    // Wait for the script to load
-    script.onload = () => {
-      // At this point, the CounterWidget initialization function should be available
-      initWidgetComponent(container); // Call the function to initialize the widget
-    };
-  }
-  
-  // Placeholder function for initializing the CounterWidget component
-  function initWidgetComponent(container) {
-    // This function should be defined in your main.eaafacdb.js file
-    // It initializes the CounterWidget and renders it in the specified container
-    // For example: initCounterWidget(container);
-  }
-  
-  window.initCounterWidget = initCounterWidget;
-  
+// Load React and ReactDOM from a CDN
+const script = document.createElement('script');
+script.src = 'https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js';
+document.head.appendChild(script);
+
+const script2 = document.createElement('script');
+script2.src = 'https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js';
+document.head.appendChild(script2);
+
+// Function to load and render the React app
+function loadReactApp(containerId) {
+  // Create a container for the app
+  const container = document.getElementById(containerId);
+
+  // Render your React app into the container
+  ReactDOM.render(React.createElement(App), container);
+}
+
+// Expose the loadReactApp function globally
+window.loadReactApp = loadReactApp;
