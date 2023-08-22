@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# A Simple Embeddable React Widget
+This project is a simple template for an embeddable React widget that can be inserted into a host website using a single &lt;script> tag. It supports JSX, CSS styles, and is compiled using Webpack into a single .js file which can be static-hosted.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Both synchronous and asynchronous loading is supported.
 
-## Available Scripts
+# Overview
+1. The widget is instantiated when the .js package is loaded
+2. The host page supplies a **name** and a **targetElementId**
+3. The widget registers a global object with the name supplied by the host page 
+4. The widget renders the React component at the element specified by the host page
+5. The host page can communicate with the widget via the global object
 
-In the project directory, you can run:
+## Demo
+You can view a live demo of both synchronous and asynchronous loading here: 
 
-### `npm start`
+https://bjgrosse.github.io/simple-embeddable-react-widget/dist/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Usage Example #1: Synchronous
+This method uses simple <script> tag reference as shown below:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```html
+    <div id="root"></div>
+    
+    <script src="http://somehost/widget.js"  
+            id="Simple-Widget-Script" 
+            data-config="{'name': 'w1', 'config': {'targetElementId': 'root'}}" ></script>
+```
 
-### `npm test`
+The data-config attribute passes in the name **w1** for the widget's global object as well as the target element id **root** where the widget should be rendered.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The host page can then communicate with the widget via the global object like this:
 
-### `npm run build`
+```html
+<div><button onclick="w1('message', 'Hello world!');">Send Message</button></div>
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In this code, we send the **message** call to the widget and pass a string as the parameter.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage Example #2: Asynchronous
+We can load the widget asynchronously. Using this method we create a *temporary* object that holds any calls to the widget in a queue and when the widget loads, it will then process those calls.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```html
+<div id="root">Loading...</div>
+<script>
+    (function (w, d, s, o, f, js, fjs) {
+        w['Simple-Widget'] = o; w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
+        js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+        js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
+    }(window, document, 'script', 'w1', 'http://somehost/widget.js'));
+    w1('init', { targetElementId: 'root' });
+</script>
+```
 
-### `npm run eject`
+This code follows the pattern used by Google Analytics. The function is called with the desired name of the global object (**w1**) and the url to the script. The function then records the desired name and, using that name, creates a placeholder global object that receives and queues any calls made to the widget before the asynchronous loading finishes.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Then it creates a script tag and injects it into the DOM. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The host then issues the 'init' call to the widget passing in any initialization values:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```html
+    w1('init', { targetElementId: 'root' });
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Running the Project
+## Install dependencies
+```
+$ npm install
+```
+## Run the development server
+```
+$ ./node_modules/.bin/webpack-dev-server --open
+```
+## Build the package
+```
+$ ./node_modules/.bin/webpack --config webpack.config.js
+```
+## Run Tests
+```
+$ Jest
+```
 
-## Learn More
+# Acknowledgments
+I found helpful guidance in this project from the following sites:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+https://blog.jenyay.com/building-javascript-widget/
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://github.com/seriousben/embeddable-react-widget

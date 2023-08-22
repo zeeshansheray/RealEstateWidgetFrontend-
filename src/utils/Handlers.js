@@ -9,7 +9,6 @@ const Services = (fn) => {
             return { response : res.data}
 
         } catch (err) {
-            console.log('API- ERROR', err.response ? err.response.data : err)
             toaster && utils.showToaster({title: 'Error', message: error || err.response ? err.response.data.error : err.message, severity: 'error'})
             // expire error : jwt expired
             if(err.response && err.response.status === enums.ResponseStatus.UNAUTHORIZED) {

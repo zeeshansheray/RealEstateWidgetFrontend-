@@ -1,6 +1,5 @@
 import * as localForage from 'localforage'
 import ReactDOM from 'react-dom';
-import CustomToasters from '../components/CustomToasters';
 import { ColorSchemeCode } from '../enums/ColorScheme';
 import ct from 'countries-and-timezones'
 import {ColorScheme, CountryCode, Currencies} from '../enums';
@@ -23,10 +22,6 @@ const compareJSON = (objA, objB) => {
     return JSON.stringify(objA) === JSON.stringify(objB)
 }
 
-const showToaster = ({position, title, message, severity, delay}) => {
-    const notifications = [{title, message, severity, progress: 0}]
-    ReactDOM.render(<CustomToasters position={position} notifications={notifications} delay = {delay}/>, document.getElementById('Toaster'))
-}
 
 const getAvatar = ({firstName, lastName, className, width, heigth, bgColor, id, tableName, customers}) => {
     let randomNum  = getRandomNumber(6) // used for avatar background color
@@ -243,7 +238,6 @@ export {
     emptyJSON,
     getDate,
     booleanHasAnyValue,
-    showToaster,
     getAvatar,
     invertColor,
     hslToHex,
