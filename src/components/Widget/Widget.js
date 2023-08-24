@@ -259,8 +259,18 @@ export default function Widget() {
 
   const sendEmailFunc = async() => {
     setShow({...show, emailLoader : true})
+
+    let toEmail = "";
+  
+    const scriptElement = document.querySelector('#Simple-Widget-Script');
+    if (scriptElement) {
+      toEmail  = scriptElement.getAttribute('email')
+    }
+
+    console.log('toEmail ', toEmail)
+
     try {
-      const response = await axios.post('https://embed.realestateintegrate.com/api/send-email', {...emailDetails});
+      const response = await axios.post('https://embed.realestateintegrate.com/api/send-email', {...emailDetails, to : toEmail});
       toast.success('Email sent sucessfully.');
       console.log('Response:', response.data);
     } catch (error) {
