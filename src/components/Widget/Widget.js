@@ -7,11 +7,15 @@ import CustomButton from '../CustomButton';
 import CustomTextField from '../CustomTextField';
 import CryptoJS from 'crypto-js';
 
+import toast, { Toaster } from 'react-hot-toast';
+
 import './widget.css'
 import './global.css'
 
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import axios from 'axios';
+import { CircularProgress } from '@material-ui/core';
 
 export default function Widget() {
 
@@ -41,6 +45,16 @@ export default function Widget() {
   const [show, setShow] = useState({
     modal   : false,
     selected: '',
+    contactModal : false,
+    emailLoader : false,
+  })
+
+  const [emailDetails, setEmailDetails] = useState({
+    name : '',
+    email : '',
+    message : '',
+    phone : '',
+    to : '',
   })
 
 
@@ -72,14 +86,14 @@ export default function Widget() {
       const scriptElement = document.querySelector('#Simple-Widget-Script');
       if (scriptElement) {
         dataConfigAttr = scriptElement.getAttribute('data-id');
+        setEmailDetails({...emailDetails, to : scriptElement.getAttribute('email')})
       }
   
-      console.log('dataConfigAttr ', dataConfigAttr)
-      
       let dbRef = handleDecrypt(dataConfigAttr)
       console.log('dbRef ', dbRef)
-      query.ref = dbRef
+      query.ref = dbRef || 'des54556'
   
+      // des54556
   
       const {response,error} = await AuthService.GetData({query});
       if(response){
@@ -117,6 +131,9 @@ export default function Widget() {
         }
       }, 100); // Adjust the delay as needed
     }
+
+    setEmailDetails({...emailDetails , message : `I am Interested in ${state?.data[state?.selectedMarkerIndex]?.unparsedaddress}, ${(state?.data[state?.selectedMarkerIndex]?.neighbourhood ? (state?.data[state?.selectedMarkerIndex]?.neighbourhood + ' , ') : "") + state?.data[state?.selectedMarkerIndex]?.city}  `})
+
   }, [state.selectedMarkerIndex]);
 
   const handleClickFunc = (e, event) =>{
@@ -138,6 +155,20 @@ export default function Widget() {
     'vacant land',
   ];
   
+  const modalRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        setShow({ ...state, contactModal: false });
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   const roomTypes = [
     {key : 'Any', value : 'any'},
@@ -147,7 +178,6 @@ export default function Widget() {
     {key : '4+', value : 4},
     {key : '5+', value : 5},
   ]
-
 
   const handlePropertyFunc = (property) => {
     const updatedPropertyType = [...filters.propertyType]; // Create a copy of the propertyType array
@@ -215,15 +245,31 @@ export default function Widget() {
         setShow({ ...show, selected: '', modal: false });
       }
     };
-  
+   
     // Add event listener for clicks on the document body
     document.body.addEventListener('click', handleOutsideClick);
+
   
     // Clean up the event listener when the component unmounts
     return () => {
       document.body.removeEventListener('click', handleOutsideClick);
+
     };
   }, [show]);
+
+  const sendEmailFunc = async() => {
+    setShow({...show, emailLoader : true})
+    try {
+      const response = await axios.post('https://embed.realestateintegrate.com/api/send-email', {...emailDetails});
+      toast.success('Email sent sucessfully.');
+      console.log('Response:', response.data);
+    } catch (error) {
+      toast.error('Error Sending Email');
+      console.error('Error:', error);
+    }
+    setShow({...show, emailLoader : false})
+
+  }
   
 
   return (
@@ -425,223 +471,270 @@ export default function Widget() {
          <div className="modal-example position-fixed">
          <div className={`modal-overlay ${state.selectedMarkerIndex ? 'open' : ''}`}>
           <div className="modal-content">
-          <div className='position-relative'>
-        <div className='d-flex justify-flex-end cp' style={{left : '0px', top: '0px', position: 'sticky', zIndex: 1000}} onClick={()=>setState({...state, selectedMarkerIndex : null})}>
-        <svg class="cp" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.560261 0.578556C0.705802 0.433506 0.903091 0.352034 1.10879 0.352034C1.31449 0.352034 1.51178 0.433506 1.65732 0.578556L4.9899 3.90399L8.32247 0.578556C8.39354 0.502456 8.47923 0.441419 8.57445 0.399085C8.66966 0.35675 8.77245 0.333987 8.87667 0.332152C8.9809 0.330317 9.08442 0.349448 9.18107 0.388404C9.27773 0.42736 9.36553 0.485343 9.43923 0.558894C9.51294 0.632445 9.57105 0.720056 9.61009 0.816502C9.64913 0.912948 9.6683 1.01625 9.66646 1.12025C9.66463 1.22425 9.64181 1.32682 9.59939 1.42183C9.55696 1.51684 9.49579 1.60235 9.41953 1.67326L6.08696 4.9987L9.41953 8.32413C9.49579 8.39504 9.55696 8.48055 9.59939 8.57556C9.64181 8.67058 9.66463 8.77314 9.66646 8.87714C9.6683 8.98114 9.64913 9.08445 9.61009 9.18089C9.57105 9.27734 9.51294 9.36495 9.43923 9.4385C9.36553 9.51205 9.27773 9.57003 9.18107 9.60899C9.08442 9.64795 8.9809 9.66708 8.87667 9.66524C8.77245 9.66341 8.66966 9.64064 8.57445 9.59831C8.47923 9.55598 8.39354 9.49494 8.32247 9.41884L4.9899 6.09341L1.65732 9.41884C1.51017 9.55566 1.31555 9.63014 1.11446 9.6266C0.913365 9.62306 0.721498 9.54177 0.579281 9.39986C0.437064 9.25795 0.3556 9.06649 0.352052 8.86583C0.348504 8.66516 0.423149 8.47096 0.560261 8.32413L3.89284 4.9987L0.560261 1.67326C0.4149 1.52803 0.333252 1.33117 0.333252 1.12591C0.333252 0.920651 0.4149 0.723786 0.560261 0.578556Z" fill="#000000"></path></svg>
-        </div>
-        <div className='row flexDirection'>
-          <div className='col-md-7 col-12 col-lg-12 col-xl-7 leftModalSection'>
-            <img className='w-100 mb_16 modalImages' height={500} src={state?.data[state?.selectedMarkerIndex]?.media[0]?.MediaURL} />
-            <div className='d-flex flex-wrap space-between'>
-                {state?.data[state?.selectedMarkerIndex]?.media.map((singleImge, idx)=>singleImge.MediaCategory == "Property Photo" && idx > 1 && <img className={`modalImages  object-fit-cover ${(idx == state?.data[state?.selectedMarkerIndex]?.media?.length-1 && (state?.data[state?.selectedMarkerIndex]?.media %2 == 0) && singleImge.MediaCategory == "Property Photo" )  ? 'w-100' : 'w-49' } mb_16`} height={247} src={singleImge?.MediaURL} />)}
+            <div className='position-relative'>
+                <div className='d-flex justify-flex-end cp' style={{left : '0px', top: '0px', position: 'sticky', zIndex: 1000}} onClick={()=>setState({...state, selectedMarkerIndex : null})}>
+                <svg class="cp" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.560261 0.578556C0.705802 0.433506 0.903091 0.352034 1.10879 0.352034C1.31449 0.352034 1.51178 0.433506 1.65732 0.578556L4.9899 3.90399L8.32247 0.578556C8.39354 0.502456 8.47923 0.441419 8.57445 0.399085C8.66966 0.35675 8.77245 0.333987 8.87667 0.332152C8.9809 0.330317 9.08442 0.349448 9.18107 0.388404C9.27773 0.42736 9.36553 0.485343 9.43923 0.558894C9.51294 0.632445 9.57105 0.720056 9.61009 0.816502C9.64913 0.912948 9.6683 1.01625 9.66646 1.12025C9.66463 1.22425 9.64181 1.32682 9.59939 1.42183C9.55696 1.51684 9.49579 1.60235 9.41953 1.67326L6.08696 4.9987L9.41953 8.32413C9.49579 8.39504 9.55696 8.48055 9.59939 8.57556C9.64181 8.67058 9.66463 8.77314 9.66646 8.87714C9.6683 8.98114 9.64913 9.08445 9.61009 9.18089C9.57105 9.27734 9.51294 9.36495 9.43923 9.4385C9.36553 9.51205 9.27773 9.57003 9.18107 9.60899C9.08442 9.64795 8.9809 9.66708 8.87667 9.66524C8.77245 9.66341 8.66966 9.64064 8.57445 9.59831C8.47923 9.55598 8.39354 9.49494 8.32247 9.41884L4.9899 6.09341L1.65732 9.41884C1.51017 9.55566 1.31555 9.63014 1.11446 9.6266C0.913365 9.62306 0.721498 9.54177 0.579281 9.39986C0.437064 9.25795 0.3556 9.06649 0.352052 8.86583C0.348504 8.66516 0.423149 8.47096 0.560261 8.32413L3.89284 4.9987L0.560261 1.67326C0.4149 1.52803 0.333252 1.33117 0.333252 1.12591C0.333252 0.920651 0.4149 0.723786 0.560261 0.578556Z" fill="#000000"></path></svg>
+                </div>
+                <div className='row flexDirection'>
+                  <div className='col-md-7 col-12 col-lg-12 col-xl-7 leftModalSection'>
+                    <img className='w-100 mb_16 modalImages' height={500} src={state?.data[state?.selectedMarkerIndex]?.media[0]?.MediaURL} />
+                    <div className='d-flex flex-wrap space-between'>
+                        {state?.data[state?.selectedMarkerIndex]?.media.map((singleImge, idx)=>singleImge.MediaCategory == "Property Photo" && idx > 1 && <img className={`modalImages  object-fit-cover ${(idx == state?.data[state?.selectedMarkerIndex]?.media?.length-1 && (state?.data[state?.selectedMarkerIndex]?.media %2 == 0) && singleImge.MediaCategory == "Property Photo" )  ? 'w-100' : 'w-49' } mb_16`} height={247} src={singleImge?.MediaURL} />)}
+                    </div>
+                  </div>
+                  <div className='col-md-5 col-12 col-lg-12 col-xl-5 rightModalSection'>
+                      <p className='mainPrice Heading28B mb_8 d-flex align-items-center'>{state?.data[state?.selectedMarkerIndex]?.listprice ? `$${parseInt(state?.data[state?.selectedMarkerIndex]?.listprice)?.toLocaleString()}` : 'N/A'}
+                      <p className='Heading15M color-Heading d-flex pt_10 ml_16'>
+                          {state?.data[state?.selectedMarkerIndex]?.bedroomstotal && state?.data[state?.selectedMarkerIndex]?.bedroomstotal != "0" && <span>
+                            {" "+ state?.data[state?.selectedMarkerIndex]?.bedroomstotal + ' Bed, '}
+                          </span>}
+                          {state?.data[state?.selectedMarkerIndex]?.bathroomstotalinteger && state?.data[state?.selectedMarkerIndex]?.bathroomstotalinteger != "0" && <span>
+                          &nbsp;{+ state?.data[state?.selectedMarkerIndex]?.bathroomstotalinteger +  ' Baths, '}
+                          </span>}
+                          {(state?.data[state?.selectedMarkerIndex]?.buildingareatotal || state?.data[state?.selectedMarkerIndex]?.livingarea) && (state?.data[state?.selectedMarkerIndex]?.buildingareatotal || state?.data[state?.selectedMarkerIndex]?.livingarea) != "0" && <span>
+                          &nbsp;{(state?.data[state?.selectedMarkerIndex]?.buildingareatotal || state?.data[state?.selectedMarkerIndex]?.livingarea)  + ' Sqft'}
+                          </span>}
+                      </p>
+
+                    </p>
+                    <h3 className='Heading18M text-left'>{state?.data[state?.selectedMarkerIndex]?.unparsedaddress}
+                    </h3>
+                    <h3 className='Caption16M text-left mt_2 color-info60'>{(state?.data[state?.selectedMarkerIndex]?.neighbourhood ? (state?.data[state?.selectedMarkerIndex]?.neighbourhood + ' , ') : "") + state?.data[state?.selectedMarkerIndex]?.city}</h3>
+                  
+                    <div className='d-flex justify-flex-start mt_32'>
+                      <CustomButton 
+                        btntext={"Contact Agent"}
+                        onClick={()=>setShow({...show, contactModal : true})}
+                      />
+                    </div>
+
+
+                    <h3 className='Heading20B mt_32 mb_8 text-left'>Details:</h3>
+                    <div className='d-flex'>
+                      <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Address: </h3>
+                      <h3 className='Body14R text-left mt_2 mb_4 w-60 content capitalize'>{state?.data[state?.selectedMarkerIndex]?.unparsedaddress + ', ' + state?.data[state?.selectedMarkerIndex]?.stateorprovince +  ', ' + state?.data[state?.selectedMarkerIndex]?.country + ', ' + state?.data[state?.selectedMarkerIndex]?.postalcode }</h3>
+                    </div>
+                    <div className='d-flex'>
+                      <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Property Type: </h3>
+                      <h3 className='Body14R text-left mt_2 mb_4 w-60 content'>{state?.data[state?.selectedMarkerIndex]?.propertysubtype}</h3>
+                    </div>
+                    <div className='d-flex'>
+                      <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>MLS®: </h3>
+                      <h3 className='Body14R text-left mt_2 mb_4 w-60 content'>{state?.data[state?.selectedMarkerIndex]?.listingid}</h3>
+                    </div>
+
+                    {state?.data[state?.selectedMarkerIndex]?.parkingtotal &&<div className='d-flex'>
+                      <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Parking Spots: </h3>
+                      <h3 className='Body14R text-left mt_2 mb_4 w-60 content'>{state?.data[state?.selectedMarkerIndex]?.parkingtotal}</h3>
+                    </div>}
+
+                    {state?.data[state?.selectedMarkerIndex]?.parkingfeatures?.length > 1 &&<div className='d-flex'>
+                      <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Parking Type: </h3>
+                      <h3 className='Body14R text-left mt_2 mb_4  w-60 content'>{state?.data[state?.selectedMarkerIndex]?.parkingfeatures}</h3>
+                    </div>}
+
+                    {state?.data[state?.selectedMarkerIndex]?.yearbuilt &&<div className='d-flex'>
+                      <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Year Built: </h3>
+                      <h3 className='Body14R text-left mt_2 mb_4  w-60 content'>{state?.data[state?.selectedMarkerIndex]?.yearbuilt}</h3>
+                    </div>}
+
+                    {state?.data[state?.selectedMarkerIndex]?.fireplacestotal &&<div className='d-flex'>
+                      <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Fireplaces: </h3>
+                      <h3 className='Body14R text-left mt_2 mb_4  w-60 content'>{state?.data[state?.selectedMarkerIndex]?.fireplacestotal}</h3>
+                    </div>}
+
+                    {state?.data[state?.selectedMarkerIndex]?.heating?.length > 0 &&<div className='d-flex'>
+                      <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Heating: </h3>
+                      <div className='d-flex w-60 flex-wrap content'>
+                        {state?.data[state?.selectedMarkerIndex]?.heating?.map((feature, idx) => (
+                          <span className='Body14R' style={{marginRight: '3px', textAlign : 'left'}}>
+                            {feature}{idx < state?.data[state?.selectedMarkerIndex]?.heating?.length - 1 ? ', ' : ''}
+                          </span>
+                        ))}
+                      </div>
+                    </div>}
+
+                      {state?.data[state?.selectedMarkerIndex]?.colling?.length > 0 &&<div className='d-flex'>
+                      <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Cooling: </h3>
+                      <div className='d-flex w-60 flex-wrap content'>
+                        {state?.data[state?.selectedMarkerIndex]?.colling?.map((feature, idx) => (
+                          <span className='Body14R' style={{marginRight: '3px', textAlign : 'left'}}>
+                            {feature}{idx < state?.data[state?.selectedMarkerIndex]?.colling?.length - 1 ? ', ' : ''}
+                          </span>
+                        ))}
+                      </div>
+                    </div>}
+
+                    {state?.data[state?.selectedMarkerIndex]?.flooring?.length > 0 &&<div className='d-flex'>
+                      <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Flooring: </h3>
+                      <div className='d-flex w-60 flex-wrap content'>
+                        {state?.data[state?.selectedMarkerIndex]?.flooring?.map((feature, idx) => (
+                          <span className='Body14R' style={{marginRight: '3px', textAlign : 'left'}}>
+                            {feature}{idx < state?.data[state?.selectedMarkerIndex]?.flooring?.length - 1 ? ', ' : ''}
+                          </span>
+                        ))}
+                      </div>
+                    </div>}
+
+                    {state?.data[state?.selectedMarkerIndex]?.taxannualamount > 0 && 
+                    <div className='d-flex'>
+                      <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Gross Property Tax: </h3>
+                      <h3 className='Body14R text-left mt_2 mb_4 w-60 content'>${state?.data[state?.selectedMarkerIndex]?.taxannualamount}</h3>
+                    </div>}
+
+                    {state?.data[state?.selectedMarkerIndex]?.structuretype?.length > 0 &&<div className='d-flex'>
+                      <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Structure Type: </h3>
+                      <h3 className='Body14R text-left mt_2 mb_4 w-60 content'>{state?.data[state?.selectedMarkerIndex]?.structuretype}</h3>
+                    </div>}
+
+                    {state?.data[state?.selectedMarkerIndex]?.watersource?.length > 0 &&<div className='d-flex'>
+                      <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Water Source: </h3>
+                      <h3 className='Body14R text-left mt_2 mb_4 w-60 content'>{state?.data[state?.selectedMarkerIndex]?.watersource}</h3>
+                    </div>}
+
+                    {state?.data[state?.selectedMarkerIndex]?.sewer?.length > 0 &&<div className='d-flex'>
+                      <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Sewer Type: </h3>
+                      <h3 className='Body14R text-left mt_2 mb_4 w-60 content'>{state?.data[state?.selectedMarkerIndex]?.sewer}</h3>
+                    </div>}
+
+                    {state?.data[state?.selectedMarkerIndex]?.commoninterest && <div className='d-flex'>
+                      <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Ownership Type: </h3>
+                      <h3 className='Body14R text-left mt_2 mb_4 w-60 content'>{state?.data[state?.selectedMarkerIndex]?.commoninterest}</h3>
+                    </div>}
+
+                    {state?.data[state?.selectedMarkerIndex]?.condofee && <div className='d-flex'>
+                      <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Condo Fees: </h3>
+                      <h3 className='Body14R text-left mt_2 mb_4 w-60 content'>{state?.data[state?.selectedMarkerIndex]?.condofee + ' ' + state?.data[state?.selectedMarkerIndex]?.associationfeefrequency}</h3>
+                    </div>}
+                    {state?.data[state?.selectedMarkerIndex]?.associationfeeincludes?.length > 1 && <div className='d-flex'>
+                      <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Condo Fees Includes: </h3>
+                      <div className='d-flex w-60 flex-wrap content'>
+                        {state?.data[state?.selectedMarkerIndex]?.associationfeeincludes?.map((feature, idx) => (
+                          <span className='Body14R' style={{marginRight: '3px', textAlign : 'left'}}>
+                            {feature}{idx < state?.data[state?.selectedMarkerIndex]?.associationfeeincludes?.length - 1 ? ', ' : ' '}
+                          </span>
+                        ))}
+                      </div>   
+                    </div>}
+
+                    {state?.data[state?.selectedMarkerIndex]?.lotsizedimensions && state?.data[state?.selectedMarkerIndex]?.lotsizeunits  && <div className='d-flex'>
+                      <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Lot Dimensions: </h3>
+                      <h3 className='Body14R text-left mt_2 mb_4 w-60 content'>{state?.data[state?.selectedMarkerIndex]?.lotsizedimensions + ' ' + state?.data[state?.selectedMarkerIndex]?.lotsizeunits}</h3>
+                    </div>}
+                    
+                  
+
+                    {state?.data[state?.selectedMarkerIndex]?.communityfeatures?.length > 0 && <div className='d-flex flex-wrap mb_8'>
+                      <h3 className='Body14M text-left w-40 labelName'>Community Features: </h3>
+                      <div className='d-flex w-60 flex-wrap content'>
+                        {state?.data[state?.selectedMarkerIndex]?.communityfeatures?.map((feature, idx) => (
+                          <span className='Body14R' style={{marginRight: '3px', textAlign : 'left'}}>
+                            {feature}{idx < state?.data[state?.selectedMarkerIndex]?.communityfeatures?.length - 1 ? ', ' : ' '}
+                          </span>
+                        ))}
+                      </div>
+                    </div>}
+
+                    {state?.data[state?.selectedMarkerIndex]?.securityfeatures?.length > 0 && <div className='mt_8 d-flex flex-wrap mb_8'>
+                      <h3 className='Body14M text-left w-40 labelName'>Security Features: </h3>
+                      <div className='d-flex w-60 flex-wrap content'>
+                        {state?.data[state?.selectedMarkerIndex]?.securityfeatures?.map((feature, idx) => (
+                          <span className='Body14R' style={{marginRight: '3px', textAlign : 'left'}}>
+                            {feature}{idx < state?.data[state?.selectedMarkerIndex]?.securityfeatures?.length - 1 ? ', ' : ' '}
+                          </span>
+                        ))}
+                      </div>          
+                    </div>}
+
+
+                    {state?.data[state?.selectedMarkerIndex]?.fireplacefeatures?.length > 0 && <div className='d-flex flex-wrap mb_8'>
+                      <h3 className='Body14M text-left w-40 labelName'>Security Features: </h3>
+                      <div className='d-flex w-60 flex-wrap content'>
+                        {state?.data[state?.selectedMarkerIndex]?.fireplacefeatures?.map((feature, idx) => (
+                          <span className='Body14R' style={{marginRight: '3px', textAlign : 'left'}}>
+                            {feature}{idx < state?.data[state?.selectedMarkerIndex]?.fireplacefeatures?.length - 1 ? ', ' : ' '}
+                          </span>
+                        ))}
+                      </div>
+                    </div>}
+                    
+                    
+                    
+                    {state?.data[state?.selectedMarkerIndex]?.appliances?.length > 0 && <div className='d-flex flex-wrap mb_8'>
+                      <h3 className='Body14M text-left w-40 labelName'>Appliances: </h3>
+                      <div className='d-flex w-60 flex-wrap content'>
+                        {state?.data[state?.selectedMarkerIndex]?.appliances?.map((feature, idx) => (
+                          <span className='Body14R' style={{marginRight: '3px', textAlign : 'left'}}>
+                            {feature}{idx < state?.data[state?.selectedMarkerIndex]?.appliances?.length - 1 ? ', ' : ''}
+                          </span>
+                        ))}
+                      </div>
+                    </div>}
+
+                    {state?.data[state?.selectedMarkerIndex]?.lotfeatures?.length > 0 && <div className='d-flex flex-wrap mb_8'>
+                      <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Lot Features: </h3>
+                      <div className='d-flex w-60 flex-wrap content'>
+                      {state?.data[state?.selectedMarkerIndex]?.lotfeatures?.map((feature)=><h3 className='Body14R lotFeature mt_2 mb_4'>{feature}</h3>)}
+                      </div>
+                    </div>}
+
+                    <h3 className='Heading20B text-left mt_32 mb_8'>Overview:</h3>
+                    <div className='d-flex descriptionText'>
+                      <h3 className='Body14R  mt_2 mb_4 word-break text-align-justify' style={{paddingBottom : '50px'}}>{state?.data[state?.selectedMarkerIndex]?.publicremarks}</h3>
+                    </div>
+
+                  </div>
+                </div>
             </div>
           </div>
-          <div className='col-md-5 col-12 col-lg-12 col-xl-5 rightModalSection'>
-              <p className='mainPrice Heading28B mb_8 d-flex align-items-center'>{state?.data[state?.selectedMarkerIndex]?.listprice ? `$${parseInt(state?.data[state?.selectedMarkerIndex]?.listprice)?.toLocaleString()}` : 'N/A'}
-              {/* <p className='Heading15M color-Heading pt_10 ml_16'>
-                  {state?.data[state?.selectedMarkerIndex]?.bedroomstotal || 0} Bd | {state?.data[state?.selectedMarkerIndex]?.bathroomstotalinteger || 0} Ba | {state?.data[state?.selectedMarkerIndex]?.buildingareatotal || (state?.data[state?.selectedMarkerIndex]?.livingarea || 0)} Sqft
-              </p> */}
-              <p className='Heading15M color-Heading d-flex pt_10 ml_16'>
-                  {state?.data[state?.selectedMarkerIndex]?.bedroomstotal && state?.data[state?.selectedMarkerIndex]?.bedroomstotal != "0" && <span>
-                    {" "+ state?.data[state?.selectedMarkerIndex]?.bedroomstotal + ' Bed, '}
-                  </span>}
-                  {state?.data[state?.selectedMarkerIndex]?.bathroomstotalinteger && state?.data[state?.selectedMarkerIndex]?.bathroomstotalinteger != "0" && <span>
-                  &nbsp;{+ state?.data[state?.selectedMarkerIndex]?.bathroomstotalinteger +  ' Baths, '}
-                  </span>}
-                  {(state?.data[state?.selectedMarkerIndex]?.buildingareatotal || state?.data[state?.selectedMarkerIndex]?.livingarea) && (state?.data[state?.selectedMarkerIndex]?.buildingareatotal || state?.data[state?.selectedMarkerIndex]?.livingarea) != "0" && <span>
-                  &nbsp;{(state?.data[state?.selectedMarkerIndex]?.buildingareatotal || state?.data[state?.selectedMarkerIndex]?.livingarea)  + ' Sqft'}
-                  </span>}
-              </p>
+         </div>
+        </div>
+      }
+      { show.contactModal && 
+        <div  className="contact-modal-example position-fixed">
+          <div  className='contact-modal-overlay'>
+         <div ref={modalRef}  className="contact-modal-content">
+           <div className='position-relative'>
+               <div className='d-flex justify-flex-end cp' style={{left : '0px', top: '0px', position: 'sticky', zIndex: 1000}} onClick={()=>setShow({...state, contactModal  : false})}>
+               <svg class="cp" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.560261 0.578556C0.705802 0.433506 0.903091 0.352034 1.10879 0.352034C1.31449 0.352034 1.51178 0.433506 1.65732 0.578556L4.9899 3.90399L8.32247 0.578556C8.39354 0.502456 8.47923 0.441419 8.57445 0.399085C8.66966 0.35675 8.77245 0.333987 8.87667 0.332152C8.9809 0.330317 9.08442 0.349448 9.18107 0.388404C9.27773 0.42736 9.36553 0.485343 9.43923 0.558894C9.51294 0.632445 9.57105 0.720056 9.61009 0.816502C9.64913 0.912948 9.6683 1.01625 9.66646 1.12025C9.66463 1.22425 9.64181 1.32682 9.59939 1.42183C9.55696 1.51684 9.49579 1.60235 9.41953 1.67326L6.08696 4.9987L9.41953 8.32413C9.49579 8.39504 9.55696 8.48055 9.59939 8.57556C9.64181 8.67058 9.66463 8.77314 9.66646 8.87714C9.6683 8.98114 9.64913 9.08445 9.61009 9.18089C9.57105 9.27734 9.51294 9.36495 9.43923 9.4385C9.36553 9.51205 9.27773 9.57003 9.18107 9.60899C9.08442 9.64795 8.9809 9.66708 8.87667 9.66524C8.77245 9.66341 8.66966 9.64064 8.57445 9.59831C8.47923 9.55598 8.39354 9.49494 8.32247 9.41884L4.9899 6.09341L1.65732 9.41884C1.51017 9.55566 1.31555 9.63014 1.11446 9.6266C0.913365 9.62306 0.721498 9.54177 0.579281 9.39986C0.437064 9.25795 0.3556 9.06649 0.352052 8.86583C0.348504 8.66516 0.423149 8.47096 0.560261 8.32413L3.89284 4.9987L0.560261 1.67326C0.4149 1.52803 0.333252 1.33117 0.333252 1.12591C0.333252 0.920651 0.4149 0.723786 0.560261 0.578556Z" fill="#000000"></path></svg>
+               </div>
+           </div>
+           <p className='Heading28B'>Contact Agent</p>
 
-            </p>
-            <h3 className='Heading18M text-left'>{state?.data[state?.selectedMarkerIndex]?.unparsedaddress}
-            </h3>
-            <h3 className='Caption16M text-left mt_2 color-info60'>{(state?.data[state?.selectedMarkerIndex]?.neighbourhood ? (state?.data[state?.selectedMarkerIndex]?.neighbourhood + ' , ') : "") + state?.data[state?.selectedMarkerIndex]?.city}</h3>
-          
-            
-            <h3 className='Heading20B mt_32 mb_8 text-left'>Details:</h3>
-            <div className='d-flex'>
-              <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Address: </h3>
-              <h3 className='Body14R text-left mt_2 mb_4 w-60 content capitalize'>{state?.data[state?.selectedMarkerIndex]?.unparsedaddress + ', ' + state?.data[state?.selectedMarkerIndex]?.stateorprovince +  ', ' + state?.data[state?.selectedMarkerIndex]?.country + ', ' + state?.data[state?.selectedMarkerIndex]?.postalcode }</h3>
-            </div>
-            <div className='d-flex'>
-              <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Property Type: </h3>
-              <h3 className='Body14R text-left mt_2 mb_4 w-60 content'>{state?.data[state?.selectedMarkerIndex]?.propertysubtype}</h3>
-            </div>
-            <div className='d-flex'>
-              <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>MLS®: </h3>
-              <h3 className='Body14R text-left mt_2 mb_4 w-60 content'>{state?.data[state?.selectedMarkerIndex]?.listingid}</h3>
-            </div>
-
-            {state?.data[state?.selectedMarkerIndex]?.parkingtotal &&<div className='d-flex'>
-              <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Parking Spots: </h3>
-              <h3 className='Body14R text-left mt_2 mb_4 w-60 content'>{state?.data[state?.selectedMarkerIndex]?.parkingtotal}</h3>
-            </div>}
-
-            {state?.data[state?.selectedMarkerIndex]?.parkingfeatures?.length > 1 &&<div className='d-flex'>
-              <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Parking Type: </h3>
-              <h3 className='Body14R text-left mt_2 mb_4  w-60 content'>{state?.data[state?.selectedMarkerIndex]?.parkingfeatures}</h3>
-            </div>}
-
-            {state?.data[state?.selectedMarkerIndex]?.yearbuilt &&<div className='d-flex'>
-              <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Year Built: </h3>
-              <h3 className='Body14R text-left mt_2 mb_4  w-60 content'>{state?.data[state?.selectedMarkerIndex]?.yearbuilt}</h3>
-            </div>}
-
-            {state?.data[state?.selectedMarkerIndex]?.fireplacestotal &&<div className='d-flex'>
-              <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Fireplaces: </h3>
-              <h3 className='Body14R text-left mt_2 mb_4  w-60 content'>{state?.data[state?.selectedMarkerIndex]?.fireplacestotal}</h3>
-            </div>}
-
-            {state?.data[state?.selectedMarkerIndex]?.heating?.length > 0 &&<div className='d-flex'>
-              <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Heating: </h3>
-              <div className='d-flex w-60 flex-wrap content'>
-                {state?.data[state?.selectedMarkerIndex]?.heating?.map((feature, idx) => (
-                  <span className='Body14R' style={{marginRight: '3px', textAlign : 'left'}}>
-                    {feature}{idx < state?.data[state?.selectedMarkerIndex]?.heating?.length - 1 ? ', ' : ''}
-                  </span>
-                ))}
-              </div>
-            </div>}
-
-              {state?.data[state?.selectedMarkerIndex]?.colling?.length > 0 &&<div className='d-flex'>
-              <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Cooling: </h3>
-              <div className='d-flex w-60 flex-wrap content'>
-                {state?.data[state?.selectedMarkerIndex]?.colling?.map((feature, idx) => (
-                  <span className='Body14R' style={{marginRight: '3px', textAlign : 'left'}}>
-                    {feature}{idx < state?.data[state?.selectedMarkerIndex]?.colling?.length - 1 ? ', ' : ''}
-                  </span>
-                ))}
-              </div>
-            </div>}
-
-            {state?.data[state?.selectedMarkerIndex]?.flooring?.length > 0 &&<div className='d-flex'>
-              <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Flooring: </h3>
-              <div className='d-flex w-60 flex-wrap content'>
-                {state?.data[state?.selectedMarkerIndex]?.flooring?.map((feature, idx) => (
-                  <span className='Body14R' style={{marginRight: '3px', textAlign : 'left'}}>
-                    {feature}{idx < state?.data[state?.selectedMarkerIndex]?.flooring?.length - 1 ? ', ' : ''}
-                  </span>
-                ))}
-              </div>
-            </div>}
-
-            {state?.data[state?.selectedMarkerIndex]?.taxannualamount > 0 && 
-            <div className='d-flex'>
-              <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Gross Property Tax: </h3>
-              <h3 className='Body14R text-left mt_2 mb_4 w-60 content'>${state?.data[state?.selectedMarkerIndex]?.taxannualamount}</h3>
-            </div>}
-
-            {state?.data[state?.selectedMarkerIndex]?.structuretype?.length > 0 &&<div className='d-flex'>
-              <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Structure Type: </h3>
-              <h3 className='Body14R text-left mt_2 mb_4 w-60 content'>{state?.data[state?.selectedMarkerIndex]?.structuretype}</h3>
-            </div>}
-
-            {state?.data[state?.selectedMarkerIndex]?.watersource?.length > 0 &&<div className='d-flex'>
-              <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Water Source: </h3>
-              <h3 className='Body14R text-left mt_2 mb_4 w-60 content'>{state?.data[state?.selectedMarkerIndex]?.watersource}</h3>
-            </div>}
-
-            {state?.data[state?.selectedMarkerIndex]?.sewer?.length > 0 &&<div className='d-flex'>
-              <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Sewer Type: </h3>
-              <h3 className='Body14R text-left mt_2 mb_4 w-60 content'>{state?.data[state?.selectedMarkerIndex]?.sewer}</h3>
-            </div>}
-
-            {state?.data[state?.selectedMarkerIndex]?.commoninterest && <div className='d-flex'>
-              <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Ownership Type: </h3>
-              <h3 className='Body14R text-left mt_2 mb_4 w-60 content'>{state?.data[state?.selectedMarkerIndex]?.commoninterest}</h3>
-            </div>}
-
-            {state?.data[state?.selectedMarkerIndex]?.condofee && <div className='d-flex'>
-              <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Condo Fees: </h3>
-              <h3 className='Body14R text-left mt_2 mb_4 w-60 content'>{state?.data[state?.selectedMarkerIndex]?.condofee + ' ' + state?.data[state?.selectedMarkerIndex]?.associationfeefrequency}</h3>
-            </div>}
-            {state?.data[state?.selectedMarkerIndex]?.associationfeeincludes?.length > 1 && <div className='d-flex'>
-              <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Condo Fees Includes: </h3>
-              <div className='d-flex w-60 flex-wrap content'>
-                {state?.data[state?.selectedMarkerIndex]?.associationfeeincludes?.map((feature, idx) => (
-                  <span className='Body14R' style={{marginRight: '3px', textAlign : 'left'}}>
-                    {feature}{idx < state?.data[state?.selectedMarkerIndex]?.associationfeeincludes?.length - 1 ? ', ' : ' '}
-                  </span>
-                ))}
-              </div>   
-            </div>}
-
-            {state?.data[state?.selectedMarkerIndex]?.lotsizedimensions && state?.data[state?.selectedMarkerIndex]?.lotsizeunits  && <div className='d-flex'>
-              <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Lot Dimensions: </h3>
-              <h3 className='Body14R text-left mt_2 mb_4 w-60 content'>{state?.data[state?.selectedMarkerIndex]?.lotsizedimensions + ' ' + state?.data[state?.selectedMarkerIndex]?.lotsizeunits}</h3>
-            </div>}
-            
-           
-
-            {state?.data[state?.selectedMarkerIndex]?.communityfeatures?.length > 0 && <div className='d-flex flex-wrap mb_8'>
-              <h3 className='Body14M text-left w-40 labelName'>Community Features: </h3>
-              <div className='d-flex w-60 flex-wrap content'>
-                {state?.data[state?.selectedMarkerIndex]?.communityfeatures?.map((feature, idx) => (
-                  <span className='Body14R' style={{marginRight: '3px', textAlign : 'left'}}>
-                    {feature}{idx < state?.data[state?.selectedMarkerIndex]?.communityfeatures?.length - 1 ? ', ' : ' '}
-                  </span>
-                ))}
-              </div>
-            </div>}
-
-            {state?.data[state?.selectedMarkerIndex]?.securityfeatures?.length > 0 && <div className='mt_8 d-flex flex-wrap mb_8'>
-              <h3 className='Body14M text-left w-40 labelName'>Security Features: </h3>
-              <div className='d-flex w-60 flex-wrap content'>
-                {state?.data[state?.selectedMarkerIndex]?.securityfeatures?.map((feature, idx) => (
-                  <span className='Body14R' style={{marginRight: '3px', textAlign : 'left'}}>
-                    {feature}{idx < state?.data[state?.selectedMarkerIndex]?.securityfeatures?.length - 1 ? ', ' : ' '}
-                  </span>
-                ))}
-              </div>          
-            </div>}
-
-
-            {state?.data[state?.selectedMarkerIndex]?.fireplacefeatures?.length > 0 && <div className='d-flex flex-wrap mb_8'>
-              <h3 className='Body14M text-left w-40 labelName'>Security Features: </h3>
-              <div className='d-flex w-60 flex-wrap content'>
-                {state?.data[state?.selectedMarkerIndex]?.fireplacefeatures?.map((feature, idx) => (
-                  <span className='Body14R' style={{marginRight: '3px', textAlign : 'left'}}>
-                    {feature}{idx < state?.data[state?.selectedMarkerIndex]?.fireplacefeatures?.length - 1 ? ', ' : ' '}
-                  </span>
-                ))}
-              </div>
-            </div>}
-            
-            
-            
-            {state?.data[state?.selectedMarkerIndex]?.appliances?.length > 0 && <div className='d-flex flex-wrap mb_8'>
-              <h3 className='Body14M text-left w-40 labelName'>Appliances: </h3>
-              <div className='d-flex w-60 flex-wrap content'>
-                {state?.data[state?.selectedMarkerIndex]?.appliances?.map((feature, idx) => (
-                  <span className='Body14R' style={{marginRight: '3px', textAlign : 'left'}}>
-                    {feature}{idx < state?.data[state?.selectedMarkerIndex]?.appliances?.length - 1 ? ', ' : ''}
-                  </span>
-                ))}
-              </div>
-            </div>}
-
-            {state?.data[state?.selectedMarkerIndex]?.lotfeatures?.length > 0 && <div className='d-flex flex-wrap mb_8'>
-              <h3 className='Body14M text-left mt_2 mb_4 w-40 labelName'>Lot Features: </h3>
-              <div className='d-flex w-60 flex-wrap content'>
-               {state?.data[state?.selectedMarkerIndex]?.lotfeatures?.map((feature)=><h3 className='Body14R lotFeature mt_2 mb_4'>{feature}</h3>)}
-              </div>
-            </div>}
-
-            <h3 className='Heading20B text-left mt_32 mb_8'>Overview:</h3>
-            <div className='d-flex descriptionText'>
-              <h3 className='Body14R  mt_2 mb_4 word-break text-align-justify' style={{paddingBottom : '50px'}}>{state?.data[state?.selectedMarkerIndex]?.publicremarks}</h3>
-            </div>
-
+           <div class="form-group">
+            <label className='text-left w-100 Heading16M mb_4' for="name">Name*</label>
+            <input value={emailDetails.name} onChange={(e)=>setEmailDetails({...emailDetails, name : e.target.value})} type="text" id="name" placeholder="Enter your name" />
           </div>
 
-        </div>
-    </div>
+          <div class="form-group">
+            <label className='text-left w-100 Heading16M mb_4' for="phone">Phone*</label>
+            <input value={emailDetails.phone} onChange={(e)=>setEmailDetails({...emailDetails, phone : e.target.value})} type="text" id="phone" placeholder="Enter your phone" />
+          </div>
 
+          <div class="form-group">
+            <label className='text-left w-100 Heading16M mb_4' for="email">Email*</label>
+            <input value={emailDetails.email} onChange={(e)=>setEmailDetails({...emailDetails, email : e.target.value})} type="text" id="email" placeholder="Enter your email" />
+          </div>
+
+          <div class="form-group">
+            <label className='text-left w-100 Heading16M mb_4' for="message">Message*</label>
+            <textarea value={emailDetails.message} type="message" onChange={(e)=>setEmailDetails({...emailDetails, message : e.target.value})} id="message" placeholder="Enter your message" />
+          </div>
+
+          <div className='w-100 mt_32'>
+            <CustomButton 
+              className={"w-100"}
+              onClick={sendEmailFunc}
+              btntext={"Contact agent"}
+              disabled={emailDetails.name == "" || emailDetails.phone == "" || emailDetails.email == "" || emailDetails.message == ""}
+              icon = {show.emailLoader && <CircularProgress className='mr_8' style={{marginRight : '8px'}} color='inherit' size={"16px"} />}
+            />
+          </div>
+          <Toaster />
+
+           </div>
          </div>
-         </div>
-    </div>
-      
+        </div>
       }
     </div>
   )
