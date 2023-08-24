@@ -273,8 +273,9 @@ export default function Widget() {
       const response = await axios.post('https://embed.realestateintegrate.com/api/send-email', {...emailDetails, to : toEmail});
       toast.success('Email sent sucessfully.');
       console.log('Response:', response.data);
+      setShow({...show, contactModal : false})
+      setEmailDetails({name : '', email : '', phone : '', message : ''})
     } catch (error) {
-      toast.error('Error Sending Email');
       console.error('Error:', error);
     }
     setShow({...show, emailLoader : false})
