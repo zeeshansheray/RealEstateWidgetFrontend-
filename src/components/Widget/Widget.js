@@ -97,6 +97,7 @@ export default function Widget() {
   
       const {response,error} = await AuthService.GetData({query});
       if(response){
+        console.log('response ', response.data[0])
         let filteredByPrice = await response.data.sort((a, b) => {
           const priceA = parseFloat(a?.listprice) || 0;
           const priceB = parseFloat(b?.listprice) || 0;
@@ -132,7 +133,7 @@ export default function Widget() {
       }, 100); // Adjust the delay as needed
     }
 
-    setEmailDetails({...emailDetails , message : `I am Interested in ${state?.data[state?.selectedMarkerIndex]?.unparsedaddress}, ${(state?.data[state?.selectedMarkerIndex]?.neighbourhood ? (state?.data[state?.selectedMarkerIndex]?.neighbourhood + ' , ') : "") + state?.data[state?.selectedMarkerIndex]?.city}  `})
+    setEmailDetails({...emailDetails , message : `I am interested in ${state?.data[state?.selectedMarkerIndex]?.unparsedaddress}, ${(state?.data[state?.selectedMarkerIndex]?.neighbourhood ? (state?.data[state?.selectedMarkerIndex]?.neighbourhood + ' , ') : "") + state?.data[state?.selectedMarkerIndex]?.city}  `})
 
   }, [state.selectedMarkerIndex]);
 
@@ -270,11 +271,11 @@ export default function Widget() {
     console.log('toEmail ', toEmail)
 
     try {
-      const response = await axios.post('https://embed.realestateintegrate.com/api/send-email', {...emailDetails, to : toEmail});
+      const response = await axios.post('https://embed.realestateintegrate.com/api/send-email', {...emailDetails, to : toEmail, mls : state?.data[state?.selectedMarkerIndex]?.listingid});
       toast.success('Email sent sucessfully.');
       console.log('Response:', response.data);
       setShow({...show, contactModal : false})
-      setEmailDetails({name : '', email : '', phone : '', message : ''})
+      setEmailDetails({firstName : '', lastName : '', email : '', phone : '', message : ''})
     } catch (error) {
       console.error('Error:', error);
     }
@@ -713,9 +714,15 @@ export default function Widget() {
            <p className='Heading28B'>Contact Agent</p>
 
            <div class="form-group">
-            <label className='text-left w-100 Heading16M mb_4' for="name">Name*</label>
-            <input value={emailDetails.name} onChange={(e)=>setEmailDetails({...emailDetails, name : e.target.value})} type="text" id="name" placeholder="Enter your name" />
+            <label className='text-left w-100 Heading16M mb_4' for="name">First Name*</label>
+            <input value={emailDetails.firstName} onChange={(e)=>setEmailDetails({...emailDetails, firstName : e.target.value})} type="text" id="name" placeholder="Enter your firstname" />
           </div>
+
+          <div class="form-group">
+            <label className='text-left w-100 Heading16M mb_4' for="name">Last Name*</label>
+            <input value={emailDetails.lastName} onChange={(e)=>setEmailDetails({...emailDetails, lastName : e.target.value})} type="text" id="name" placeholder="Enter your firstname" />
+          </div>
+
 
           <div class="form-group">
             <label className='text-left w-100 Heading16M mb_4' for="phone">Phone*</label>
@@ -737,7 +744,7 @@ export default function Widget() {
               className={"w-100"}
               onClick={sendEmailFunc}
               btntext={"Contact agent"}
-              disabled={emailDetails.name == "" || emailDetails.phone == "" || emailDetails.email == "" || emailDetails.message == ""}
+              disabled={emailDetails.firstName == "" || emailDetails.lastName == "" || emailDetails.phone == "" || emailDetails.email == "" || emailDetails.message == ""}
               icon = {show.emailLoader && <CircularProgress className='mr_8' style={{marginRight : '8px'}} color='inherit' size={"16px"} />}
             />
           </div>
