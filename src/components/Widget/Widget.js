@@ -91,7 +91,8 @@ export default function Widget() {
   
       let dbRef = handleDecrypt(dataConfigAttr)
       console.log('dbRef ', dbRef)
-      query.ref = dbRef || 'des54556'
+      // query.ref = dbRef || 'des54556'
+      query.ref = dbRef
   
       // des54556
   
