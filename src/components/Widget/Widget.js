@@ -715,12 +715,12 @@ export default function Widget() {
 
            <div class="form-group">
             <label className='text-left w-100 Heading16M mb_4' for="name">First Name*</label>
-            <input value={emailDetails.firstName} onChange={(e)=>setEmailDetails({...emailDetails, firstName : e.target.value})} type="text" id="name" placeholder="Enter your firstname" />
+            <input value={emailDetails.firstName} onChange={(e)=>setEmailDetails({...emailDetails, firstName : e.target.value})} type="text" id="name" placeholder="Enter your first name" />
           </div>
 
           <div class="form-group">
             <label className='text-left w-100 Heading16M mb_4' for="name">Last Name*</label>
-            <input value={emailDetails.lastName} onChange={(e)=>setEmailDetails({...emailDetails, lastName : e.target.value})} type="text" id="name" placeholder="Enter your firstname" />
+            <input value={emailDetails.lastName} onChange={(e)=>setEmailDetails({...emailDetails, lastName : e.target.value})} type="text" id="name" placeholder="Enter your last name" />
           </div>
 
 
