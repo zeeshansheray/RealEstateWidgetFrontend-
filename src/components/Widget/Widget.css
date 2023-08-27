@@ -4,6 +4,21 @@
 /* Your additional styles here */
 
 
+.Heading10M{
+  font-size: 10px !important;
+}
+
+.Heading22B{
+  font-size: 22px;
+  font-weight: 700 !important;
+}
+
+.disclaimerText{
+  width: inherit;
+  padding: 8px 24px;
+  text-align: center;
+}
+
 .boxShadow{
         -webkit-filter: drop-shadow(0px 0px 5px #000);
         filter: drop-shadow(0px 0px 5px #000);
@@ -445,6 +460,7 @@ textarea{
   .modal-content img {
     max-width: 100%;
   }
+
 
   .MainBox{
     width: 100% !important;

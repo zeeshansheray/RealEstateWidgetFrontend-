@@ -1079,6 +1079,10 @@ label {
 }
 
 
+.mt_24{
+  margin-top: 24px;
+}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -1140,6 +1144,10 @@ html {
 
     .Body14M{
       font-size: 13px !important;
+    }
+
+    .Heading10M{
+      font-size: 10px !important;
     }
 
     .Heading15M{
