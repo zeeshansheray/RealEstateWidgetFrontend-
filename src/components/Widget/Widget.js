@@ -773,7 +773,7 @@ export default function Widget() {
 
           <div className='disclaimerText'>
             <div className='Heading10M'>
-               By pressing Contact Agent, you agree that a real estate professional may contact <br/> you about your inquiry by phone, text, and/or email.
+               By pressing Contact Agent, you agree that a real estate professional <br/>  may contact you about your inquiry by phone, text, and/or email.
             </div>
           </div>
           </> :
@@ -786,6 +786,7 @@ export default function Widget() {
           </div>
           
           }
+          {console.log('show.emailSent ', show)}
            </div>
            <Toaster/>
          </div>
