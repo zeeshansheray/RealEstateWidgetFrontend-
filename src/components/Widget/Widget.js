@@ -294,13 +294,13 @@ export default function Widget() {
     try {
       const response = await axios.post('https://embed.realestateintegrate.com/api/send-email', {...emailDetails, to : toEmail, mls : state?.data[state?.selectedMarkerIndex]?.listingid});
       console.log('Response:', response.data);
-      setShow({...show, contactModal : false, emailSent : true})
+      setShow({...show, contactModal : false, emailSent : true, emailLoader : false})
       setEmailDetails({firstName : '', lastName : '', email : '', phone : '', message : ''})
     } catch (error) {
       console.error('Error:', error);
       toast.error('Error while sending email')
+     setShow({...show, emailLoader : false})
     }
-    setShow({...show, emailLoader : false})
   }
   
 
