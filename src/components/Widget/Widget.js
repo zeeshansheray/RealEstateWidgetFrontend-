@@ -781,7 +781,7 @@ export default function Widget() {
           <div>
 
             <img height={"200px"} width={"auto"} src="https://assets.materialup.com/uploads/378d2c84-810d-477a-802b-d495646b9c4e/preview.jpg" alt="" /> 
-            <div className='Heading22B text-center'>
+            <div className='Heading22B text-center' style={{marginTop : '32px', marginBottom : '32px' }}>
             Thank you! <br/> We'll connect with you shortly.
             </div>
           </div>
