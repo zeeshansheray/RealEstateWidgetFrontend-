@@ -1,7 +1,6 @@
 const PngIcons = {
     loader : '/Loader.gif',
-    menu : '/menu.png'
-
+    menu : '/menu.png',
 };
 
 export default PngIcons;

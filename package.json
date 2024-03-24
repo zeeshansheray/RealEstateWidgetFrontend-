@@ -36,9 +36,11 @@
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "axios": "^1.4.0",
-    "bootstrap": "^5.3.1",
+    "bootstrap": "^5.3.3",
     "countries-and-timezones": "^3.5.1",
+    "cross-env": "^7.0.3",
     "crypto-js": "^4.1.1",
+    "formik": "^2.4.5",
     "react": "^16.14.0",
     "react-dom": "^16.10.2",
     "react-hot-toast": "^2.4.1",

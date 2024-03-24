@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
+@import '~bootstrap/dist/css/bootstrap.min.css';
 
 p {
   margin: 0px;
@@ -9,105 +9,13 @@ body{
   -webkit-font-smoothing: antialiased;
 }
 
-.trigger1{
-    padding-top: 11px;
-    border: 2px;
-    text-align: center;
-    border-color: rgba(0,132,255,.21);
-    border-style: dashed;
-    font-size: 14px;
-    border-radius: 6px;
-    color: #0084ff;
-    cursor: pointer;
-}
-
-.trigger1:hover{
-  border-color: #0084ff;
-  background-color: #0084ff0f!important;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-}
-
-.trigger2{
-  padding-top: 11px;
-  border: 2px;
-  text-align: center;
-  border-color:#afead0;
-  border-style: dashed;
-  font-size: 14px;
-  border-radius: 6px;
-  color: #5cd59d;
-  cursor: pointer;
-}
-
-.trigger2:hover{
-border-color:#5cd59d;
-background-color: #e0f7e3!important;
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-}
-
-.or{
-  position: absolute;
-    right: 385px;
-    top: 80px;
-}
-
 .overflow-scroll{
   overflow: scroll;
-  -webkit-overflow-scrolling: touch;
-}
-
-.text-align-justify{
-  text-align: justify;
 }
 
 
-.emptyState {
+.d-flex{
   display: flex;
-  flex-direction: column;
-  gap: 32px;
-  margin-top: 12%;
-  align-items: center;
-}
-.emptyState-sm {
-  padding: 40px 0px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: center;
-}
-.emptyImage {
-  height: 80px;
-  width: 80px;
-}
-
-.emptyImage-sm {
-  height: 48px;
-  width: 48px;
-}
-
-.section-p1{
-  padding: 40px 80px;
-}
-
-.emptyBody {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-}
-
-
-.place-self-end {
-  place-self: end;
-}
-
-.display {
-  display: unset !important;
-}
-
-.place-self-center {
-  place-self: center;
 }
 
 .d-none {
@@ -118,25 +26,19 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 2
   text-align: end;
 }
 
+.text-right{
+  text-align: right;
+}
+
+input[type="radio"]{
+  accent-color:green;
+}
+
 .middle {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.line-height-10 {
-  line-height: 10px !important;
-}
-
-h1,h2,h3,h4,h5,h6,p{
-  margin: 0px !important;
-}
-
-.headerCollapseIcon:hover {
-  svg rect {
-    fill: color(primary50);
-  }
 }
 
 .float-left {
@@ -209,14 +111,6 @@ h1,h2,h3,h4,h5,h6,p{
   justify-content: center;
 }
 
-.MuiCheckbox-root{
-  padding: 0px !important;
-}
-
-.MuiCheckbox-root:hover, .MuiIconButton-colorSecondary:hover{
-  background-color: white !important;
-}
-
 .disabledbutton {
   pointer-events: none !important;
   opacity: 0.5 !important;
@@ -238,6 +132,10 @@ h1,h2,h3,h4,h5,h6,p{
 
 .rotate-right {
   transform: rotate(270deg);
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin-bottom: 0px;
 }
 
 .flex-grow{
@@ -308,50 +206,6 @@ a.hover-none:hover {
   overflow: hidden;
 }
 
-.xl {
-  padding: 16px 24px !important;
-}
-
-.l {
-  padding: 12px 24px !important;
-}
-
-.m {
-  padding: 8px 24px !important;
-}
-
-.s {
-  padding: 6px 24px !important;
-}
-
-.lotFeature{
-  padding: 4px 8px;
-  background-color: #2f80ed;
-  color: white;
-  border-radius: 4px;
-  margin-right: 8px !important;
-}
-
-.leftModalSection{
-  max-height: 95vh;
-  overflow-y: auto;
-}
-
-.rightModalSection{
-  max-height: 95vh;
-  overflow-y: auto;
-}
-
-.tableRowHover:hover {
-  background-color: color(neutral0);
-}
-
-.imageCover {
-  height: 80px;
-  width: 163px;
-  object-fit: cover;
-}
-
 .display-none {
   display: none !important;
 }
@@ -371,13 +225,6 @@ a.hover-none:hover {
   max-height: 250px;
   overflow-y: scroll;
   z-index: 11 !important;
-}
-.transition {
-  transition: all 0.2s ease-in-out;
-}
-.grayed-image {
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
 }
 
 .togglebtn {
@@ -399,7 +246,6 @@ label {
 
 .object-fit-cover {
   object-fit: cover;
-  object-position: 50% 50%;
 }
 
 
@@ -471,13 +317,6 @@ label {
   text-decoration: line-through;
 }
 
-.bar {
-  border-bottom: 0.5px solid color(neutral20) !important;
-  width: 100%;
-  z-index: 0;
-  left: 0px;
-}
-
 .saveAndCloseBtn:focus {
   outline: none;
 }
@@ -485,22 +324,6 @@ label {
 .outline-none:focus-visible {
   outline: 0px !important;
   border: 0px !important;
-}
-
-
-.rangePoints::after {
-  content: "Points";
-  margin-left: 4px;
-}
-
-.UploadImage {
-  border: 1px dashed color(neutral60);
-  box-sizing: border-box;
-  border-radius: 8px;
-  padding: 8px 16px;
-  width: 144px;
-  color: color(neutral60);
-  font-size: 12px;
 }
 
 .space-between {
@@ -634,82 +457,10 @@ label {
   overflow: hidden;
 }
 
-.SimpleSelect {
-  position: relative;
-  border-radius: 6px;
-  color: color(neutral80);
-  background-color: color(white);
-  border: 1px solid color(neutral20);
-  font-size: 14px;
-  padding: 8px 8px 10px 8px;
-  cursor: pointer;
-  text-transform: capitalize;
-  height: 36px;
-}
-
-.SimpleSelect:focus,
-.SimpleSelect:hover {
-  border-radius: 8;
-  background-color: color(white);
-  border: 1px solid color(primary50);
-}
-
-.loaderOuterPage {
-  height: 100%;
-}
-
-#CampaignFunctions {
-  .borderSet {
-    border: 1px solid color(neutral10);
-  }
-}
-
-#dateFilter {
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
-  border-radius: 4px;
-}
-
-.blurBg {
-  filter: blur(62px);
-  -webkit-filter: blur(62px);
-}
-
-.hoverCollapse:hover {
-  fill: #2f80ed;
-}
-
-.edit-border {
-  border-bottom: 2px solid #e1e5ea;
-  box-sizing: border-box;
-}
-
-.box-shadow {
-  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.12);
-}
-
 .ellipses {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-}
-
-.fitContentInputField {
-  border: none;
-  padding: 2px 0px;
-  background-color: transparent;
-  color: #000000;
-  cursor: pointer;
-  width: 100%;
-}
-
-.fitContentInputField::placeholder {
-  color: #000000;
-  padding: 2px 0px;
-}
-
-.fitContentInputField:focus + .titleBar {
-  display: none;
-  transition: all 0.2s ease-in-out;
 }
 
 .titleBar {
@@ -764,82 +515,6 @@ label {
 /* ---------------------------------------------------
     Media Queries
 ----------------------------------------------------- */
-
-/*  For Sidebar */
-@media (max-width: 767px) {
-
-}
-
-.p_0 {
-  padding: 0px !important;
-}
-
-.imageSection {
-  position: fixed;
-  right: 0px;
-  top: 0px;
-
-  .sideImage {
-    width: 100%;
-    height: 100vh;
-  }
-}
-
-@media (max-width: 575px) {
-  body {
-    font-size: 4vw;
-  }
-  .main-heading {
-    font-size: 7vw;
-  }
-}
-@media (min-width: 360px) and (max-width: 575px) {
-
-}
-
-@media (min-width: 576px) and (max-width: 767px) {
-}
-/* md */
-@media (min-width: 768px) and (max-width: 991px) {
-}
-/* lg */
-@media (min-width: 992px) and (max-width: 1199px) {
-}
-/* xl */
-@media (min-width: 1200px) {
-}
-
-.MuiListItem-root {
-  font-size: 14px !important;
-  font-weight: 500 !important;
-  line-height: 16px !important;
-  font-family: "Inter";
-  background-color: color(white) !important;
-  color: color(neutral100) !important;
-}
-.MuiListItem-root.Mui-selected,
-.MuiListItem-root.Mui-selected:hover {
-  background-color: color(white) !important;
-  color: color(primary50) !important;
-  font-size: 14px !important;
-  font-weight: 500 !important;
-  line-height: 16px !important;
-  font-family: "Inter";
-}
-.MuiListItem-button:hover {
-  background-color: color(white) !important;
-  color: color(primary50) !important;
-}
-
-.text-ellipsis--2 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  display: -webkit-box !important;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  white-space: normal;
-}
-
 .phoneField{
   color: color(neutral100) !important;
   border: 1px solid color(neutral20) !important;
@@ -857,13 +532,61 @@ label {
   box-shadow: 0 0 0 0.1rem color(primary20);
 }
 
+.bar-inner, .multi-range-slider .thumb::before, .multi-range-slider .thumb::after, .bar-right, .bar-left{
+  box-shadow: none !important;
+}
+
+.multi-range-slider .thumb::before{
+  margin: -10px -12px !important;
+  border: 1px solid #D9D9D9 !important;
+}
+
+.bar-right, .bar-left{
+  padding: 0px !important;
+
+}
+
+input[type='checkbox'] {
+  accent-color: black;
+}
+
+.selected{
+  background-color: #C0C0C0;
+  transition: 0.3s ease;
+}
+
+.bar-inner{
+  background-color: white !important;
+  border: 0px !important;
+}
+
+.bar{
+  height: 0px;
+  background-color: white;
+  border: 1px solid #D9D9D9;
+}
+
+#grouped-demo:hover{
+  .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline{
+    border-color: color(primary50) !important;
+  }
+}
+
+
+#TextfieldUpdated, .phoneField, #grouped-demo
+,#SelectUpdated {
+  textarea {
+    resize: none;
+    
+  }
+
   input,
   .phoneField,
   textarea,
   select,
   .fitContentInputField {
     color: color(neutral100);
-    border: 1px solid color(neutral20) !important;
+    border: 1px solid color(primary50) !important;
     width: 100%;
     padding: 10px 8px;
     box-sizing: border-box;
@@ -888,12 +611,6 @@ label {
   input[type="number"] {
     line-height: 30px;
     height: 40px;
-    border: 1px solid #2f80ed;
-    border-radius: 4px;
-  }
-
-  .w-48{
-    width: 48%;
   }
 
   input[type="number"]::-webkit-inner-spin-button {
@@ -922,6 +639,11 @@ label {
       fill: color(primary50) !important;
     }
   }
+}
+
+.MuiIconButton-colorSecondary:hover {
+  background-color: color(neutral20) !important;
+}
 
 #Toaster .notification-container {
   font-size: 14px;
@@ -1079,9 +801,19 @@ label {
 }
 
 
-.mt_24{
-  margin-top: 24px;
+
+#CustomRadio{
+  .MuiRadio-colorSecondary.Mui-checked{
+      color: color(primary50) !important;
+      &:hover{
+          background-color: color(neutral20) !important;
+      }
+  }
+  .MuiIconButton-colorSecondary:hover{
+      background-color: color(neutral20) !important;
+  }
 }
+
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -1090,10 +822,6 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
 
 #grouped-demo{
   z-index: 10000000;
@@ -1112,229 +840,69 @@ html {
   background: #FF0000;
 }
 
-
-  
-  @media screen and (max-width: 600px) {
-
-    .flexDirection{
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .mainPrice{
-      font-size: 22px !important;
-    }
-
-    .modalImages{
-      width: 100% !important;
-      height: 200px !important;
-    }
-
-    .Body14R{
-      font-size: 13px !important;
-    }
-
-    .labelName{
-      width: 45% !important;
-    }
-
-    .content{
-      width: 55% !important;
-    }
-
-    .Body14M{
-      font-size: 13px !important;
-    }
-
-    .Heading10M{
-      font-size: 10px !important;
-    }
-
-    .Heading15M{
-      font-size: 14px !important;
-    }
-
-    .leftModalSection{
-      max-height: 100% !important;
-      margin-top: 32px;
-      height: 100% !important;
-      -webkit-overflow-scrolling: touch;
-      overflow: scroll;
-
-    }
-
-    .rightModalSection{
-      max-height: 100% !important;
-      padding-right: 8px !important;
-      padding-left: 8px !important;
-      height: 100% !important;
-      -webkit-overflow-scrolling: touch;
-      overflow: scroll;
-
-    }
-  }
-
-  @media screen and (min-width: 768px) and (max-width: 991px) {
-    .leftModalSection{
-      max-height: 100vh !important;
-    }
-    .rightModalSection{
-      height: 100% !important;
-      -webkit-overflow-scrolling: touch;
-      overflow: auto !important;
-      max-height: 100vh !important;
-      }
-  }
-
-  @media screen and (min-width:992px) and (max-width: 1199px) {
-    .leftModalSection{
-      max-height: unset !important;
-      overflow-y:  unset !important;
-    }
-    .rightModalSection{
-      height: 95vh !important;
-      -webkit-overflow-scrolling: touch;
-      overflow: auto !important;
-      max-height: unset !important;
-      }
-
-  }
-
-  .w-100{
-    width: 100%;
-  }
-
-  .w-49{
-    width: 49%;
-  }
-
-  .Heading28B{
-    -webkit-font-smoothing: antialiased;
-    font-family: Inter;
-    font-size: 28px;
-    font-weight: 700!important;
-  }
-
-  .Heading15M{
-    -webkit-font-smoothing: antialiased;
-    font-family: Inter;
-    font-size: 15px!important;
-    font-weight: 15px;
-  }
-
-  .Heading18M{
-    -webkit-font-smoothing: antialiased;
-    font-family: Inter;
-    font-size: 18px!important;
-  }
-
-  .Body14M{
-    -webkit-font-smoothing: antialiased;
-    font-family: Inter;
-    font-size: 14px!important;
-    font-weight: 500 !important;
-  } 
-
-  .Body14R{
-    -webkit-font-smoothing: antialiased;
-    font-family: Inter;
-    font-size: 14px!important;
-    font-weight: 400;
-  }
-
-  .Caption16M{
-    -webkit-font-smoothing: antialiased;
-    font-family: Inter;
-    font-size: 16px!important;
-    font-weight: 500 !important;
-    color: #909090!important;
-  }
-
-  .Heading20B{
-    -webkit-font-smoothing: antialiased;
-    font-family: Inter;
-    font-size: 20px!important;
-    font-weight: 700!important;
-    
-  }
-
-  .mb_8{
-    margin-bottom: 8;
-  }
-
-  .mb_32{
-    margin-bottom: 32px;
-  }
-
-  .text-left{
-    text-align: left !important;
-  }
-
-  .Heading16M{
-    -webkit-font-smoothing: antialiased;
-    font-family: Inter;
-    font-size: 16px!important;
-    font-weight: 500 !important;
-  }
-
-  .Heading15M{
-    -webkit-font-smoothing: antialiased;
-    font-family: Inter;
-    font-size: 15px!important;
-    font-weight: 500 !important;
-  }
-
-  .mt_16{
-    margin-top: 16px !important;
-  }
-
-  .mt_32{
-    margin-top: 32px !important;
-  }
-
-  .mb_16{
-    margin-bottom: 16px !important;
-  }
-
-  
-  .mb_8{
-    margin-bottom: 8px !important;
-  }
-
-  .ml_8{
-    margin-left: 8px !important;
-  }
-
-  
-.pt_10{
-  padding-top: 10px ;
+.overflow-y-scroll {
+  overflow-y: scroll;
 }
 
-.ml_16{
-  margin-left: 16px !important;
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+#viewDetailComponent{
+  position        : absolute;
+  right           : 16px;
+  box-shadow      : 0px 3px 5px rgba(9, 30, 66, 0.2), 0px 0px 1px rgba(9, 30, 66, 0.31);
+  border-radius   : 4px;
+  color           : black;
+  width           : 120px !important;
+  background-color: white;
+  z-index         : 100;
+
+    .singleItem{
+        padding: 8px 12px !important;
+        border-radius: 6px !important;
+    }
+  .wrapper :hover{
+      background-color: #f5f7fc;
+  }
 }
 
 
-.w-40{
-  width: 40%;
+.mt_16{
+  margin-top: 16px;
 }
 
-.w-60{
-  width: 60%;
+.mt_4{
+  margin-top: 4px;
 }
 
-.mt_2{
-  margin-top: 2px !important;
+.gap-16{
+  grid-gap: 16px;
 }
 
-.mb_4{
-  margin-bottom: 4px !important;
+
+.mt_24{
+  margin-top: 24px;
 }
 
-.ml_4{
-  margin-left: 4px !important;
+.mt_32{
+  margin-top: 32px;
 }
 
-.ml_20{
-  margin-left: 20px !important;
+
+.ml_8{
+  margin-left: 8px;
+}
+
+.mt_8{
+  margin-top: 8px;
 }
